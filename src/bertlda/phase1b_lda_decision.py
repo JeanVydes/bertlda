@@ -103,7 +103,8 @@ def main() -> dict:
     df_k = pd.read_csv(ck_search).sort_values("K").reset_index(drop=True)
 
     ck_lda = cargar_checkpoint("ck_corpus_lda")
-    docs_tokens = ck_lda["docs_tokens"]
+    docs_tokens = (ck_lda.get("docs_tokens") or ck_lda.get("docs_tok")
+                   or ck_lda.get("docs_tokensens"))
     id2word = ck_lda["id2word"]
     corpus = ck_lda["corpus"]
     dict_eval = ck_lda["dict_eval"]
@@ -114,7 +115,7 @@ def main() -> dict:
     # Standalone manual candidate override (None = automatic top-N)
     K_CANDIDATOS_MANUAL = None
     N_TOP_STABILITY = 5
-    N_SEEDS = CFG["lda"]["n_corridas_stabilityilidad"]
+    N_SEEDS = CFG["lda"]["n_corridas_estabilidad"]
     SEEDS = [CFG["seed"] + i for i in range(N_SEEDS)]
     PASSES_STABILITY = 10
     PESOS_K = {"plateau": 0.30, "stability": 0.30,
