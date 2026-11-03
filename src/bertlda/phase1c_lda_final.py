@@ -57,7 +57,10 @@ def main() -> dict:
     P = base["params"]
 
     ck_lda = cargar_checkpoint("ck_corpus_lda")
-    docs_tokensens = ck_lda["docs_tokensens"]
+    docs_tokens = (ck_lda.get("docs_tokens") or ck_lda.get("docs_tok")
+                   or ck_lda.get("docs_tokensens"))
+    if docs_tokens is None:
+        raise RuntimeError("ck_corpus_lda missing docs_tokens key")
     id2word = ck_lda["id2word"]
     corpus = ck_lda["corpus"]
 

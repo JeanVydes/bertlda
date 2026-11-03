@@ -145,7 +145,9 @@ def main() -> dict:
     from gensim.models.ldamulticore import LdaMulticore
     NC = (CFG["compute"]["n_cores"] if CFG["compute"]["n_cores"] else
           max(1, __import__("multiprocessing").cpu_count() - 1))
-    Cls = LdaModel if (P["escala"] == "MICRO" or NC == 1) else LdaMulticore
+    # LdaModel monoproc is more stable/reproducible than LdaMulticore for these
+    # corpus sizes and avoids joblib worker contention (which made the grid too slow).
+    Cls = LdaModel
     ex = {} if Cls is LdaModel else {"workers": NC}
     print(f"  Class: {Cls.__name__} | cores: {NC}")
 
