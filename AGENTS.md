@@ -18,13 +18,19 @@ uv sync
 
 ## Current state (last session)
 
-- Phase 0 **done** — see `outputs/results/corpus/*` and `outputs/visualizations/*`
-  (world map by country, annual distribution, annual trend, country heatmap,
-  source ranking, country distribution). Checkpoint `ck_corpus_base.pkl` present.
-- Phase 1a **in progress** (background). Resume-capable via
-  `lda_k_search.csv`. 19–23 of 37 K values done (last K ~22-23).
-- Phase 1b/1c/Phase 3 **not done**.
-- BERTopic phases (2a/2b/2c), Phase 4 **not done**.
+- Phase 0 **done** — `outputs/results/corpus/*` + `outputs/visualizations/*`
+  (world map, annual distribution + trend, country distribution + heatmap,
+  source ranking).
+- LDA **done**:
+  - K=14, alpha=asymmetric, eta=symmetric (chosen by operator override).
+  - Model: `outputs/models/lda/lda_final.model`.
+  - `outputs/results/lda/lda_theta.csv` (19,505 × 14 topics),
+    `lda_topic_summary.csv`, `lda_ranking.csv`,
+    `model_configuration_lda.json`.
+  - Phase 3 LDA viz: similarity (cosine/Hellinger/Jensen-Shannon), top-words
+    heatmap, topic × year, topic × country in `outputs/visualizations/`.
+  - Phase 1a grid partial (K=4…23) retained in `lda_k_search.csv`.
+- BERTopic (2a/2b/2c) and Phase 4 (trends) **not done**.
 
 ## Phase sequence and commands
 

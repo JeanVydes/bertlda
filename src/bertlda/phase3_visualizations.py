@@ -169,7 +169,7 @@ def main() -> dict:
 
     # LDA
     print("\n-- LDA --")
-    model_path = RUTAS["models"] / "lda" / "lda_final.model"
+    model_path = RUTAS["models_lda"] / "lda_final.model"
     theta_path = RUTAS["results"] / "lda" / "lda_theta.csv"
     summary_path = RUTAS["results"] / "lda" / "lda_topic_summary.csv"
     try:
@@ -214,7 +214,7 @@ def main() -> dict:
 
     # BERTopic (optional)
     print("\n-- BERTopic --")
-    bt_model_path = RUTAS["models"] / "bertopic" / "bertopic_final"
+    bt_model_path = RUTAS["models_bertopic"] / "bertopic_final"
     bt_info_path = RUTAS["results"] / "bertopic" / "bertopic_topic_info.csv"
     bt_docs_path = RUTAS["results"] / "bertopic" / "resultados_bertopic.csv"
     if bt_model_path.exists() and bt_docs_path.exists():

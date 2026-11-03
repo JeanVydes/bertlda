@@ -122,7 +122,7 @@ def main() -> dict:
                 "parsimony": 0.20, "interpretability": 0.20}
 
     # OVERRIDE_K support
-    OVERRIDE_K = None
+    OVERRIDE_K = 14
 
     print(f"  Candidates evaluated: {df_k['K'].tolist()}")
 

@@ -127,7 +127,7 @@ def main() -> dict:
         lda = LdaModel(corpus=corpus, num_topics=k_final, id2word=id2word,
                        alpha=alpha_final, eta=eta_final,
                        passes=CFG["lda"]["passes_final"], random_state=CFG["seed"])
-    model_path = RUTAS["models"] / "lda" / "lda_final.model"
+    model_path = RUTAS["models_lda"] / "lda_final.model"
     model_path.parent.mkdir(parents=True, exist_ok=True)
     lda.save(str(model_path))
     print(f"  Model -> {model_path}")

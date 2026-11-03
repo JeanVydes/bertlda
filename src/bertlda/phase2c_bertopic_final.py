@@ -249,7 +249,7 @@ def main() -> dict:
             topics_red = topics_orig
 
     # Save model (local) — BERTopic save
-    model_dir = RUTAS["models"] / "bertopic" / "bertopic_final"
+    model_dir = RUTAS["models_bertopic"] / "bertopic_final"
     model_dir.mkdir(parents=True, exist_ok=True)
     try:
         topic_model.save(str(model_dir), serialization="safetensors",
