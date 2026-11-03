@@ -1,0 +1,16 @@
+﻿metric,value
+Total records,20000
+With title,20000
+With abstract,20000
+With both,20000
+Without useful text,0
+DOI duplicates,20
+Title duplicates,59
+Excluded by length,495
+USABLE DOCUMENTS,19505
+Year range,2018-2026
+Countries (normalized),86
+Corpus ALL CAPS,0.0%
+Uppercase normalization,False
+Docs >350 words,739
+Distinct sources,5697

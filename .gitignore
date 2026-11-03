@@ -9,7 +9,6 @@ wheels/
 # Virtual environments
 .venv
 
-# Data and generated artifacts
-raw_corpus.csv
-outputs/
-fase2-draft-code/*.exe
+# Legacy draft code and installers (reference only, not tracked)
+fase2-draft-code/
+*.exe
