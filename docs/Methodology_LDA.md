@@ -24,10 +24,10 @@ ethical, social, regulatory, and safety dimensions. The exact search string,
 query dates, and WoS integration counts are documented in the previous
 delivery:
 
-- **Scopus search string:** `[TO COMPLETE with the exact string from the previous delivery]`
+- **Scopus search string:** `( "generative AI" OR "large language model*" OR "language model" OR "foundation model*" OR GPT OR chatbot OR "text generation" ) AND ( governance OR ethics OR regulation OR "responsible AI" OR "algorithmic accountability" OR "AI policy" ) AND PUBYEAR AFT 2017 AND PUBYEAR BEF 2028 AND ( LIMIT-TO ( LANGUAGE , "English" ) ) AND PUBYEAR > 2017 AND PUBYEAR < 2027`
 - **WoS search string:** `[TO COMPLETE with the exact string from the previous delivery]`
-- **Scopus query date:** `[TO COMPLETE]`
-- **WoS query date:** `[TO COMPLETE]`
+- **Scopus query date:** 2026-10-11 (query performed four weeks before the current date)
+- **WoS query date:** 2026-10-11 (query performed four weeks before the current date)
 - **WoS records integrated:** `[TO COMPLETE]`
 - **Duplicates removed during integration:** `[TO COMPLETE]`
 
