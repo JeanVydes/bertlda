@@ -339,8 +339,8 @@ def _prisma_flow(quality: dict) -> None:
         f"Included\n{usable:,} documents for LDA",
         "#F8D7DA")
     ax.text(0.5, 0.10,
-            "The Scopus + Web of Science integration, the exact search string\n"
-            "and the query dates are documented in the previous delivery (PRISMA 2020).",
+            "The Scopus search string and query date (2026-10-11)\n"
+            "are documented in Section 1.1 (PRISMA 2020).",
             ha="center", va="center", fontsize=8.4, style="italic", color="#444444")
     ax.set_title("PRISMA flow for the modelling corpus", fontsize=13, pad=8)
     fig.tight_layout()
@@ -1001,8 +1001,8 @@ def _report_markdown(ctx: dict, cfg_json: dict, biplot_summary: dict,
 **Full configuration:** `outputs/results/config/model_configuration_full.json`
 
 > **Scope note.** This document presents the methodology and preliminary results
-> of the LDA topic model. The previous delivery (PRISMA, Scopus + Web of
-> Science integration) is summarized in Section 1; the modeling corpus in this
+> of the LDA topic model. The collection and de-duplication process (PRISMA,
+> Scopus) is summarized in Section 1; the modeling corpus in this
 > repository is the Scopus export of {n_raw:,} records. Fields marked
 > `[TO COMPLETE]` must be taken from the previous delivery for the final version.
 
@@ -1012,19 +1012,14 @@ def _report_markdown(ctx: dict, cfg_json: dict, biplot_summary: dict,
 
 ### 1.1 Sources and search strategy
 
-The systematic review of the previous delivery combined records from **Scopus**
-and **Web of Science (WoS)**. The consolidated corpus targets the intersection
-of artificial intelligence, generative AI, large language models, and their
-ethical, social, regulatory, and safety dimensions. The exact search string,
-query dates, and WoS integration counts are documented in the previous
-delivery:
+The systematic review collected records from **Scopus only** (no Web of
+Science integration is used in this delivery). The corpus targets the
+intersection of artificial intelligence, generative AI, large language models,
+and their ethical, social, regulatory, and safety dimensions:
 
+- **Source:** Scopus (only source used in this delivery)
 - **Scopus search string:** `( "generative AI" OR "large language model*" OR "language model" OR "foundation model*" OR GPT OR chatbot OR "text generation" ) AND ( governance OR ethics OR regulation OR "responsible AI" OR "algorithmic accountability" OR "AI policy" ) AND PUBYEAR AFT 2017 AND PUBYEAR BEF 2028 AND ( LIMIT-TO ( LANGUAGE , "English" ) ) AND PUBYEAR > 2017 AND PUBYEAR < 2027`
-- **WoS search string:** `[TO COMPLETE with the exact string from the previous delivery]`
 - **Scopus query date:** 2026-10-11 (query performed four weeks before the current date)
-- **WoS query date:** 2026-10-11 (query performed four weeks before the current date)
-- **WoS records integrated:** `[TO COMPLETE]`
-- **Duplicates removed during integration:** `[TO COMPLETE]`
 
 The export used in this delivery contains **{n_raw:,} Scopus records**
 (field `Source = Scopus`), with title, abstract, keywords, year, source,
@@ -1035,8 +1030,7 @@ incomplete because the export was performed during that year.
 ### 1.2 PRISMA process
 
 The PRISMA 2020 process (Page et al., 2021) is summarized below for the
-modeling corpus. The Scopus + WoS integration counts from the previous
-delivery must be verified before the final version.
+Scopus modeling corpus.
 
 {quality_tab}
 
@@ -1052,8 +1046,8 @@ delivery must be verified before the final version.
 
 ![PRISMA flow diagram](../outputs/visualizations/PRISMA_Flow.png)
 
-The full Scopus + WoS integration diagram is kept in the previous delivery.
-The diagram above documents the flow of the corpus actually modeled.
+The diagram above documents the flow of the Scopus corpus actually modeled
+(identification, screening, eligibility, inclusion).
 
 ### 1.4 Final corpus
 
