@@ -1,0 +1,1390 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-08T00:28:51",
+  "project": "bertlda — LDA on an AI-ethics / generative-AI corpus",
+  "git_commit": "d4656a697f8d8bf9c928b2bfbf0b8f0343864154",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux-7.2.8-1-liquorix-amd64-x86_64-with-glibc2.41",
+    "packages": {
+      "gensim": "4.4.0",
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2",
+      "pyLDAvis": "3.4.1",
+      "nltk": "3.10.4",
+      "statsmodels": "0.15.0",
+      "geopandas": "1.2.0",
+      "sentence-transformers": "6.2.0",
+      "bertopic": "0.17.4"
+    }
+  },
+  "paths": {
+    "project_root": "/home/jean/bertlda",
+    "raw_corpus": "/home/jean/bertlda/raw_corpus.csv",
+    "results": "/home/jean/bertlda/outputs/results",
+    "visualizations": "/home/jean/bertlda/outputs/visualizations",
+    "models_lda": "/home/jean/bertlda/outputs/models/lda"
+  },
+  "config": {
+    "seed": 42,
+    "input_file": "/home/jean/bertlda/raw_corpus.csv",
+    "col_titulo": "Title",
+    "col_abstract": "Abstract",
+    "col_anio": "Year",
+    "col_pais": null,
+    "cols_opcionales": [
+      "Authors",
+      "Affiliations",
+      "Authors with affiliations",
+      "Correspondence Address",
+      "DOI",
+      "Source title",
+      "Publisher",
+      "Document Type",
+      "Open Access",
+      "Language of Original Document",
+      "Link",
+      "EID"
+    ],
+    "umbral_mayusculas": 0.8,
+    "min_palabras_doc": 20,
+    "compute": {
+      "embeddings_device": "auto",
+      "umap_backend": "cpu",
+      "hdbscan_backend": "cpu",
+      "deterministic": true,
+      "n_cores": null,
+      "batch_size": 16
+    },
+    "embedding_model": "sentence-transformers/allenai-specter",
+    "embedding_candidatos": [
+      [
+        "SciBERT (actual)",
+        "allenai/scibert_scivocab_uncased"
+      ],
+      [
+        "all-mpnet-base-v2",
+        "sentence-transformers/all-mpnet-base-v2"
+      ],
+      [
+        "SPECTER",
+        "sentence-transformers/allenai-specter"
+      ],
+      [
+        "BGE-base-en-v1.5",
+        "BAAI/bge-base-en-v1.5"
+      ]
+    ],
+    "normalizar_embeddings": true,
+    "max_seq_length": 512,
+    "vectorizer": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df_frac": 0.0015,
+      "min_df_min": 3,
+      "max_features": 50000
+    },
+    "ctfidf_reduce_frequent_words": true,
+    "restricciones": {
+      "max_outlier_rate": 0.35,
+      "min_n_topics": 5,
+      "max_dominance": 0.4
+    },
+    "pesos_score": {
+      "cv": 0.25,
+      "npmi": 0.2,
+      "diversity": 0.15,
+      "redundancy": 0.15,
+      "separation": 0.15,
+      "coverage": 0.1
+    },
+    "umbral_redundancia": 0.7,
+    "busqueda": {
+      "n_top_refinamiento": 3,
+      "hdbscan_coarse_method": "eom",
+      "hdbscan_coarse_epsilon": 0.0,
+      "seeds_estabilidad": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "n_top_estabilidad": 3
+    },
+    "seleccion_bertopic": {
+      "n_neighbors": null,
+      "n_components": null,
+      "min_cluster_size": null,
+      "min_samples": null,
+      "metodo": null,
+      "epsilon": null
+    },
+    "outliers": {
+      "reasignar": true,
+      "estrategia": "c-tf-idf",
+      "threshold": 0.1
+    },
+    "lda": {
+      "passes_final": 50,
+      "passes_lda": 30,
+      "passes_stability": 10,
+      "k_candidatos": null,
+      "n_corridas_estabilidad": 10,
+      "sensitivity_k": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "sensitivity_seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "sensitivity_passes": 10,
+      "top_words_stability": 10
+    },
+    "viz": {
+      "dpi": 150,
+      "formatos": [
+        "png",
+        "svg"
+      ],
+      "top_words": 20,
+      "max_topics_heatmap": 25,
+      "top_paises": 10,
+      "relevance_lambda": 0.6,
+      "biplot_max_documents": 1500
+    },
+    "report": {
+      "language": "es",
+      "top_sources": 15,
+      "top_countries": 12,
+      "top_institutions": 20,
+      "top_document_types": 10,
+      "reference_year_cutoff": 2026
+    }
+  },
+  "params": {
+    "n_docs": 19505,
+    "escala": "SMALL",
+    "k_min": 4,
+    "k_max": 40,
+    "k_step": 1,
+    "passes_lda": 30,
+    "passes_fijo": 30,
+    "no_below": 39,
+    "no_above": 0.5,
+    "bigram_min_count": 59,
+    "bigram_threshold": 8,
+    "alpha_grid": [
+      "symmetric",
+      "asymmetric",
+      0.01,
+      0.1
+    ],
+    "eta_grid": [
+      "symmetric",
+      0.01,
+      0.05,
+      0.5
+    ],
+    "coherence_sample": 10000,
+    "umap_grid": [
+      {
+        "n_neighbors": 10,
+        "n_components": 5,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 10,
+        "n_components": 10,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 10,
+        "n_components": 15,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 15,
+        "n_components": 5,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 15,
+        "n_components": 15,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 30,
+        "n_components": 5,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 30,
+        "n_components": 10,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 30,
+        "n_components": 15,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 50,
+        "n_components": 5,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 50,
+        "n_components": 10,
+        "min_dist": 0.0
+      },
+      {
+        "n_neighbors": 50,
+        "n_components": 15,
+        "min_dist": 0.0
+      }
+    ],
+    "umap_ref": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0
+    },
+    "umap_viz": {
+      "n_neighbors": 15,
+      "n_components": 2,
+      "min_dist": 0.1
+    },
+    "umap_viz_3d": {
+      "n_neighbors": 15,
+      "n_components": 3,
+      "min_dist": 0.1
+    },
+    "mcs_grid": [
+      49,
+      68,
+      98,
+      146,
+      195
+    ],
+    "mcs_ref": 98,
+    "hdbscan_ref": {
+      "min_cluster_size": 98,
+      "min_samples": 9,
+      "cluster_selection_method": "eom",
+      "cluster_selection_epsilon": 0.0,
+      "metric": "euclidean",
+      "prediction_data": true
+    },
+    "eps_grid": [
+      0.0
+    ],
+    "metodos_grid": [
+      "eom",
+      "leaf"
+    ],
+    "chunk_size": 2000,
+    "batch_size": 16,
+    "n_top_umap_hdbscan": 3,
+    "n_top_hdbscan_fino": 5
+  },
+  "corpus": {
+    "source": "Scopus CSV export (raw_corpus.csv)",
+    "n_records_raw": 20000,
+    "n_documents_modelled": 19505,
+    "year_range": "2018-2026",
+    "n_countries": 86,
+    "n_sources": 5697,
+    "n_excluded_by_length": 495,
+    "n_doi_duplicates": 20,
+    "n_title_duplicates": 59,
+    "n_docs_over_350_words": 739,
+    "quality_table": [
+      {
+        "metric": "Total records",
+        "value": "20000"
+      },
+      {
+        "metric": "With title",
+        "value": "20000"
+      },
+      {
+        "metric": "With abstract",
+        "value": "20000"
+      },
+      {
+        "metric": "With both",
+        "value": "20000"
+      },
+      {
+        "metric": "Without useful text",
+        "value": "0"
+      },
+      {
+        "metric": "DOI duplicates",
+        "value": "20"
+      },
+      {
+        "metric": "Title duplicates",
+        "value": "59"
+      },
+      {
+        "metric": "Excluded by length",
+        "value": "495"
+      },
+      {
+        "metric": "USABLE DOCUMENTS",
+        "value": "19505"
+      },
+      {
+        "metric": "Year range",
+        "value": "2018-2026"
+      },
+      {
+        "metric": "Countries (normalized)",
+        "value": "86"
+      },
+      {
+        "metric": "Corpus ALL CAPS",
+        "value": "0.0%"
+      },
+      {
+        "metric": "Uppercase normalization",
+        "value": "False"
+      },
+      {
+        "metric": "Docs >350 words",
+        "value": "739"
+      },
+      {
+        "metric": "Distinct sources",
+        "value": "5697"
+      }
+    ]
+  },
+  "preprocessing": {
+    "fields_used": [
+      "Title",
+      "Abstract"
+    ],
+    "fields_available_not_used": [
+      "Author Keywords",
+      "Index Keywords"
+    ],
+    "min_words_per_document": 20,
+    "lowercase": true,
+    "unicode_and_punctuation_cleaning": true,
+    "url_email_citation_copyright_removal": true,
+    "lemmatization": "WordNet (nouns, then verbs)",
+    "min_token_length": 3,
+    "stopword_layers": [
+      "NLTK English functional stopwords",
+      "editorial / publisher stopwords",
+      "methodological stopwords",
+      "AI-ethics domain terms"
+    ],
+    "n_stopwords": 288,
+    "bigrams": {
+      "min_count": 59,
+      "threshold": 8
+    },
+    "dictionary_filter": {
+      "no_below": 39,
+      "no_above": 0.5
+    },
+    "n_tokens_total": 2361836,
+    "n_tokens_mean": 121.09,
+    "vocab_train": 4533,
+    "vocab_eval": 23887,
+    "n_docs_with_empty_bow": 0
+  },
+  "lda": {
+    "implementation": "gensim.models.ldamodel.LdaModel (single process)",
+    "n_topics": 14,
+    "alpha": "asymmetric",
+    "eta": "symmetric",
+    "passes": 50,
+    "iterations_per_document": 50,
+    "random_seed": 42,
+    "n_documents": 19505,
+    "vocab_size": 4533,
+    "theta_shape": [
+      19505,
+      14
+    ],
+    "final_metrics": {
+      "cv": 0.5249,
+      "npmi": 0.0518,
+      "diversity": 0.7929,
+      "perplexity": -7.3229,
+      "dominance": 0.1824,
+      "entropy_norm": 0.9497,
+      "topics_empty": 0,
+      "K": 14
+    }
+  },
+  "k_selection": {
+    "evaluated_range": [
+      4,
+      23
+    ],
+    "n_candidates": 20,
+    "best_cv_k": 21,
+    "best_cv": 0.5556,
+    "chosen_k": 14,
+    "chosen_cv": 0.5406,
+    "table": [
+      {
+        "cv": 0.4826,
+        "npmi": 0.0377,
+        "diversity": 0.875,
+        "perplexity": -7.413,
+        "dominance": 0.274,
+        "entropy_norm": 0.9953,
+        "topics_empty": 0,
+        "K": 4,
+        "elapsed_s": 89.1
+      },
+      {
+        "cv": 0.4846,
+        "npmi": 0.0366,
+        "diversity": 0.82,
+        "perplexity": -7.3861,
+        "dominance": 0.2516,
+        "entropy_norm": 0.9891,
+        "topics_empty": 0,
+        "K": 5,
+        "elapsed_s": 90.3
+      },
+      {
+        "cv": 0.4841,
+        "npmi": 0.034,
+        "diversity": 0.75,
+        "perplexity": -7.3658,
+        "dominance": 0.2298,
+        "entropy_norm": 0.9882,
+        "topics_empty": 0,
+        "K": 6,
+        "elapsed_s": 93.4
+      },
+      {
+        "cv": 0.4989,
+        "npmi": 0.04,
+        "diversity": 0.7429,
+        "perplexity": -7.3513,
+        "dominance": 0.206,
+        "entropy_norm": 0.9864,
+        "topics_empty": 0,
+        "K": 7,
+        "elapsed_s": 88.5
+      },
+      {
+        "cv": 0.4806,
+        "npmi": 0.0347,
+        "diversity": 0.7125,
+        "perplexity": -7.3453,
+        "dominance": 0.1863,
+        "entropy_norm": 0.9894,
+        "topics_empty": 0,
+        "K": 8,
+        "elapsed_s": 89.4
+      },
+      {
+        "cv": 0.4922,
+        "npmi": 0.0406,
+        "diversity": 0.7444,
+        "perplexity": -7.3327,
+        "dominance": 0.1491,
+        "entropy_norm": 0.9917,
+        "topics_empty": 0,
+        "K": 9,
+        "elapsed_s": 95.2
+      },
+      {
+        "cv": 0.4865,
+        "npmi": 0.0386,
+        "diversity": 0.7,
+        "perplexity": -7.3298,
+        "dominance": 0.139,
+        "entropy_norm": 0.9884,
+        "topics_empty": 0,
+        "K": 10,
+        "elapsed_s": 92.8
+      },
+      {
+        "cv": 0.5377,
+        "npmi": 0.057,
+        "diversity": 0.8091,
+        "perplexity": -7.3059,
+        "dominance": 0.1288,
+        "entropy_norm": 0.986,
+        "topics_empty": 0,
+        "K": 11,
+        "elapsed_s": 182.5
+      },
+      {
+        "cv": 0.5189,
+        "npmi": 0.0502,
+        "diversity": 0.775,
+        "perplexity": -7.3105,
+        "dominance": 0.1518,
+        "entropy_norm": 0.9818,
+        "topics_empty": 0,
+        "K": 12,
+        "elapsed_s": 182.2
+      },
+      {
+        "cv": 0.5354,
+        "npmi": 0.061,
+        "diversity": 0.7769,
+        "perplexity": -7.3168,
+        "dominance": 0.1238,
+        "entropy_norm": 0.9689,
+        "topics_empty": 0,
+        "K": 13,
+        "elapsed_s": 191.4
+      },
+      {
+        "cv": 0.5406,
+        "npmi": 0.0581,
+        "diversity": 0.8,
+        "perplexity": -7.3209,
+        "dominance": 0.1774,
+        "entropy_norm": 0.9542,
+        "topics_empty": 0,
+        "K": 14,
+        "elapsed_s": 183.3
+      },
+      {
+        "cv": 0.5383,
+        "npmi": 0.0634,
+        "diversity": 0.7467,
+        "perplexity": -7.3229,
+        "dominance": 0.1963,
+        "entropy_norm": 0.9564,
+        "topics_empty": 0,
+        "K": 15,
+        "elapsed_s": 177.3
+      },
+      {
+        "cv": 0.535,
+        "npmi": 0.0611,
+        "diversity": 0.7688,
+        "perplexity": -7.3216,
+        "dominance": 0.1148,
+        "entropy_norm": 0.9638,
+        "topics_empty": 0,
+        "K": 16,
+        "elapsed_s": 175.0
+      },
+      {
+        "cv": 0.5298,
+        "npmi": 0.0567,
+        "diversity": 0.7588,
+        "perplexity": -7.3233,
+        "dominance": 0.1171,
+        "entropy_norm": 0.9573,
+        "topics_empty": 0,
+        "K": 17,
+        "elapsed_s": 179.7
+      },
+      {
+        "cv": 0.5524,
+        "npmi": 0.0641,
+        "diversity": 0.7778,
+        "perplexity": -7.3192,
+        "dominance": 0.136,
+        "entropy_norm": 0.9524,
+        "topics_empty": 0,
+        "K": 18,
+        "elapsed_s": 180.0
+      },
+      {
+        "cv": 0.5492,
+        "npmi": 0.0642,
+        "diversity": 0.8,
+        "perplexity": -7.3205,
+        "dominance": 0.1566,
+        "entropy_norm": 0.9499,
+        "topics_empty": 0,
+        "K": 19,
+        "elapsed_s": 180.2
+      },
+      {
+        "cv": 0.5471,
+        "npmi": 0.0655,
+        "diversity": 0.745,
+        "perplexity": -7.328,
+        "dominance": 0.1346,
+        "entropy_norm": 0.95,
+        "topics_empty": 0,
+        "K": 20,
+        "elapsed_s": 179.6
+      },
+      {
+        "cv": 0.5556,
+        "npmi": 0.071,
+        "diversity": 0.7952,
+        "perplexity": -7.3287,
+        "dominance": 0.1251,
+        "entropy_norm": 0.9556,
+        "topics_empty": 0,
+        "K": 21,
+        "elapsed_s": 180.9
+      },
+      {
+        "cv": 0.5535,
+        "npmi": 0.0715,
+        "diversity": 0.7818,
+        "perplexity": -7.327,
+        "dominance": 0.1247,
+        "entropy_norm": 0.9444,
+        "topics_empty": 0,
+        "K": 22,
+        "elapsed_s": 181.5
+      },
+      {
+        "cv": 0.5463,
+        "npmi": 0.0665,
+        "diversity": 0.7826,
+        "perplexity": -7.3371,
+        "dominance": 0.1059,
+        "entropy_norm": 0.9505,
+        "topics_empty": 0,
+        "K": 23,
+        "elapsed_s": 187.9
+      }
+    ]
+  },
+  "alpha_eta_search": {
+    "grid_size": 16,
+    "best": {
+      "cv": 0.5039,
+      "npmi": 0.0474,
+      "diversity": 0.7286,
+      "perplexity": -7.3136,
+      "dominance": 0.1136,
+      "entropy_norm": 0.9851,
+      "topics_empty": 0,
+      "K": 14,
+      "alpha": "asymmetric",
+      "eta": "symmetric"
+    },
+    "table": [
+      {
+        "cv": 0.4988,
+        "npmi": 0.0453,
+        "diversity": 0.6929,
+        "perplexity": -7.3118,
+        "dominance": 0.1155,
+        "entropy_norm": 0.9875,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "symmetric",
+        "eta": "symmetric"
+      },
+      {
+        "cv": 0.4982,
+        "npmi": 0.0451,
+        "diversity": 0.6929,
+        "perplexity": -7.3504,
+        "dominance": 0.1159,
+        "entropy_norm": 0.9873,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "symmetric",
+        "eta": "0.01"
+      },
+      {
+        "cv": 0.4988,
+        "npmi": 0.0453,
+        "diversity": 0.6929,
+        "perplexity": -7.3172,
+        "dominance": 0.1156,
+        "entropy_norm": 0.9874,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "symmetric",
+        "eta": "0.05"
+      },
+      {
+        "cv": 0.4915,
+        "npmi": 0.0405,
+        "diversity": 0.7,
+        "perplexity": -7.3074,
+        "dominance": 0.1141,
+        "entropy_norm": 0.9869,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "symmetric",
+        "eta": "0.5"
+      },
+      {
+        "cv": 0.5039,
+        "npmi": 0.0474,
+        "diversity": 0.7286,
+        "perplexity": -7.3136,
+        "dominance": 0.1136,
+        "entropy_norm": 0.9851,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "asymmetric",
+        "eta": "symmetric"
+      },
+      {
+        "cv": 0.5002,
+        "npmi": 0.0458,
+        "diversity": 0.7214,
+        "perplexity": -7.3522,
+        "dominance": 0.1158,
+        "entropy_norm": 0.9831,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "asymmetric",
+        "eta": "0.01"
+      },
+      {
+        "cv": 0.5006,
+        "npmi": 0.0459,
+        "diversity": 0.7286,
+        "perplexity": -7.3186,
+        "dominance": 0.1147,
+        "entropy_norm": 0.9841,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "asymmetric",
+        "eta": "0.05"
+      },
+      {
+        "cv": 0.5,
+        "npmi": 0.0464,
+        "diversity": 0.7143,
+        "perplexity": -7.3073,
+        "dominance": 0.1115,
+        "entropy_norm": 0.9849,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "asymmetric",
+        "eta": "0.5"
+      },
+      {
+        "cv": 0.4975,
+        "npmi": 0.0447,
+        "diversity": 0.6929,
+        "perplexity": -7.3281,
+        "dominance": 0.1173,
+        "entropy_norm": 0.9868,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.01",
+        "eta": "symmetric"
+      },
+      {
+        "cv": 0.4986,
+        "npmi": 0.0455,
+        "diversity": 0.6929,
+        "perplexity": -7.3671,
+        "dominance": 0.1174,
+        "entropy_norm": 0.9865,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.01",
+        "eta": "0.01"
+      },
+      {
+        "cv": 0.4962,
+        "npmi": 0.0443,
+        "diversity": 0.6857,
+        "perplexity": -7.3336,
+        "dominance": 0.117,
+        "entropy_norm": 0.987,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.01",
+        "eta": "0.05"
+      },
+      {
+        "cv": 0.4926,
+        "npmi": 0.0421,
+        "diversity": 0.6929,
+        "perplexity": -7.3207,
+        "dominance": 0.1159,
+        "entropy_norm": 0.9865,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.01",
+        "eta": "0.5"
+      },
+      {
+        "cv": 0.4988,
+        "npmi": 0.0453,
+        "diversity": 0.6929,
+        "perplexity": -7.3158,
+        "dominance": 0.115,
+        "entropy_norm": 0.9875,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.1",
+        "eta": "symmetric"
+      },
+      {
+        "cv": 0.4982,
+        "npmi": 0.0451,
+        "diversity": 0.6929,
+        "perplexity": -7.3542,
+        "dominance": 0.1152,
+        "entropy_norm": 0.9875,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.1",
+        "eta": "0.01"
+      },
+      {
+        "cv": 0.4982,
+        "npmi": 0.0451,
+        "diversity": 0.6929,
+        "perplexity": -7.3211,
+        "dominance": 0.1151,
+        "entropy_norm": 0.9874,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.1",
+        "eta": "0.05"
+      },
+      {
+        "cv": 0.4923,
+        "npmi": 0.0413,
+        "diversity": 0.7071,
+        "perplexity": -7.3119,
+        "dominance": 0.1135,
+        "entropy_norm": 0.9871,
+        "topics_empty": 0,
+        "K": 14,
+        "alpha": "0.1",
+        "eta": "0.5"
+      }
+    ]
+  },
+  "stability": {
+    "table": [
+      {
+        "K": 4,
+        "ARI_medio": 0.34833282781435404,
+        "ARI_min": 0.21595680220503646,
+        "cv_seed_std": 0.010994730556043643,
+        "n_seeds": 10,
+        "elapsed_s": 787.4
+      },
+      {
+        "K": 5,
+        "ARI_medio": 0.40267085220274,
+        "ARI_min": 0.2521935531257138,
+        "cv_seed_std": 0.007497492914301411,
+        "n_seeds": 10,
+        "elapsed_s": 813.4
+      },
+      {
+        "K": 6,
+        "ARI_medio": 0.3481926395252479,
+        "ARI_min": 0.2429582958967235,
+        "cv_seed_std": 0.014433904530652825,
+        "n_seeds": 10,
+        "elapsed_s": 803.5
+      },
+      {
+        "K": 14,
+        "ARI_medio": 0.3088730659107038,
+        "ARI_min": 0.24251630503012045,
+        "cv_seed_std": 0.013389846899796873,
+        "n_seeds": 10,
+        "elapsed_s": 890.6
+      }
+    ]
+  },
+  "sensitivity": {
+    "k_neighbourhood": [
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "passes": 10,
+    "seed_table": [
+      {
+        "K": 12,
+        "jaccard_mean": 0.4321,
+        "jaccard_std": 0.0544,
+        "jaccard_min": 0.3557,
+        "ari_mean": 0.2808,
+        "ari_std": 0.0292,
+        "ari_min": 0.2412,
+        "cv_mean": 0.5203,
+        "cv_std": 0.0123,
+        "n_seeds": 5,
+        "n_pairs": 10
+      },
+      {
+        "K": 13,
+        "jaccard_mean": 0.3673,
+        "jaccard_std": 0.0427,
+        "jaccard_min": 0.3008,
+        "ari_mean": 0.2705,
+        "ari_std": 0.0256,
+        "ari_min": 0.2216,
+        "cv_mean": 0.5322,
+        "cv_std": 0.0114,
+        "n_seeds": 5,
+        "n_pairs": 10
+      },
+      {
+        "K": 14,
+        "jaccard_mean": 0.3785,
+        "jaccard_std": 0.0444,
+        "jaccard_min": 0.2915,
+        "ari_mean": 0.2806,
+        "ari_std": 0.0358,
+        "ari_min": 0.2141,
+        "cv_mean": 0.5244,
+        "cv_std": 0.0126,
+        "n_seeds": 5,
+        "n_pairs": 10
+      },
+      {
+        "K": 15,
+        "jaccard_mean": 0.3074,
+        "jaccard_std": 0.0376,
+        "jaccard_min": 0.2565,
+        "ari_mean": 0.2472,
+        "ari_std": 0.0346,
+        "ari_min": 0.2221,
+        "cv_mean": 0.5333,
+        "cv_std": 0.0156,
+        "n_seeds": 5,
+        "n_pairs": 10
+      },
+      {
+        "K": 16,
+        "jaccard_mean": 0.3308,
+        "jaccard_std": 0.0461,
+        "jaccard_min": 0.2468,
+        "ari_mean": 0.2532,
+        "ari_std": 0.0316,
+        "ari_min": 0.2097,
+        "cv_mean": 0.5243,
+        "cv_std": 0.0104,
+        "n_seeds": 5,
+        "n_pairs": 10
+      }
+    ],
+    "k_table": [
+      {
+        "K": 12,
+        "reference_K": 14,
+        "jaccard_best_mean": 0.6647,
+        "jaccard_best_median": 0.6667,
+        "jaccard_best_min": 0.1111,
+        "jaccard_best_max": 1.0,
+        "topics_matched_ge_0_5": 10,
+        "topics_total": 12,
+        "reference_topics_covered_ge_0_5": 10
+      },
+      {
+        "K": 13,
+        "reference_K": 14,
+        "jaccard_best_mean": 0.5309,
+        "jaccard_best_median": 0.5385,
+        "jaccard_best_min": 0.1111,
+        "jaccard_best_max": 1.0,
+        "topics_matched_ge_0_5": 7,
+        "topics_total": 13,
+        "reference_topics_covered_ge_0_5": 7
+      },
+      {
+        "K": 14,
+        "reference_K": 14,
+        "jaccard_best_mean": 1.0,
+        "jaccard_best_median": 1.0,
+        "jaccard_best_min": 1.0,
+        "jaccard_best_max": 1.0,
+        "topics_matched_ge_0_5": 14,
+        "topics_total": 14,
+        "reference_topics_covered_ge_0_5": 14
+      },
+      {
+        "K": 15,
+        "reference_K": 14,
+        "jaccard_best_mean": 0.5255,
+        "jaccard_best_median": 0.5385,
+        "jaccard_best_min": 0.0,
+        "jaccard_best_max": 1.0,
+        "topics_matched_ge_0_5": 8,
+        "topics_total": 15,
+        "reference_topics_covered_ge_0_5": 8
+      },
+      {
+        "K": 16,
+        "reference_K": 14,
+        "jaccard_best_mean": 0.4404,
+        "jaccard_best_median": 0.381,
+        "jaccard_best_min": 0.0,
+        "jaccard_best_max": 1.0,
+        "topics_matched_ge_0_5": 7,
+        "topics_total": 16,
+        "reference_topics_covered_ge_0_5": 7
+      }
+    ]
+  },
+  "descriptive": {
+    "document_types": [
+      {
+        "document_type": "Article",
+        "documents": 8319,
+        "percentage": 42.65
+      },
+      {
+        "document_type": "Conference paper",
+        "documents": 8011,
+        "percentage": 41.07
+      },
+      {
+        "document_type": "Review",
+        "documents": 1806,
+        "percentage": 9.26
+      },
+      {
+        "document_type": "Book chapter",
+        "documents": 838,
+        "percentage": 4.3
+      },
+      {
+        "document_type": "Note",
+        "documents": 164,
+        "percentage": 0.84
+      },
+      {
+        "document_type": "Book",
+        "documents": 127,
+        "percentage": 0.65
+      },
+      {
+        "document_type": "Editorial",
+        "documents": 80,
+        "percentage": 0.41
+      },
+      {
+        "document_type": "Letter",
+        "documents": 53,
+        "percentage": 0.27
+      },
+      {
+        "document_type": "Short survey",
+        "documents": 47,
+        "percentage": 0.24
+      },
+      {
+        "document_type": "Conference review",
+        "documents": 42,
+        "percentage": 0.22
+      },
+      {
+        "document_type": "Erratum",
+        "documents": 7,
+        "percentage": 0.04
+      },
+      {
+        "document_type": "Data paper",
+        "documents": 6,
+        "percentage": 0.03
+      },
+      {
+        "document_type": "Retracted",
+        "documents": 5,
+        "percentage": 0.03
+      }
+    ],
+    "publishers_top": [
+      {
+        "publisher": "Institute of Electrical and Electronics Engineers Inc.",
+        "documents": 3007,
+        "percentage": 15.42
+      },
+      {
+        "publisher": "Springer Science and Business Media Deutschland GmbH",
+        "documents": 1388,
+        "percentage": 7.12
+      },
+      {
+        "publisher": "Association for Computational Linguistics (ACL)",
+        "documents": 1182,
+        "percentage": 6.06
+      },
+      {
+        "publisher": "Multidisciplinary Digital Publishing Institute (MDPI)",
+        "documents": 1171,
+        "percentage": 6.0
+      },
+      {
+        "publisher": "Association for Computing Machinery, Inc",
+        "documents": 988,
+        "percentage": 5.07
+      },
+      {
+        "publisher": "Association for Computing Machinery",
+        "documents": 802,
+        "percentage": 4.11
+      },
+      {
+        "publisher": "Elsevier B.V.",
+        "documents": 751,
+        "percentage": 3.85
+      },
+      {
+        "publisher": "Elsevier Ltd",
+        "documents": 746,
+        "percentage": 3.82
+      },
+      {
+        "publisher": "Springer Nature",
+        "documents": 436,
+        "percentage": 2.24
+      },
+      {
+        "publisher": "John Wiley and Sons Inc",
+        "documents": 434,
+        "percentage": 2.23
+      },
+      {
+        "publisher": "Frontiers Media SA",
+        "documents": 399,
+        "percentage": 2.05
+      },
+      {
+        "publisher": "Nature Research",
+        "documents": 394,
+        "percentage": 2.02
+      },
+      {
+        "publisher": "Springer",
+        "documents": 367,
+        "percentage": 1.88
+      },
+      {
+        "publisher": "JMIR Publications Inc.",
+        "documents": 323,
+        "percentage": 1.66
+      },
+      {
+        "publisher": "CEUR-WS",
+        "documents": 281,
+        "percentage": 1.44
+      }
+    ],
+    "institutions_top": [
+      {
+        "institution": "University of California",
+        "documents": 354,
+        "percentage": 1.81
+      },
+      {
+        "institution": "Stanford University",
+        "documents": 326,
+        "percentage": 1.67
+      },
+      {
+        "institution": "Tsinghua University",
+        "documents": 322,
+        "percentage": 1.65
+      },
+      {
+        "institution": "Carnegie Mellon University",
+        "documents": 255,
+        "percentage": 1.31
+      },
+      {
+        "institution": "Zhejiang University",
+        "documents": 249,
+        "percentage": 1.28
+      },
+      {
+        "institution": "National University of Singapore",
+        "documents": 239,
+        "percentage": 1.23
+      },
+      {
+        "institution": "Nanyang Technological University",
+        "documents": 217,
+        "percentage": 1.11
+      },
+      {
+        "institution": "University of Oxford",
+        "documents": 211,
+        "percentage": 1.08
+      },
+      {
+        "institution": "Shanghai Jiao Tong University",
+        "documents": 203,
+        "percentage": 1.04
+      },
+      {
+        "institution": "University of Washington",
+        "documents": 201,
+        "percentage": 1.03
+      },
+      {
+        "institution": "University of Cambridge",
+        "documents": 191,
+        "percentage": 0.98
+      },
+      {
+        "institution": "University of Toronto",
+        "documents": 172,
+        "percentage": 0.88
+      },
+      {
+        "institution": "Peking University",
+        "documents": 168,
+        "percentage": 0.86
+      },
+      {
+        "institution": "Renmin University of China",
+        "documents": 152,
+        "percentage": 0.78
+      },
+      {
+        "institution": "University of Chinese Academy of Sciences",
+        "documents": 151,
+        "percentage": 0.77
+      },
+      {
+        "institution": "Fudan University",
+        "documents": 150,
+        "percentage": 0.77
+      },
+      {
+        "institution": "Harvard University",
+        "documents": 147,
+        "percentage": 0.75
+      },
+      {
+        "institution": "University of Pennsylvania",
+        "documents": 140,
+        "percentage": 0.72
+      },
+      {
+        "institution": "University of Michigan",
+        "documents": 138,
+        "percentage": 0.71
+      },
+      {
+        "institution": "University of Southern California",
+        "documents": 137,
+        "percentage": 0.7
+      }
+    ]
+  },
+  "artifacts": [
+    "outputs/results/config/model_configuration_full.json",
+    "outputs/results/corpus/annual_distribution.csv",
+    "outputs/results/corpus/corpus_quality.csv",
+    "outputs/results/corpus/country_distribution.csv",
+    "outputs/results/corpus/document_type_distribution.csv",
+    "outputs/results/corpus/excluded_documents.csv",
+    "outputs/results/corpus/institution_ranking.csv",
+    "outputs/results/corpus/publisher_ranking.csv",
+    "outputs/results/corpus/source_ranking.csv",
+    "outputs/results/corpus/stopword_candidates.csv",
+    "outputs/results/lda/hjbiplot_countries.csv",
+    "outputs/results/lda/hjbiplot_documents_sample.csv",
+    "outputs/results/lda/hjbiplot_summary.csv",
+    "outputs/results/lda/hjbiplot_years.csv",
+    "outputs/results/lda/lda_alpha_eta_search.csv",
+    "outputs/results/lda/lda_final_metrics.csv",
+    "outputs/results/lda/lda_k_decision.csv",
+    "outputs/results/lda/lda_k_search.csv",
+    "outputs/results/lda/lda_ranking.csv",
+    "outputs/results/lda/lda_sensitivity_k.csv",
+    "outputs/results/lda/lda_sensitivity_k_overlap.csv",
+    "outputs/results/lda/lda_sensitivity_pairs.csv",
+    "outputs/results/lda/lda_sensitivity_seeds.csv",
+    "outputs/results/lda/lda_stability.csv",
+    "outputs/results/lda/lda_theta.csv",
+    "outputs/results/lda/lda_topic_summary.csv",
+    "outputs/results/lda/ldavis_relevance_terms.csv",
+    "outputs/results/model_configuration_lda.json",
+    "outputs/visualizations/LDA_HJBiplot_Countries.png",
+    "outputs/visualizations/LDA_HJBiplot_Countries.svg",
+    "outputs/visualizations/LDA_HJBiplot_Documents.png",
+    "outputs/visualizations/LDA_HJBiplot_Documents.svg",
+    "outputs/visualizations/LDA_HJBiplot_Years.png",
+    "outputs/visualizations/LDA_HJBiplot_Years.svg",
+    "outputs/visualizations/LDA_K_Coherence.png",
+    "outputs/visualizations/LDA_K_Coherence.svg",
+    "outputs/visualizations/LDA_Sensitivity_K_Overlap.png",
+    "outputs/visualizations/LDA_Sensitivity_K_Overlap.svg",
+    "outputs/visualizations/LDA_Sensitivity_Stability.png",
+    "outputs/visualizations/LDA_Sensitivity_Stability.svg",
+    "outputs/visualizations/LDA_Similarity_Cosine.png",
+    "outputs/visualizations/LDA_Similarity_Cosine.svg",
+    "outputs/visualizations/LDA_Similitud_Hellinger.png",
+    "outputs/visualizations/LDA_Similitud_Hellinger.svg",
+    "outputs/visualizations/LDA_Similitud_JensenShannon.png",
+    "outputs/visualizations/LDA_Similitud_JensenShannon.svg",
+    "outputs/visualizations/LDA_TopWords_Heatmap.png",
+    "outputs/visualizations/LDA_TopWords_Heatmap.svg",
+    "outputs/visualizations/LDA_Topic_x_Country.png",
+    "outputs/visualizations/LDA_Topic_x_Country.svg",
+    "outputs/visualizations/LDA_Topic_x_Year.png",
+    "outputs/visualizations/LDA_Topic_x_Year.svg",
+    "outputs/visualizations/LDAvis.html",
+    "outputs/visualizations/LDAvis_Intertopic_Map.png",
+    "outputs/visualizations/LDAvis_Intertopic_Map.svg",
+    "outputs/visualizations/LDAvis_Relevance_Heatmap.png",
+    "outputs/visualizations/LDAvis_Relevance_Heatmap.svg",
+    "outputs/visualizations/PRISMA_Flow.png",
+    "outputs/visualizations/PRISMA_Flow.svg",
+    "outputs/visualizations/World_Map_Publications.png",
+    "outputs/visualizations/World_Map_Publications.svg",
+    "outputs/visualizations/annual_distribution.png",
+    "outputs/visualizations/annual_distribution.svg",
+    "outputs/visualizations/annual_trend.png",
+    "outputs/visualizations/annual_trend.svg",
+    "outputs/visualizations/country_distribution_top20.png",
+    "outputs/visualizations/country_distribution_top20.svg",
+    "outputs/visualizations/country_year_heatmap.png",
+    "outputs/visualizations/country_year_heatmap.svg",
+    "outputs/visualizations/document_type_distribution.png",
+    "outputs/visualizations/document_type_distribution.svg",
+    "outputs/visualizations/institution_ranking_top20.png",
+    "outputs/visualizations/institution_ranking_top20.svg",
+    "outputs/visualizations/source_ranking_top15.png",
+    "outputs/visualizations/source_ranking_top15.svg",
+    "outputs/models/lda/lda_final.model",
+    "outputs/models/lda/lda_final.model.expElogbeta.npy",
+    "outputs/models/lda/lda_final.model.id2word",
+    "outputs/models/lda/lda_final.model.state"
+  ]
+}

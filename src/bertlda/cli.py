@@ -46,6 +46,10 @@ PHASE_REGISTRY = [
      "Visualizations for LDA and BERTopic."),
     ("phase4", "phase4_trends", "main",
      "Temporal trend analysis (OLS, Mann-Kendall, beta regression)."),
+    ("phase5", "phase5_sensitivity", "main",
+     "LDA sensitivity: seed stability (Jaccard/ARI) + K neighbourhood."),
+    ("phase6", "phase6_report", "main",
+     "Deliverables: full config JSON, HJ-Biplot, LDAvis, Methodology_LDA.md."),
     ("preprocess-corpus", "preprocess_corpus", "main",
      "Preprocess a Scopus export corpus (Title+Abstract -> tokens)."),
 ]

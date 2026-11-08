@@ -27,6 +27,8 @@ Phases run independently (resumable via checkpoints and CSVs):
 | 2c | `phase2c_bertopic_final` | Final BERTopic model from a manually selected grid row. |
 | 3 | `phase3_visualizations` | LDA + BERTopic visualizations (PNG/SVG/HTML). |
 | 4 | `phase4_trends` | Temporal trend analysis (OLS, Mann-Kendall, beta regression). |
+| 5 | `phase5_sensitivity` | LDA sensitivity: seed stability (Jaccard/ARI) + K neighbourhood. |
+| 6 | `phase6_report` | Deliverables: full config JSON, HJ-Biplot, LDAvis, `docs/Methodology_LDA.md`. |
 
 Invoke via CLI:
 
@@ -40,6 +42,8 @@ bertlda --phase phase2b
 bertlda --phase phase2c   # after editing CFG['seleccion_bertopic'] in config.py
 bertlda --phase phase3
 bertlda --phase phase4
+bertlda --phase phase5
+bertlda --phase phase6   # add --skip-ldavis to skip the heavy pyLDAvis HTML step
 bertlda --phase preprocess-corpus --input raw_corpus.csv
 ```
 

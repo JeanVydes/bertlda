@@ -1,0 +1,4 @@
+﻿dataset,n_rows,n_cols,explained_axis1,explained_axis2,mean_row_cos2,mean_col_cos2
+years,5,14,72.33,25.15,0.9237,0.9646
+countries,12,14,61.2,26.89,0.6774,0.6355
+documents,1500,14,20.29,11.72,0.3113,0.2109

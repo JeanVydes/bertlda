@@ -172,8 +172,15 @@ CFG = {
     # LDA
     "lda": {
         "passes_final": 50,
+        "passes_lda": 30,
+        "passes_stability": 10,
         "k_candidatos": None,
         "n_corridas_estabilidad": 10,
+        # Sensitivity analysis (assignment section 6)
+        "sensitivity_k": [12, 13, 14, 15, 16],
+        "sensitivity_seeds": [42, 43, 44, 45, 46],
+        "sensitivity_passes": 10,
+        "top_words_stability": 10,
     },
 
     # Visualization
@@ -183,6 +190,18 @@ CFG = {
         "top_words": 20,
         "max_topics_heatmap": 25,
         "top_paises": 10,
+        "relevance_lambda": 0.6,
+        "biplot_max_documents": 1500,
+    },
+
+    # Report / exports
+    "report": {
+        "language": "es",
+        "top_sources": 15,
+        "top_countries": 12,
+        "top_institutions": 20,
+        "top_document_types": 10,
+        "reference_year_cutoff": 2026,
     },
 }
 

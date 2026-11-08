@@ -30,7 +30,19 @@ uv sync
   - Phase 3 LDA viz: similarity (cosine/Hellinger/Jensen-Shannon), top-words
     heatmap, topic × year, topic × country in `outputs/visualizations/`.
   - Phase 1a grid partial (K=4…23) retained in `lda_k_search.csv`.
-- BERTopic (2a/2b/2c) and Phase 4 (trends) **not done**.
+- Sensitivity (Phase 5) **done**: K∈{12,13,14,15,16} × 5 seeds
+  (`lda_sensitivity_pairs.csv`, `lda_sensitivity_seeds.csv`,
+  `lda_sensitivity_k.csv`, `lda_sensitivity_k_overlap.csv`) + stability /
+  K-overlap figures. For K=14: Jaccard mean 0.3785, ARI mean 0.2806.
+- Deliverables (Phase 6) **done**: `docs/Methodology_LDA.md` (the assignment
+  report, sections 1–9 + annexes), full config
+  `outputs/results/config/model_configuration_full.json`, HJ-Biplot
+  (years/countries/documents × topics + cos² tables), LDAvis
+  (`outputs/visualizations/LDAvis.html` + intertopic map + relevance tables
+  for λ∈{0, 0.6, 1}), PRISMA flow diagram, descriptive extras
+  (document types, publishers, institutions).
+- BERTopic (2a/2b/2c) and Phase 4 (trends) **not done** (not required by the
+  current assignment).
 
 ## Phase sequence and commands
 
@@ -68,6 +80,12 @@ bertlda --phase phase3
 
 # Temporal trends (OLS / Mann-Kendall / beta regression)
 bertlda --phase phase4
+
+# LDA sensitivity (seed stability + K neighbourhood) — resumable
+bertlda --phase phase5
+
+# Final deliverables: config JSON, HJ-Biplot, LDAvis, Methodology_LDA.md
+bertlda --phase phase6
 ```
 
 ## Resumability notes
