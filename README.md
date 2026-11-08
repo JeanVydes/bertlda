@@ -1,10 +1,13 @@
-# bertlda
+# bertlda — LDA topic modeling (Scopus only)
 
-Multi-stage LDA topic-modeling pipeline for Scopus CSV exports,
-adapted to CSV-only workflows. Corpus topic: AI ethics / generative AI.
+Multi-stage topic-modeling pipeline using **only LDA** (no BERTopic) on a
+Scopus export of the AI-ethics / generative-AI literature. All exports are
+CSV-only (never xlsx); heavy phases are resumable via checkpoints.
 
-Final model: **K=27** topics, alpha=asymmetric, eta=0.5 (see
-`outputs/results/model_configuration_lda.json` and `docs/Methodology_LDA.md`).
+Final model: **K=27** topics (coherence plateau, smallest K within 1% of max
+C_v), alpha=asymmetric, eta=0.5 (see `outputs/results/model_configuration_lda.json`,
+full configuration in `outputs/results/config/model_configuration_full.json`,
+and the report in `docs/Methodology_LDA.md`).
 
 ## Setup
 
