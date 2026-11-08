@@ -17,6 +17,7 @@ dependencies = [
     "pandas>=3.1.0",
     "pycountry>=26.2.16",
     "pyldavis>=3.4.1",
+    "python-docx>=1.2.0",
     "scikit-learn>=1.9",
     "statsmodels>=0.15.0",
     "wordcloud>=1.9.6",
