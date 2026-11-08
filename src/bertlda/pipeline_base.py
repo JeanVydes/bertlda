@@ -28,14 +28,13 @@ from config import (
 # Output sub-folders
 CORPUS_AUDIT_DIR = RESULTS_DIR / "corpus"
 LDA_RESULTS_DIR = RESULTS_DIR / "lda"
-BERTOPIC_RESULTS_DIR = RESULTS_DIR / "bertopic"
 TRENDS_DIR = RESULTS_DIR / "trends"
 
 
 def asegurar_carpetas():
     for d in [
         CHECKPOINT_DIR, RESULTS_DIR, VIZ_DIR, MODELS_DIR,
-        CORPUS_AUDIT_DIR, LDA_RESULTS_DIR, BERTOPIC_RESULTS_DIR,
+        CORPUS_AUDIT_DIR, LDA_RESULTS_DIR,
         TRENDS_DIR,
     ]:
         d.mkdir(parents=True, exist_ok=True)

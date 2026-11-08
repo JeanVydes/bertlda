@@ -14,7 +14,7 @@ Classification (alpha=0.05, with Benjamini-Hochberg FDR correction):
   Increasing* / Declining*: only one significant, same sign
   Stable                 : discordant signs or neither significant
 
-Reads:  LDA and/or BERTopic result CSVs
+Reads:  LDA result CSVs
 Writes: outputs/results/trends/trend_analysis_<MODEL>.csv
         outputs/results/trends/prevalencia_anual_<MODEL>.csv
         outputs/visualizations/trend_grid_<MODEL>.png/.svg
@@ -286,32 +286,12 @@ def cargar_lda():
     return prop, total, nombres
 
 
-def cargar_bertopic():
-    path = RUTAS["results"] / "bertopic" / "resultados_bertopic.csv"
-    info_path = RUTAS["results"] / "bertopic" / "bertopic_topic_info.csv"
-    if not path.exists():
-        return None
-    docs = pd.read_csv(path)
-    col_t = "topic_reduced" if "topic_reduced" in docs.columns else "topic_original"
-    etiquetas = {}
-    if info_path.exists():
-        try:
-            info = pd.read_csv(info_path)
-            if "Topic" in info.columns and "Name" in info.columns:
-                etiquetas = {int(t): str(n) for t, n in zip(info["Topic"], info["Name"])}
-        except Exception:
-            pass
-    prop, total, nombres = series_desde_asignacion(docs, col_t, "anio", etiquetas)
-    return prop, total, nombres
-
-
 def main() -> dict:
     _guard_statsmodels()
     asegurar_carpetas()
     print_separador("PHASE 4 — TEMPORAL TREND ANALYSIS")
     t0 = perf_counter()
-    hecho = False
-    for modelo, cargar in [("BERTopic", cargar_bertopic), ("LDA", cargar_lda)]:
+    for modelo, cargar in [("LDA", cargar_lda)]:
         print(f"\n-- {modelo} --")
         try:
             datos = cargar()

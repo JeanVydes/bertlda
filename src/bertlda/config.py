@@ -2,7 +2,7 @@
 """
 config.py
 =========
-Central configuration for the topic-modeling pipeline (LDA + BERTopic) for
+Central configuration for the LDA topic-modeling pipeline for
 src/bertlda. Todo se exporta a CSV; no se usa xlsx.
 
 Usage:
@@ -33,7 +33,6 @@ RUTAS = {
     "results": RESULTS_DIR,
     "visualizations": VIZ_DIR,
     "models_lda": MODELS_DIR / "lda",
-    "models_bertopic": MODELS_DIR / "bertopic",
 }
 
 # -----------------------------------------------------------------------------
@@ -95,78 +94,10 @@ CFG = {
     # Minimum words (Title+Abstract) for a document to enter the model
     "min_palabras_doc": 20,
 
-    # Compute
+    # Compute (LDA is CPU-only for reproducibility)
     "compute": {
-        "embeddings_device": "auto",   # auto | cuda | cpu
-        "umap_backend": "cpu",         # cpu | cuml
-        "hdbscan_backend": "cpu",
         "deterministic": True,
         "n_cores": None,               # None = automático
-        "batch_size": 16,
-    },
-
-    # Embeddings
-    "embedding_model": "sentence-transformers/allenai-specter",
-    "embedding_candidatos": [
-        ("SciBERT (actual)", "allenai/scibert_scivocab_uncased"),
-        ("all-mpnet-base-v2", "sentence-transformers/all-mpnet-base-v2"),
-        ("SPECTER", "sentence-transformers/allenai-specter"),
-        ("BGE-base-en-v1.5", "BAAI/bge-base-en-v1.5"),
-    ],
-    "normalizar_embeddings": True,
-    "max_seq_length": 512,
-
-    # Vectorizer / c-TF-IDF
-    "vectorizer": {
-        "ngram_range": (1, 2),
-        "min_df_frac": 0.0015,
-        "min_df_min": 3,
-        "max_features": 50_000,
-    },
-    "ctfidf_reduce_frequent_words": True,
-
-    # Hard constraints (declared a priori)
-    "restricciones": {
-        "max_outlier_rate": 0.35,
-        "min_n_topics": 5,
-        "max_dominance": 0.40,
-    },
-
-    # Multi-criteria score weights
-    "pesos_score": {
-        "cv": 0.25,
-        "npmi": 0.20,
-        "diversity": 0.15,
-        "redundancy": 0.15,
-        "separation": 0.15,
-        "coverage": 0.10,
-    },
-    "umbral_redundancia": 0.70,
-
-    # Staged search
-    "busqueda": {
-        "n_top_refinamiento": 3,
-        "hdbscan_coarse_method": "eom",
-        "hdbscan_coarse_epsilon": 0.0,
-        "seeds_estabilidad": [42, 43, 44, 45, 46],
-        "n_top_estabilidad": 3,
-    },
-
-    # Manual selection (filled after reviewing etapa2_hdbscan.csv)
-    "seleccion_bertopic": {
-        "n_neighbors": None,
-        "n_components": None,
-        "min_cluster_size": None,
-        "min_samples": None,
-        "metodo": None,
-        "epsilon": None,
-    },
-
-    # Outliers
-    "outliers": {
-        "reasignar": True,
-        "estrategia": "c-tf-idf",
-        "threshold": 0.10,
     },
 
     # LDA
@@ -177,7 +108,7 @@ CFG = {
         "k_candidatos": None,
         "n_corridas_estabilidad": 10,
         # Sensitivity analysis (assignment section 6)
-        "sensitivity_k": [12, 13, 14, 15, 16],
+        "sensitivity_k": [25, 26, 27, 28, 29],
         "sensitivity_seeds": [42, 43, 44, 45, 46],
         "sensitivity_passes": 10,
         "top_words_stability": 10,
@@ -196,7 +127,7 @@ CFG = {
 
     # Report / exports
     "report": {
-        "language": "es",
+        "language": "en",
         "top_sources": 15,
         "top_countries": 12,
         "top_institutions": 20,

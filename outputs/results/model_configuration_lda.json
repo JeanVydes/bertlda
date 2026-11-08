@@ -1,8 +1,8 @@
 {
-  "fecha": "2026-11-03T12:23:02",
-  "k_final": 14,
+  "fecha": "2026-11-08T03:48:23",
+  "k_final": 27,
   "alpha": "asymmetric",
-  "eta": "symmetric",
+  "eta": "0.5",
   "passes": 50,
   "seed": 42,
   "n_docs": 19505,

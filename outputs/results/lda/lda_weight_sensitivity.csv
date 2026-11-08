@@ -1,0 +1,5 @@
+﻿scheme,plateau,parsimony,interpretability,K_winner
+declared,0.4,0.3,0.3,4
+equal,0.3333333333333333,0.3333333333333333,0.3333333333333333,4
+pars_dom,0.25,0.5,0.25,4
+plateau_dom,0.5,0.25,0.25,4

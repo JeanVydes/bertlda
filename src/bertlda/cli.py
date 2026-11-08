@@ -2,7 +2,7 @@
 """
 cli.py
 ======
-Command-line interface for the bertlda multi-stage topic-modeling pipeline.
+Command-line interface for the bertlda multi-stage LDA pipeline.
 
 Examples
 --------
@@ -36,14 +36,8 @@ PHASE_REGISTRY = [
      "LDA decision: stability, K choice, alpha/eta search."),
     ("phase1c", "phase1c_lda_final", "main",
      "LDA final model: training, Theta, topics, exports."),
-    ("phase2a", "phase2a_embeddings_compare", "main",
-     "Compare embedding models (optional, heavy)."),
-    ("phase2b", "phase2b_bertopic_grid", "main",
-     "BERTopic grid: UMAP + HDBSCAN exploration."),
-    ("phase2c", "phase2c_bertopic_final", "main",
-     "BERTopic final model from a manually selected grid combination."),
     ("phase3", "phase3_visualizations", "main",
-     "Visualizations for LDA and BERTopic."),
+     "Visualizations for LDA."),
     ("phase4", "phase4_trends", "main",
      "Temporal trend analysis (OLS, Mann-Kendall, beta regression)."),
     ("phase5", "phase5_sensitivity", "main",

@@ -8,10 +8,8 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "bertopic>=0.17.4",
     "gensim>=4.4.0",
     "geopandas>=1.2.0",
-    "hdbscan>=0.8.44",
     "matplotlib>=3.11.2",
     "nltk>=3.10.4",
     "numpy>=2.5.4",
@@ -19,9 +17,8 @@ dependencies = [
     "pandas>=3.1.0",
     "pycountry>=26.2.16",
     "pyldavis>=3.4.1",
-    "sentence-transformers>=6.2.0",
+    "scikit-learn>=1.9",
     "statsmodels>=0.15.0",
-    "umap-learn>=0.5.12",
     "wordcloud>=1.9.6",
 ]
 

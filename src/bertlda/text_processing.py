@@ -200,17 +200,7 @@ def detectar_mayusculas(serie, umbral: float = 0.80) -> tuple[float, bool]:
     return frac, frac > umbral
 
 
-def clean_for_embeddings(texto: str, normalizar: bool = False) -> str:
-    """Minimal cleaning for embedding models (no stemming, no stopword removal)."""
-    t = str(texto)
-    t = RE_URL.sub(" ", t)
-    t = RE_EMAIL.sub(" ", t)
-    t = RE_CITATION.sub(" ", t)
-    t = RE_COPYRIGHT.sub(" ", t)
-    t = RE_SPACES.sub(" ", t).strip()
-    if normalizar:
-        t = normalizar_casing(t)
-    return t
+
 
 
 # -----------------------------------------------------------------------------
@@ -349,33 +339,8 @@ def ms_para(mcs: int) -> list[int]:
 
 
 def get_params(n_docs: int) -> dict:
-    """Derive LDA + BERTopic parameters continuously from corpus size."""
+    """Derive LDA parameters continuously from corpus size."""
     n = int(n_docs)
-    fracs = (0.0025, 0.0035, 0.005, 0.0075, 0.01)
-    mcs_ref = max(10, int(round(n * 0.005)))
-    mcs_grid = sorted({max(10, int(round(n * f))) for f in fracs} | {mcs_ref})
-
-    if n < 5_000:
-        nc_grid = [5, 10]
-    elif n < 30_000:
-        nc_grid = [5, 10, 15]
-    else:
-        nc_grid = [10, 15, 20]
-
-    nn_grid = sorted({10, 15, 30, min(50, max(15, int(n ** 0.5 / 2)))})
-    umap_grid = [
-        {"n_neighbors": nn, "n_components": nc, "min_dist": 0.0}
-        for nn in nn_grid for nc in nc_grid
-    ]
-    umap_ref = {
-        "n_neighbors": 15,
-        "n_components": min(10, nc_grid[-1]),
-        "min_dist": 0.0,
-    }
-    umap_viz = {"n_neighbors": 15, "n_components": 2, "min_dist": 0.10}
-    umap_viz_3d = {"n_neighbors": 15, "n_components": 3, "min_dist": 0.10}
-
-    k_max = int(min(50, max(25, round(n ** 0.5 / 2))))
     params = {
         "n_docs": n,
         "escala": etiqueta_escala(n),
@@ -391,26 +356,6 @@ def get_params(n_docs: int) -> dict:
         "alpha_grid": ["symmetric", "asymmetric", 0.01, 0.1],
         "eta_grid": ["symmetric", 0.01, 0.05, 0.5],
         "coherence_sample": None if n <= 10_000 else 10_000,
-        "umap_grid": umap_grid,
-        "umap_ref": umap_ref,
-        "umap_viz": umap_viz,
-        "umap_viz_3d": umap_viz_3d,
-        "mcs_grid": mcs_grid,
-        "mcs_ref": mcs_ref,
-        "hdbscan_ref": {
-            "min_cluster_size": mcs_ref,
-            "min_samples": max(1, mcs_ref // 10),
-            "cluster_selection_method": "eom",
-            "cluster_selection_epsilon": 0.0,
-            "metric": "euclidean",
-            "prediction_data": True,
-        },
-        "eps_grid": [0.0],
-        "metodos_grid": ["eom", "leaf"],
-        "chunk_size": 2_000 if n < 30_000 else 5_000,
-        "batch_size": 16,
-        "n_top_umap_hdbscan": 3 if n < 30_000 else 2,
-        "n_top_hdbscan_fino": 5,
     }
     return params
 
@@ -424,5 +369,4 @@ if __name__ == "__main__":
     n = 20_000
     p = get_params(n)
     print(f"  params for {n:,} docs [{p['escala']}]: "
-          f"K={p['k_min']}-{p['k_max']} | mcs_ref={p['mcs_ref']} | "
-          f"umap={len(p['umap_grid'])} combos")
+          f"K={p['k_min']}-{p['k_max']}")

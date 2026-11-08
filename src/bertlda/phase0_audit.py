@@ -395,13 +395,10 @@ def main() -> dict:
     # 14. SUMMARY
     print_separador("PHASE 0 COMPLETED")
     print(f"  Usable documents : {len(df_ok):,} [{P['escala']}]")
-    print(f"  Profile          : K {P['k_min']}-{P['k_max']} | mcs_ref={P['mcs_ref']} | "
-          f"mcs_grid={P['mcs_grid']}")
-    print(f"  UMAP combos      : {len(P['umap_grid'])}")
+    print(f"  Profile          : K {P['k_min']}-{P['k_max']}")
     print(f"  Time             : {_fmt(perf_counter() - t0)}")
     print("\n-- NEXT STEP --")
     print("  LDA phases: phase1a -> phase1b -> phase1c")
-    print("  BERTopic:    phase2b -> phase2c (after manual selection)")
     print("=" * 66)
     return checkpoint
 

@@ -1,421 +1,811 @@
 ﻿lambda,topic,topic_label,rank,term,p_w_given_t,p_w,relevance
-0.0,1,"Adversarial attacks, privacy and cybersecurity",1,hate_speech,0.00200572,7.927e-05,3.230914
-0.0,1,"Adversarial attacks, privacy and cybersecurity",2,polarization,0.00066334,2.905e-05,3.128304
-0.0,1,"Adversarial attacks, privacy and cybersecurity",3,election,0.00075737,3.348e-05,3.118899
-0.0,1,"Adversarial attacks, privacy and cybersecurity",4,app,0.00140156,6.401e-05,3.086364
-0.0,1,"Adversarial attacks, privacy and cybersecurity",5,privacy_policy,0.00178778,8.173e-05,3.085302
-0.0,1,"Adversarial attacks, privacy and cybersecurity",6,anonymization,0.00138951,6.401e-05,3.077733
-0.0,1,"Adversarial attacks, privacy and cybersecurity",7,morally,0.00067982,3.151e-05,3.071511
-0.0,1,"Adversarial attacks, privacy and cybersecurity",8,prejudice,0.00051389,2.413e-05,3.05875
-0.0,1,"Adversarial attacks, privacy and cybersecurity",9,gpts,0.0012243,5.761e-05,3.056509
-0.0,1,"Adversarial attacks, privacy and cybersecurity",10,advisor,0.00074507,3.545e-05,3.045371
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",1,mediation,0.00084574,5.416e-05,2.748286
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",2,virtue,0.00039819,2.56e-05,2.744241
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",3,reframing,0.00050815,3.643e-05,2.635272
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",4,self-reflection,0.00056779,4.185e-05,2.607665
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",5,ontological,0.0004581,3.446e-05,2.58715
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",6,operationalizes,0.00033614,2.56e-05,2.574841
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",7,experiential,0.00040683,3.151e-05,2.558064
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",8,mapping,0.00036059,2.806e-05,2.553239
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",9,coach,0.00105288,8.222e-05,2.549854
-0.0,2,"Reasoning agents, alignment and cognitive frameworks",10,bim,0.00113402,8.862e-05,2.549125
-0.0,3,"Generative AI ethics, governance and societal challenges",1,governmental,0.00030004,3.348e-05,2.192984
-0.0,3,"Generative AI ethics, governance and societal challenges",2,writer,0.00041597,4.973e-05,2.124057
-0.0,3,"Generative AI ethics, governance and societal challenges",3,esg,0.00168347,0.00020334,2.113723
-0.0,3,"Generative AI ethics, governance and societal challenges",4,legislative,0.00052679,6.401e-05,2.107836
-0.0,3,"Generative AI ethics, governance and societal challenges",5,stock,0.00037679,4.579e-05,2.107645
-0.0,3,"Generative AI ethics, governance and societal challenges",6,scholarly,0.00125003,0.00015263,2.102913
-0.0,3,"Generative AI ethics, governance and societal challenges",7,editor,0.00062478,7.681e-05,2.0961
-0.0,3,"Generative AI ethics, governance and societal challenges",8,sdgs,0.00024354,3.102e-05,2.060714
-0.0,3,"Generative AI ethics, governance and societal challenges",9,public_administration,0.00027715,3.545e-05,2.056458
-0.0,3,"Generative AI ethics, governance and societal challenges",10,intelligence_gai,0.00045019,5.761e-05,2.056052
-0.0,4,Human-AI interaction and conversational agents,1,self-efficacy,0.0008191,5.859e-05,2.63764
-0.0,4,Human-AI interaction and conversational agents,2,anthropomorphism,0.00051874,3.89e-05,2.590524
-0.0,4,Human-AI interaction and conversational agents,3,novice,0.00089258,6.844e-05,2.568197
-0.0,4,Human-AI interaction and conversational agents,4,program_course,0.00042138,3.25e-05,2.562449
-0.0,4,Human-AI interaction and conversational agents,5,technology_acceptance,0.00047946,3.742e-05,2.550491
-0.0,4,Human-AI interaction and conversational agents,6,attribution_permit,0.00038183,3.053e-05,2.5264
-0.0,4,Human-AI interaction and conversational agents,7,foreground,0.00024833,2.019e-05,2.509753
-0.0,4,Human-AI interaction and conversational agents,8,ideation,0.00096717,7.927e-05,2.501529
-0.0,4,Human-AI interaction and conversational agents,9,introductory,0.00067427,5.564e-05,2.494802
-0.0,4,Human-AI interaction and conversational agents,10,little_know,0.00056509,4.677e-05,2.491666
-0.0,5,ChatGPT evaluation and benchmark performance,1,chatgpt-generated,0.00055702,3.742e-05,2.70042
-0.0,5,ChatGPT evaluation and benchmark performance,2,frequently_ask,0.00057019,4.333e-05,2.5772
-0.0,5,ChatGPT evaluation and benchmark performance,3,metacognitive,0.00112828,8.665e-05,2.566528
-0.0,5,ChatGPT evaluation and benchmark performance,4,chatgpt-3_chatgpt-4,0.00047345,3.643e-05,2.564538
-0.0,5,ChatGPT evaluation and benchmark performance,5,microsoft_copilot,0.00062951,4.874e-05,2.558387
-0.0,5,ChatGPT evaluation and benchmark performance,6,readability,0.00414072,0.00032151,2.555608
-0.0,5,ChatGPT evaluation and benchmark performance,7,human_raters,0.00049399,3.84e-05,2.554369
-0.0,5,ChatGPT evaluation and benchmark performance,8,readable,0.00035437,2.757e-05,2.553558
-0.0,5,ChatGPT evaluation and benchmark performance,9,chatgpt-3,0.00099985,7.828e-05,2.547263
-0.0,5,ChatGPT evaluation and benchmark performance,10,psychiatric,0.00088046,6.942e-05,2.540241
-0.0,6,AI in education and student learning,1,faculty,0.00249338,0.00011816,3.049317
-0.0,6,AI in education and student learning,2,learner,0.00769585,0.00037173,3.030278
-0.0,6,AI in education and student learning,3,curricular,0.0005184,2.511e-05,3.027486
-0.0,6,AI in education and student learning,4,learn_experience,0.00167335,8.124e-05,3.025195
-0.0,6,AI in education and student learning,5,teach_learn,0.00172585,8.518e-05,3.008746
-0.0,6,AI in education and student learning,6,men,0.0005575,2.757e-05,3.006679
-0.0,6,AI in education and student learning,7,classroom,0.00350003,0.00017479,2.99697
-0.0,6,AI in education and student learning,8,recruit,0.00071605,3.594e-05,2.991844
-0.0,6,AI in education and student learning,9,higher_education,0.00727925,0.0003668,2.987958
-0.0,6,AI in education and student learning,10,self-regulated_learn,0.00098431,4.973e-05,2.985384
-0.0,7,"Agentic systems, governance and enterprise deployment",1,backend,0.00056334,3.25e-05,2.852796
-0.0,7,"Agentic systems, governance and enterprise deployment",2,portfolio,0.00081934,5.071e-05,2.782333
-0.0,7,"Agentic systems, governance and enterprise deployment",3,auditor,0.00074589,5.071e-05,2.688409
-0.0,7,"Agentic systems, governance and enterprise deployment",4,sql,0.00083252,5.81e-05,2.662333
-0.0,7,"Agentic systems, governance and enterprise deployment",5,auditability,0.00100009,6.991e-05,2.660578
-0.0,7,"Agentic systems, governance and enterprise deployment",6,mcp,0.00110963,7.779e-05,2.657745
-0.0,7,"Agentic systems, governance and enterprise deployment",7,fraud_detection,0.0005126,3.594e-05,2.657597
-0.0,7,"Agentic systems, governance and enterprise deployment",8,blockchain,0.00136634,9.601e-05,2.655451
-0.0,7,"Agentic systems, governance and enterprise deployment",9,cyber,0.00164152,0.0001157,2.65235
-0.0,7,"Agentic systems, governance and enterprise deployment",10,low-latency,0.00037629,2.659e-05,2.649937
-0.0,8,"Bias, fairness, culture and language",1,roberta,0.00102225,4.48e-05,3.127458
-0.0,8,"Bias, fairness, culture and language",2,reproduction_distribution,0.00056518,2.659e-05,3.056722
-0.0,8,"Bias, fairness, culture and language",3,occupation,0.00115721,5.514e-05,3.043831
-0.0,8,"Bias, fairness, culture and language",4,gender_bias,0.00287492,0.00013835,3.033985
-0.0,8,"Bias, fairness, culture and language",5,metaphor,0.00120972,5.908e-05,3.019213
-0.0,8,"Bias, fairness, culture and language",6,minority,0.00093673,4.579e-05,3.018355
-0.0,8,"Bias, fairness, culture and language",7,stance,0.00232617,0.00011521,3.005217
-0.0,8,"Bias, fairness, culture and language",8,distribute_term,0.00219224,0.00011078,2.98514
-0.0,8,"Bias, fairness, culture and language",9,stereotype,0.00424136,0.00021467,2.983557
-0.0,8,"Bias, fairness, culture and language",10,attribute_specify,0.00119505,6.056e-05,2.982321
-0.0,9,"Clinical, medical and mental-health AI",1,cochrane,0.00041925,2.413e-05,2.855197
-0.0,9,"Clinical, medical and mental-health AI",2,adolescent,0.0008343,4.825e-05,2.85019
-0.0,9,"Clinical, medical and mental-health AI",3,patient-specific,0.00047238,2.757e-05,2.840987
-0.0,9,"Clinical, medical and mental-health AI",4,medline,0.00057321,3.348e-05,2.840299
-0.0,9,"Clinical, medical and mental-health AI",5,pain,0.00069121,4.037e-05,2.840285
-0.0,9,"Clinical, medical and mental-health AI",6,suicide,0.00103108,6.056e-05,2.834738
-0.0,9,"Clinical, medical and mental-health AI",7,symptom,0.00270906,0.00016001,2.829093
-0.0,9,"Clinical, medical and mental-health AI",8,mortality,0.00049979,2.954e-05,2.828398
-0.0,9,"Clinical, medical and mental-health AI",9,therapy,0.0029282,0.00017479,2.818585
-0.0,9,"Clinical, medical and mental-health AI",10,health_literacy,0.00058281,3.496e-05,2.813742
-0.0,10,"Model training, fine-tuning and predictive performance",1,random_forest,0.00071103,4.48e-05,2.764422
-0.0,10,"Model training, fine-tuning and predictive performance",2,ner,0.0009691,6.45e-05,2.709733
-0.0,10,"Model training, fine-tuning and predictive performance",3,text_classification,0.00106936,7.681e-05,2.633523
-0.0,10,"Model training, fine-tuning and predictive performance",4,auroc,0.00045442,3.545e-05,2.55091
-0.0,10,"Model training, fine-tuning and predictive performance",5,gene_expression,0.00055852,4.382e-05,2.545214
-0.0,10,"Model training, fine-tuning and predictive performance",6,shapley,0.00027449,2.166e-05,2.539297
-0.0,10,"Model training, fine-tuning and predictive performance",7,mixture,0.00050321,3.988e-05,2.535115
-0.0,10,"Model training, fine-tuning and predictive performance",8,regularization,0.00034552,2.806e-05,2.51057
-0.0,10,"Model training, fine-tuning and predictive performance",9,approximation,0.00031734,2.609e-05,2.49824
-0.0,10,"Model training, fine-tuning and predictive performance",10,auc,0.00111867,9.207e-05,2.497351
-0.0,11,Retrieval-augmented generation and document automation,1,diabetes,0.00097498,6.253e-05,2.746788
-0.0,11,Retrieval-augmented generation and document automation,2,machine-readable,0.00053429,3.545e-05,2.712835
-0.0,11,Retrieval-augmented generation and document automation,3,compliance_check,0.00098523,6.598e-05,2.703598
-0.0,11,Retrieval-augmented generation and document automation,4,tag,0.00060144,4.087e-05,2.689044
-0.0,11,Retrieval-augmented generation and document automation,5,statutory,0.00051565,3.545e-05,2.677327
-0.0,11,Retrieval-augmented generation and document automation,6,pdf,0.00051117,3.545e-05,2.66859
-0.0,11,Retrieval-augmented generation and document automation,7,injury,0.00055528,3.89e-05,2.65859
-0.0,11,Retrieval-augmented generation and document automation,8,vector_database,0.00061983,4.48e-05,2.627142
-0.0,11,Retrieval-augmented generation and document automation,9,rag-based,0.00074733,5.416e-05,2.624583
-0.0,11,Retrieval-augmented generation and document automation,10,retrieve_relevant,0.00046144,3.348e-05,2.623401
-0.0,12,Multimodal applications and natural-language tasks,1,twitter,0.00058669,3.053e-05,2.955926
-0.0,12,Multimodal applications and natural-language tasks,2,cultural_heritage,0.00089338,4.727e-05,2.939227
-0.0,12,Multimodal applications and natural-language tasks,3,aigc,0.00193436,0.00010438,2.919506
-0.0,12,Multimodal applications and natural-language tasks,4,human-written,0.00130979,7.287e-05,2.888969
-0.0,12,Multimodal applications and natural-language tasks,5,tweet,0.00059524,3.397e-05,2.863423
-0.0,12,Multimodal applications and natural-language tasks,6,machine_translation,0.00103804,6.154e-05,2.825334
-0.0,12,Multimodal applications and natural-language tasks,7,visually,0.0006849,4.185e-05,2.795179
-0.0,12,Multimodal applications and natural-language tasks,8,story,0.00272236,0.00016642,2.794769
-0.0,12,Multimodal applications and natural-language tasks,9,gpt-2,0.000611,3.742e-05,2.792922
-0.0,12,Multimodal applications and natural-language tasks,10,ai-generated_text,0.00127642,8.124e-05,2.754429
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",1,career,0.00350405,5.761e-05,4.10806
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",2,accident,0.00696051,0.00011718,4.084297
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",3,maritime,0.00332057,5.662e-05,4.071519
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",4,city,0.00710553,0.00012309,4.055727
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",5,waste,0.00257275,4.48e-05,4.050431
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",6,water,0.00598981,0.00010536,4.040398
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",7,hazard,0.00663895,0.00011767,4.032806
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",8,mobility,0.00418473,7.484e-05,4.023877
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",9,conservation,0.00196734,3.594e-05,4.002537
-0.0,13,"Safety policy, machine unlearning and spatial/environmental applications",10,right_reserve,0.00361795,6.696e-05,3.989568
-0.0,14,"Neural networks, prediction and energy/market applications",1,legal_document,0.00124895,4.924e-05,3.233452
-0.0,14,"Neural networks, prediction and energy/market applications",2,electrical,0.00095548,3.791e-05,3.226971
-0.0,14,"Neural networks, prediction and energy/market applications",3,lstm,0.00096793,3.939e-05,3.201691
-0.0,14,"Neural networks, prediction and energy/market applications",4,emission,0.00253013,0.00010339,3.197479
-0.0,14,"Neural networks, prediction and energy/market applications",5,fake_news,0.00154679,6.351e-05,3.192687
-0.0,14,"Neural networks, prediction and energy/market applications",6,price,0.00328359,0.00014377,3.1285
-0.0,14,"Neural networks, prediction and energy/market applications",7,carbon,0.00228899,0.00010093,3.121415
-0.0,14,"Neural networks, prediction and energy/market applications",8,cellular,0.00145016,6.401e-05,3.120451
-0.0,14,"Neural networks, prediction and energy/market applications",9,equipment,0.00175233,7.878e-05,3.102086
-0.0,14,"Neural networks, prediction and energy/market applications",10,cell,0.00382527,0.00017282,3.097158
-0.6,1,"Adversarial attacks, privacy and cybersecurity",1,threat,0.01100904,0.00058492,-1.531421
-0.6,1,"Adversarial attacks, privacy and cybersecurity",2,attack,0.01177772,0.00069668,-1.533872
-0.6,1,"Adversarial attacks, privacy and cybersecurity",3,risk,0.01995975,0.00267643,-1.544729
-0.6,1,"Adversarial attacks, privacy and cybersecurity",4,vulnerability,0.00987244,0.0005539,-1.618595
-0.6,1,"Adversarial attacks, privacy and cybersecurity",5,safety,0.01583939,0.00209299,-1.677591
-0.6,1,"Adversarial attacks, privacy and cybersecurity",6,detection,0.01360961,0.00149774,-1.695459
-0.6,1,"Adversarial attacks, privacy and cybersecurity",7,privacy,0.0119804,0.00116786,-1.723451
-0.6,1,"Adversarial attacks, privacy and cybersecurity",8,security,0.0111421,0.00108268,-1.765699
-0.6,1,"Adversarial attacks, privacy and cybersecurity",9,adversarial,0.0073737,0.00042589,-1.805299
-0.6,1,"Adversarial attacks, privacy and cybersecurity",10,detect,0.00759768,0.00066271,-1.952241
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",1,reason,0.02153462,0.00258338,-1.45463
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",2,framework,0.02438824,0.00640157,-1.693169
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",3,cognitive,0.00821494,0.0008882,-1.991277
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",4,agent,0.01182732,0.00256319,-2.050742
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",5,dynamic,0.00769257,0.00112798,-2.15257
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",6,interaction,0.00839529,0.00179512,-2.251011
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",7,emotion,0.00435878,0.00036631,-2.270752
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",8,structure,0.0090286,0.00237363,-2.290024
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",9,emotional,0.00483193,0.00050959,-2.299745
-0.6,2,"Reasoning agents, alignment and cognitive frameworks",10,dialogue,0.00467568,0.00049629,-2.322041
-0.6,3,"Generative AI ethics, governance and societal challenges",1,ai,0.05181675,0.01124534,-1.164921
-0.6,3,"Generative AI ethics, governance and societal challenges",2,generative_ai,0.01172729,0.00210185,-1.979863
-0.6,3,"Generative AI ethics, governance and societal challenges",3,ethical,0.01066303,0.00183894,-2.021546
-0.6,3,"Generative AI ethics, governance and societal challenges",4,technology,0.01116772,0.00239136,-2.080371
-0.6,3,"Generative AI ethics, governance and societal challenges",5,artificial_intelligence,0.01123369,0.00270548,-2.123847
-0.6,3,"Generative AI ethics, governance and societal challenges",6,genai,0.00687283,0.00118657,-2.285505
-0.6,3,"Generative AI ethics, governance and societal challenges",7,development,0.00805564,0.00242976,-2.413398
-0.6,3,"Generative AI ethics, governance and societal challenges",8,generative_artificial,0.00529199,0.00088623,-2.43015
-0.6,3,"Generative AI ethics, governance and societal challenges",9,challenge,0.00935232,0.00378324,-2.441261
-0.6,3,"Generative AI ethics, governance and societal challenges",10,practice,0.00605443,0.00150365,-2.50702
-0.6,4,Human-AI interaction and conversational agents,1,user,0.02465107,0.00263507,-1.327397
-0.6,4,Human-AI interaction and conversational agents,2,human,0.01798402,0.003992,-1.808886
-0.6,4,Human-AI interaction and conversational agents,3,ai,0.02301369,0.01124534,-1.976546
-0.6,4,Human-AI interaction and conversational agents,4,system,0.0167842,0.00767184,-2.139238
-0.6,4,Human-AI interaction and conversational agents,5,chatbots,0.00675817,0.00090445,-2.19373
-0.6,4,Human-AI interaction and conversational agents,6,interaction,0.00882582,0.00179512,-2.201
-0.6,4,Human-AI interaction and conversational agents,7,design,0.01207557,0.00414019,-2.221766
-0.6,4,Human-AI interaction and conversational agents,8,participant,0.00580143,0.00075527,-2.274276
-0.6,4,Human-AI interaction and conversational agents,9,conversational,0.00488732,0.00056276,-2.328048
-0.6,4,Human-AI interaction and conversational agents,10,make,0.006865,0.00142536,-2.359987
-0.6,5,ChatGPT evaluation and benchmark performance,1,score,0.01791905,0.00194578,-1.525053
-0.6,5,ChatGPT evaluation and benchmark performance,2,chatgpt,0.01911373,0.00278819,-1.604404
-0.6,5,ChatGPT evaluation and benchmark performance,3,response,0.01654112,0.00279016,-1.749244
-0.6,5,ChatGPT evaluation and benchmark performance,4,question,0.01372073,0.0019763,-1.798237
-0.6,5,ChatGPT evaluation and benchmark performance,5,accuracy,0.01534767,0.00282709,-1.829389
-0.6,5,ChatGPT evaluation and benchmark performance,6,performance,0.01570717,0.00388811,-1.933705
-0.6,5,ChatGPT evaluation and benchmark performance,7,compare,0.01111871,0.00179019,-1.968953
-0.6,5,ChatGPT evaluation and benchmark performance,8,test,0.01080481,0.00198024,-2.037949
-0.6,5,ChatGPT evaluation and benchmark performance,9,gpt-4,0.00711949,0.00072868,-2.05521
-0.6,5,ChatGPT evaluation and benchmark performance,10,quality,0.00906573,0.00190984,-2.198959
-0.6,6,AI in education and student learning,1,student,0.04204448,0.00221756,-0.724487
-0.6,6,AI in education and student learning,2,education,0.02604085,0.00173407,-1.105175
-0.6,6,AI in education and student learning,3,learn,0.02647623,0.00254349,-1.241822
-0.6,6,AI in education and student learning,4,educational,0.01693545,0.00095073,-1.295035
-0.6,6,AI in education and student learning,5,feedback,0.01571032,0.00108613,-1.423384
-0.6,6,AI in education and student learning,6,learner,0.00769585,0.00037173,-1.708133
-0.6,6,AI in education and student learning,7,chatgpt,0.01706116,0.00278819,-1.718006
-0.6,6,AI in education and student learning,8,skill,0.00893702,0.00057507,-1.733144
-0.6,6,AI in education and student learning,9,teach,0.00789295,0.00042736,-1.738634
-0.6,6,AI in education and student learning,10,higher_education,0.00727925,0.0003668,-1.758454
-0.6,7,"Agentic systems, governance and enterprise deployment",1,system,0.0304202,0.00767184,-1.544569
-0.6,7,"Agentic systems, governance and enterprise deployment",2,agent,0.01633763,0.00256319,-1.727683
-0.6,7,"Agentic systems, governance and enterprise deployment",3,governance,0.0133521,0.00183549,-1.795904
-0.6,7,"Agentic systems, governance and enterprise deployment",4,architecture,0.01182906,0.00163757,-1.871379
-0.6,7,"Agentic systems, governance and enterprise deployment",5,agentic,0.00619883,0.00051106,-2.051787
-0.6,7,"Agentic systems, governance and enterprise deployment",6,financial,0.00670296,0.00065729,-2.074253
-0.6,7,"Agentic systems, governance and enterprise deployment",7,enterprise,0.00549323,0.00041653,-2.090819
-0.6,7,"Agentic systems, governance and enterprise deployment",8,agentic_ai,0.0052761,0.0003929,-2.107783
-0.6,7,"Agentic systems, governance and enterprise deployment",9,workflow,0.00798142,0.00114324,-2.121084
-0.6,7,"Agentic systems, governance and enterprise deployment",10,framework,0.01570823,0.00640157,-2.133086
-0.6,8,"Bias, fairness, culture and language",1,bias,0.03967,0.00278622,-0.873933
-0.6,8,"Bias, fairness, culture and language",2,cultural,0.01125674,0.00060313,-1.521438
-0.6,8,"Bias, fairness, culture and language",3,moral,0.00911542,0.0005022,-1.659183
-0.6,8,"Bias, fairness, culture and language",4,fairness,0.00992431,0.00073607,-1.727093
-0.6,8,"Bias, fairness, culture and language",5,language,0.01274682,0.00180546,-1.835697
-0.6,8,"Bias, fairness, culture and language",6,gender,0.00654119,0.0003412,-1.83642
-0.6,8,"Bias, fairness, culture and language",7,value,0.01086502,0.00132738,-1.872389
-0.6,8,"Bias, fairness, culture and language",8,social,0.00984386,0.0012747,-1.95489
-0.6,8,"Bias, fairness, culture and language",9,linguistic,0.00664837,0.00049875,-1.972024
-0.6,8,"Bias, fairness, culture and language",10,human,0.01503714,0.003992,-1.987847
-0.6,9,"Clinical, medical and mental-health AI",1,clinical,0.03817065,0.00261882,-0.887677
-0.6,9,"Clinical, medical and mental-health AI",2,medical,0.02998234,0.00218014,-1.0558
-0.6,9,"Clinical, medical and mental-health AI",3,patient,0.02677213,0.00168828,-1.066775
-0.6,9,"Clinical, medical and mental-health AI",4,healthcare,0.02152881,0.00168532,-1.284044
-0.6,9,"Clinical, medical and mental-health AI",5,health,0.01706131,0.00108121,-1.339071
-0.6,9,"Clinical, medical and mental-health AI",6,care,0.01095314,0.00074542,-1.633506
-0.6,9,"Clinical, medical and mental-health AI",7,mental_health,0.0089225,0.00059722,-1.749892
-0.6,9,"Clinical, medical and mental-health AI",8,medicine,0.00817699,0.00059427,-1.83516
-0.6,9,"Clinical, medical and mental-health AI",9,clinician,0.00657397,0.00044164,-1.934631
-0.6,9,"Clinical, medical and mental-health AI",10,diagnosis,0.00649871,0.00047414,-1.974544
-0.6,10,"Model training, fine-tuning and predictive performance",1,fine-tune,0.01398137,0.00157504,-1.688639
-0.6,10,"Model training, fine-tuning and predictive performance",2,train,0.01575598,0.00283497,-1.804245
-0.6,10,"Model training, fine-tuning and predictive performance",3,performance,0.01649363,0.00388811,-1.884848
-0.6,10,"Model training, fine-tuning and predictive performance",4,label,0.00639807,0.00055734,-2.054828
-0.6,10,"Model training, fine-tuning and predictive performance",5,dataset,0.0089437,0.00151349,-2.119471
-0.6,10,"Model training, fine-tuning and predictive performance",6,classification,0.00748339,0.00098667,-2.126602
-0.6,10,"Model training, fine-tuning and predictive performance",7,datasets,0.0085838,0.0014357,-2.139438
-0.6,10,"Model training, fine-tuning and predictive performance",8,task,0.0126481,0.00383247,-2.14455
-0.6,10,"Model training, fine-tuning and predictive performance",9,feature,0.00747546,0.00114866,-2.188466
-0.6,10,"Model training, fine-tuning and predictive performance",10,achieve,0.00817896,0.00167548,-2.249527
-0.6,11,Retrieval-augmented generation and document automation,1,rag,0.01452648,0.00112552,-1.515978
-0.6,11,Retrieval-augmented generation and document automation,2,legal,0.01404048,0.00129193,-1.605165
-0.6,11,Retrieval-augmented generation and document automation,3,retrieval,0.0113861,0.00089411,-1.667491
-0.6,11,Retrieval-augmented generation and document automation,4,document,0.01064431,0.00096255,-1.76436
-0.6,11,Retrieval-augmented generation and document automation,5,retrieval-augmented_generation,0.00899311,0.00069717,-1.803905
-0.6,11,Retrieval-augmented generation and document automation,6,query,0.00960512,0.0009335,-1.854832
-0.6,11,Retrieval-augmented generation and document automation,7,knowledge,0.01401664,0.00273994,-1.907583
-0.6,11,Retrieval-augmented generation and document automation,8,automate,0.01087179,0.00163412,-1.954923
-0.6,11,Retrieval-augmented generation and document automation,9,system,0.01924067,0.00767184,-2.00265
-0.6,11,Retrieval-augmented generation and document automation,10,process,0.01415897,0.00360599,-2.007343
-0.6,12,Multimodal applications and natural-language tasks,1,multimodal,0.01421563,0.00146672,-1.643522
-0.6,12,Multimodal applications and natural-language tasks,2,image,0.01202436,0.00109745,-1.694916
-0.6,12,Multimodal applications and natural-language tasks,3,text,0.01291014,0.00199304,-1.862505
-0.6,12,Multimodal applications and natural-language tasks,4,application,0.01642156,0.00378915,-1.878915
-0.6,12,Multimodal applications and natural-language tasks,5,visual,0.00783079,0.0006179,-1.89402
-0.6,12,Multimodal applications and natural-language tasks,6,nlp,0.00608383,0.00039093,-1.963326
-0.6,12,Multimodal applications and natural-language tasks,7,natural_language,0.00928639,0.00117623,-1.98103
-0.6,12,Multimodal applications and natural-language tasks,8,video,0.00550618,0.00035499,-2.024512
-0.6,12,Multimodal applications and natural-language tasks,9,language,0.01037476,0.00180546,-2.041603
-0.6,12,Multimodal applications and natural-language tasks,10,survey,0.00834535,0.00116737,-2.084849
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",1,unlearn,0.0228115,0.00051008,-0.748111
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",2,urban,0.0190899,0.00038994,-0.818793
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",3,policy,0.03088585,0.00136136,-0.837747
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",4,environmental,0.0166219,0.00036877,-0.934902
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",5,safety,0.03156023,0.00209299,-0.988193
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",6,plan,0.02229812,0.00088673,-0.992064
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",7,traffic,0.01168225,0.00023091,-1.100297
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",8,spatial,0.01236573,0.00028507,-1.127719
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",9,construction,0.0161396,0.00066271,-1.198808
-0.6,13,"Safety policy, machine unlearning and spatial/environmental applications",10,city,0.00710553,0.00012309,-1.345839
-0.6,14,"Neural networks, prediction and energy/market applications",1,network,0.01262924,0.00086999,-1.552927
-0.6,14,"Neural networks, prediction and energy/market applications",2,ml,0.00895518,0.00040767,-1.5935
-0.6,14,"Neural networks, prediction and energy/market applications",3,energy,0.00904966,0.00044558,-1.618574
-0.6,14,"Neural networks, prediction and energy/market applications",4,market,0.00775965,0.0005214,-1.835223
-0.6,14,"Neural networks, prediction and energy/market applications",5,prediction,0.01021847,0.00108022,-1.851323
-0.6,14,"Neural networks, prediction and energy/market applications",6,biological,0.0059649,0.00029197,-1.866313
-0.6,14,"Neural networks, prediction and energy/market applications",7,intelligent,0.00939834,0.00097978,-1.89595
-0.6,14,"Neural networks, prediction and energy/market applications",8,forecast,0.00565845,0.00028212,-1.905331
-0.6,14,"Neural networks, prediction and energy/market applications",9,machine_learn,0.00849892,0.00078284,-1.906784
-0.6,14,"Neural networks, prediction and energy/market applications",10,power,0.00821273,0.00080401,-1.951711
-1.0,1,"Adversarial attacks, privacy and cybersecurity",1,risk,0.01995975,0.00267643,-3.914038
-1.0,1,"Adversarial attacks, privacy and cybersecurity",2,safety,0.01583939,0.00209299,-4.145255
-1.0,1,"Adversarial attacks, privacy and cybersecurity",3,detection,0.01360961,0.00149774,-4.296979
-1.0,1,"Adversarial attacks, privacy and cybersecurity",4,privacy,0.0119804,0.00116786,-4.424483
-1.0,1,"Adversarial attacks, privacy and cybersecurity",5,attack,0.01177772,0.00069668,-4.441546
-1.0,1,"Adversarial attacks, privacy and cybersecurity",6,security,0.0111421,0.00108268,-4.497024
-1.0,1,"Adversarial attacks, privacy and cybersecurity",7,threat,0.01100904,0.00058492,-4.509039
-1.0,1,"Adversarial attacks, privacy and cybersecurity",8,vulnerability,0.00987244,0.0005539,-4.618008
-1.0,1,"Adversarial attacks, privacy and cybersecurity",9,content,0.00864606,0.00167794,-4.750652
-1.0,1,"Adversarial attacks, privacy and cybersecurity",10,prompt,0.00815197,0.0029807,-4.809496
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",1,framework,0.02438824,0.00640157,-3.713654
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",2,reason,0.02153462,0.00258338,-3.838094
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",3,agent,0.01182732,0.00256319,-4.437343
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",4,design,0.00936934,0.00414019,-4.670312
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",5,structure,0.0090286,0.00237363,-4.707358
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",6,interaction,0.00839529,0.00179512,-4.780085
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",7,evaluation,0.00829235,0.00394178,-4.792422
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",8,cognitive,0.00821494,0.0008882,-4.801801
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",9,system,0.00780938,0.00767184,-4.852429
-1.0,2,"Reasoning agents, alignment and cognitive frameworks",10,dynamic,0.00769257,0.00112798,-4.867501
-1.0,3,"Generative AI ethics, governance and societal challenges",1,ai,0.05181675,0.01124534,-2.960042
-1.0,3,"Generative AI ethics, governance and societal challenges",2,generative_ai,0.01172729,0.00210185,-4.445837
-1.0,3,"Generative AI ethics, governance and societal challenges",3,artificial_intelligence,0.01123369,0.00270548,-4.488838
-1.0,3,"Generative AI ethics, governance and societal challenges",4,technology,0.01116772,0.00239136,-4.494728
-1.0,3,"Generative AI ethics, governance and societal challenges",5,ethical,0.01066303,0.00183894,-4.540973
-1.0,3,"Generative AI ethics, governance and societal challenges",6,challenge,0.00935232,0.00378324,-4.672131
-1.0,3,"Generative AI ethics, governance and societal challenges",7,development,0.00805564,0.00242976,-4.821383
-1.0,3,"Generative AI ethics, governance and societal challenges",8,tool,0.00698669,0.00344992,-4.963748
-1.0,3,"Generative AI ethics, governance and societal challenges",9,genai,0.00687283,0.00118657,-4.98018
-1.0,3,"Generative AI ethics, governance and societal challenges",10,framework,0.00672195,0.00640157,-5.002377
-1.0,4,Human-AI interaction and conversational agents,1,user,0.02465107,0.00263507,-3.702935
-1.0,4,Human-AI interaction and conversational agents,2,ai,0.02301369,0.01124534,-3.771666
-1.0,4,Human-AI interaction and conversational agents,3,human,0.01798402,0.003992,-4.018271
-1.0,4,Human-AI interaction and conversational agents,4,system,0.0167842,0.00767184,-4.087317
-1.0,4,Human-AI interaction and conversational agents,5,design,0.01207557,0.00414019,-4.416571
-1.0,4,Human-AI interaction and conversational agents,6,interaction,0.00882582,0.00179512,-4.730074
-1.0,4,Human-AI interaction and conversational agents,7,make,0.006865,0.00142536,-4.981319
-1.0,4,Human-AI interaction and conversational agents,8,work,0.00683247,0.00208364,-4.986068
-1.0,4,Human-AI interaction and conversational agents,9,chatbots,0.00675817,0.00090445,-4.997003
-1.0,4,Human-AI interaction and conversational agents,10,understand,0.00664095,0.00224119,-5.014501
-1.0,5,ChatGPT evaluation and benchmark performance,1,chatgpt,0.01911373,0.00278819,-3.957348
-1.0,5,ChatGPT evaluation and benchmark performance,2,score,0.01791905,0.00194578,-4.021891
-1.0,5,ChatGPT evaluation and benchmark performance,3,response,0.01654112,0.00279016,-4.101906
-1.0,5,ChatGPT evaluation and benchmark performance,4,performance,0.01570717,0.00388811,-4.153638
-1.0,5,ChatGPT evaluation and benchmark performance,5,accuracy,0.01534767,0.00282709,-4.176792
-1.0,5,ChatGPT evaluation and benchmark performance,6,question,0.01372073,0.0019763,-4.288848
-1.0,5,ChatGPT evaluation and benchmark performance,7,compare,0.01111871,0.00179019,-4.499126
-1.0,5,ChatGPT evaluation and benchmark performance,8,test,0.01080481,0.00198024,-4.527764
-1.0,5,ChatGPT evaluation and benchmark performance,9,evaluation,0.00933549,0.00394178,-4.673932
-1.0,5,ChatGPT evaluation and benchmark performance,10,quality,0.00906573,0.00190984,-4.703254
-1.0,6,AI in education and student learning,1,student,0.04204448,0.00221756,-3.169027
-1.0,6,AI in education and student learning,2,learn,0.02647623,0.00254349,-3.631508
-1.0,6,AI in education and student learning,3,education,0.02604085,0.00173407,-3.648089
-1.0,6,AI in education and student learning,4,chatgpt,0.01706116,0.00278819,-4.070951
-1.0,6,AI in education and student learning,5,educational,0.01693545,0.00095073,-4.078346
-1.0,6,AI in education and student learning,6,feedback,0.01571032,0.00108613,-4.153437
-1.0,6,AI in education and student learning,7,tool,0.01419803,0.00344992,-4.254652
-1.0,6,AI in education and student learning,8,support,0.01044813,0.00345189,-4.561332
-1.0,6,AI in education and student learning,9,ai,0.00942832,0.01124534,-4.664038
-1.0,6,AI in education and student learning,10,skill,0.00893702,0.00057507,-4.717553
-1.0,7,"Agentic systems, governance and enterprise deployment",1,system,0.0304202,0.00767184,-3.492648
-1.0,7,"Agentic systems, governance and enterprise deployment",2,agent,0.01633763,0.00256319,-4.114284
-1.0,7,"Agentic systems, governance and enterprise deployment",3,framework,0.01570823,0.00640157,-4.15357
-1.0,7,"Agentic systems, governance and enterprise deployment",4,governance,0.0133521,0.00183549,-4.316081
-1.0,7,"Agentic systems, governance and enterprise deployment",5,architecture,0.01182906,0.00163757,-4.437196
-1.0,7,"Agentic systems, governance and enterprise deployment",6,ai,0.00834912,0.01124534,-4.785599
-1.0,7,"Agentic systems, governance and enterprise deployment",7,workflow,0.00798142,0.00114324,-4.830639
-1.0,7,"Agentic systems, governance and enterprise deployment",8,control,0.00773423,0.00135692,-4.862099
-1.0,7,"Agentic systems, governance and enterprise deployment",9,deployment,0.00723366,0.00120233,-4.92901
-1.0,7,"Agentic systems, governance and enterprise deployment",10,financial,0.00670296,0.00065729,-5.005207
-1.0,8,"Bias, fairness, culture and language",1,bias,0.03967,0.00278622,-3.22716
-1.0,8,"Bias, fairness, culture and language",2,human,0.01503714,0.003992,-4.197232
-1.0,8,"Bias, fairness, culture and language",3,language,0.01274682,0.00180546,-4.362473
-1.0,8,"Bias, fairness, culture and language",4,cultural,0.01125674,0.00060313,-4.486788
-1.0,8,"Bias, fairness, culture and language",5,value,0.01086502,0.00132738,-4.522207
-1.0,8,"Bias, fairness, culture and language",6,across,0.01081643,0.00324608,-4.526689
-1.0,8,"Bias, fairness, culture and language",7,fairness,0.00992431,0.00073607,-4.612768
-1.0,8,"Bias, fairness, culture and language",8,social,0.00984386,0.0012747,-4.620908
-1.0,8,"Bias, fairness, culture and language",9,moral,0.00911542,0.0005022,-4.697788
-1.0,8,"Bias, fairness, culture and language",10,prompt,0.00871299,0.0029807,-4.742941
-1.0,9,"Clinical, medical and mental-health AI",1,clinical,0.03817065,0.00261882,-3.265688
-1.0,9,"Clinical, medical and mental-health AI",2,medical,0.02998234,0.00218014,-3.507147
-1.0,9,"Clinical, medical and mental-health AI",3,patient,0.02677213,0.00168828,-3.620394
-1.0,9,"Clinical, medical and mental-health AI",4,healthcare,0.02152881,0.00168532,-3.838363
-1.0,9,"Clinical, medical and mental-health AI",5,health,0.01706131,0.00108121,-4.070942
-1.0,9,"Clinical, medical and mental-health AI",6,support,0.0132765,0.00345189,-4.321759
-1.0,9,"Clinical, medical and mental-health AI",7,include,0.01304515,0.00402498,-4.339339
-1.0,9,"Clinical, medical and mental-health AI",8,care,0.01095314,0.00074542,-4.51413
-1.0,9,"Clinical, medical and mental-health AI",9,application,0.0092834,0.00378915,-4.679528
-1.0,9,"Clinical, medical and mental-health AI",10,ai,0.00899457,0.01124534,-4.711135
-1.0,10,"Model training, fine-tuning and predictive performance",1,performance,0.01649363,0.00388811,-4.104781
-1.0,10,"Model training, fine-tuning and predictive performance",2,train,0.01575598,0.00283497,-4.150535
-1.0,10,"Model training, fine-tuning and predictive performance",3,fine-tune,0.01398137,0.00157504,-4.27003
-1.0,10,"Model training, fine-tuning and predictive performance",4,task,0.0126481,0.00383247,-4.370248
-1.0,10,"Model training, fine-tuning and predictive performance",5,dataset,0.0089437,0.00151349,-4.716806
-1.0,10,"Model training, fine-tuning and predictive performance",6,datasets,0.0085838,0.0014357,-4.757879
-1.0,10,"Model training, fine-tuning and predictive performance",7,achieve,0.00817896,0.00167548,-4.80619
-1.0,10,"Model training, fine-tuning and predictive performance",8,classification,0.00748339,0.00098667,-4.89507
-1.0,10,"Model training, fine-tuning and predictive performance",9,feature,0.00747546,0.00114866,-4.89613
-1.0,10,"Model training, fine-tuning and predictive performance",10,prompt,0.0068826,0.0029807,-4.978759
-1.0,11,Retrieval-augmented generation and document automation,1,system,0.01924067,0.00767184,-3.950729
-1.0,11,Retrieval-augmented generation and document automation,2,rag,0.01452648,0.00112552,-4.231782
-1.0,11,Retrieval-augmented generation and document automation,3,process,0.01415897,0.00360599,-4.257407
-1.0,11,Retrieval-augmented generation and document automation,4,legal,0.01404048,0.00129193,-4.265811
-1.0,11,Retrieval-augmented generation and document automation,5,knowledge,0.01401664,0.00273994,-4.26751
-1.0,11,Retrieval-augmented generation and document automation,6,information,0.01184027,0.00299203,-4.436249
-1.0,11,Retrieval-augmented generation and document automation,7,retrieval,0.0113861,0.00089411,-4.475362
-1.0,11,Retrieval-augmented generation and document automation,8,automate,0.01087179,0.00163412,-4.521584
-1.0,11,Retrieval-augmented generation and document automation,9,document,0.01064431,0.00096255,-4.54273
-1.0,11,Retrieval-augmented generation and document automation,10,framework,0.00981735,0.00640157,-4.623604
-1.0,12,Multimodal applications and natural-language tasks,1,application,0.01642156,0.00378915,-4.10916
-1.0,12,Multimodal applications and natural-language tasks,2,multimodal,0.01421563,0.00146672,-4.253413
-1.0,12,Multimodal applications and natural-language tasks,3,task,0.01324856,0.00383247,-4.323866
-1.0,12,Multimodal applications and natural-language tasks,4,text,0.01291014,0.00199304,-4.349742
-1.0,12,Multimodal applications and natural-language tasks,5,challenge,0.01252966,0.00378324,-4.379656
-1.0,12,Multimodal applications and natural-language tasks,6,image,0.01202436,0.00109745,-4.42082
-1.0,12,Multimodal applications and natural-language tasks,7,language,0.01037476,0.00180546,-4.568379
-1.0,12,Multimodal applications and natural-language tasks,8,include,0.00997682,0.00402498,-4.607491
-1.0,12,Multimodal applications and natural-language tasks,9,natural_language,0.00928639,0.00117623,-4.679206
-1.0,12,Multimodal applications and natural-language tasks,10,understand,0.00913608,0.00224119,-4.695524
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",1,safety,0.03156023,0.00209299,-3.455858
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",2,policy,0.03088585,0.00136136,-3.477457
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",3,unlearn,0.0228115,0.00051008,-3.78049
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",4,plan,0.02229812,0.00088673,-3.803253
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",5,urban,0.0190899,0.00038994,-3.958596
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",6,environmental,0.0166219,0.00036877,-4.097034
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",7,construction,0.0161396,0.00066271,-4.126479
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",8,management,0.01370156,0.00136382,-4.290246
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",9,scenario,0.01282216,0.00139188,-4.356581
-1.0,13,"Safety policy, machine unlearning and spatial/environmental applications",10,spatial,0.01236573,0.00028507,-4.392826
-1.0,14,"Neural networks, prediction and energy/market applications",1,network,0.01262924,0.00086999,-4.37174
-1.0,14,"Neural networks, prediction and energy/market applications",2,prediction,0.01021847,0.00108022,-4.583559
-1.0,14,"Neural networks, prediction and energy/market applications",3,system,0.00978313,0.00767184,-4.627095
-1.0,14,"Neural networks, prediction and energy/market applications",4,intelligent,0.00939834,0.00097978,-4.667222
-1.0,14,"Neural networks, prediction and energy/market applications",5,energy,0.00904966,0.00044558,-4.705028
-1.0,14,"Neural networks, prediction and energy/market applications",6,ml,0.00895518,0.00040767,-4.715523
-1.0,14,"Neural networks, prediction and energy/market applications",7,machine_learn,0.00849892,0.00078284,-4.767816
-1.0,14,"Neural networks, prediction and energy/market applications",8,integrate,0.008259,0.00267348,-4.796451
-1.0,14,"Neural networks, prediction and energy/market applications",9,power,0.00821273,0.00080401,-4.80207
-1.0,14,"Neural networks, prediction and energy/market applications",10,market,0.00775965,0.0005214,-4.858819
+0.0,1,Human problem-solving and AI-assisted work,1,kind,0.00125361,7.878e-05,2.767171
+0.0,1,Human problem-solving and AI-assisted work,2,something,0.00034388,2.265e-05,2.7202
+0.0,1,Human problem-solving and AI-assisted work,3,happen,0.00041324,2.757e-05,2.707227
+0.0,1,Human problem-solving and AI-assisted work,4,able,0.00253498,0.00016937,2.70586
+0.0,1,Human problem-solving and AI-assisted work,5,want,0.00073127,5.022e-05,2.678368
+0.0,1,Human problem-solving and AI-assisted work,6,indeed,0.00041542,2.905e-05,2.660312
+0.0,1,Human problem-solving and AI-assisted work,7,try,0.00060368,4.234e-05,2.657262
+0.0,1,Human problem-solving and AI-assisted work,8,would,0.00318097,0.00022501,2.648817
+0.0,1,Human problem-solving and AI-assisted work,9,get,0.00093877,6.696e-05,2.640472
+0.0,1,Human problem-solving and AI-assisted work,10,wrong,0.00056547,4.136e-05,2.615409
+0.0,2,AI governance and framework design,1,epistemic,0.00458723,0.00026932,2.835142
+0.0,2,AI governance and framework design,2,accountable,0.00119362,7.188e-05,2.809697
+0.0,2,AI governance and framework design,3,delegation,0.00052298,3.151e-05,2.809223
+0.0,2,AI governance and framework design,4,socio-technical,0.00108286,6.548e-05,2.805571
+0.0,2,AI governance and framework design,5,contest,0.00055785,3.446e-05,2.784162
+0.0,2,AI governance and framework design,6,interpretive,0.00164592,0.0001029,2.772283
+0.0,2,AI governance and framework design,7,maturity,0.00103063,6.794e-05,2.71923
+0.0,2,AI governance and framework design,8,sociotechnical,0.00105458,7.09e-05,2.699646
+0.0,2,AI governance and framework design,9,conceptually,0.00033675,2.314e-05,2.67774
+0.0,2,AI governance and framework design,10,conceptual,0.00524629,0.00036631,2.661795
+0.0,3,"Generative AI ethics, technology, and societal challenges",1,chapter,0.0067776,0.00050811,2.590685
+0.0,3,"Generative AI ethics, technology, and societal challenges",2,editor_applicable,0.00042132,3.299e-05,2.547266
+0.0,3,"Generative AI ethics, technology, and societal challenges",3,chapter_explore,0.00103372,8.222e-05,2.53148
+0.0,3,"Generative AI ethics, technology, and societal challenges",4,genai,0.01471346,0.00118657,2.517696
+0.0,3,"Generative AI ethics, technology, and societal challenges",5,gen_ai,0.00086434,7.139e-05,2.493792
+0.0,3,"Generative AI ethics, technology, and societal challenges",6,expressly_prohibit,0.00035532,3.003e-05,2.470716
+0.0,3,"Generative AI ethics, technology, and societal challenges",7,igi_global,0.00034903,2.954e-05,2.469371
+0.0,3,"Generative AI ethics, technology, and societal challenges",8,reserve_right,0.00035178,3.003e-05,2.460682
+0.0,3,"Generative AI ethics, technology, and societal challenges",9,generative_ai,0.02436284,0.00210185,2.450239
+0.0,3,"Generative AI ethics, technology, and societal challenges",10,ethical_legal,0.00093564,8.075e-05,2.449927
+0.0,4,"Privacy, explainability, and financial trust",1,privacy_policy,0.00513321,8.173e-05,4.140059
+0.0,4,"Privacy, explainability, and financial trust",2,anonymization,0.00398982,6.401e-05,4.132527
+0.0,4,"Privacy, explainability, and financial trust",3,auditor,0.00312245,5.071e-05,4.120204
+0.0,4,"Privacy, explainability, and financial trust",4,lime,0.00157918,2.609e-05,4.102926
+0.0,4,"Privacy, explainability, and financial trust",5,fraud_detection,0.00215803,3.594e-05,4.095051
+0.0,4,"Privacy, explainability, and financial trust",6,blockchain,0.0057518,9.601e-05,4.092829
+0.0,4,"Privacy, explainability, and financial trust",7,shap,0.00349965,5.957e-05,4.073189
+0.0,4,"Privacy, explainability, and financial trust",8,explainable_ai,0.00810725,0.00013884,4.067167
+0.0,4,"Privacy, explainability, and financial trust",9,explanation,0.0397573,0.00068289,4.06421
+0.0,4,"Privacy, explainability, and financial trust",10,smart_contract,0.00305403,5.268e-05,4.059949
+0.0,5,ChatGPT response quality and performance evaluation,1,flesch,0.00098168,4.48e-05,3.08697
+0.0,5,ChatGPT response quality and performance evaluation,2,grade_level,0.00089792,4.136e-05,3.077822
+0.0,5,ChatGPT response quality and performance evaluation,3,read_ease,0.00072568,3.397e-05,3.061568
+0.0,5,ChatGPT response quality and performance evaluation,4,frequently_ask,0.00088238,4.333e-05,3.013844
+0.0,5,ChatGPT response quality and performance evaluation,5,readability,0.00638825,0.00032151,2.989198
+0.0,5,ChatGPT response quality and performance evaluation,6,chatgpt-3,0.00154768,7.828e-05,2.984168
+0.0,5,ChatGPT response quality and performance evaluation,7,chatgpt-3_chatgpt-4,0.00071844,3.643e-05,2.981571
+0.0,5,ChatGPT response quality and performance evaluation,8,flesch-kincaid,0.00049064,2.511e-05,2.972435
+0.0,5,ChatGPT response quality and performance evaluation,9,interrater,0.00055965,2.905e-05,2.958335
+0.0,5,ChatGPT response quality and performance evaluation,10,microsoft_copilot,0.0009359,4.874e-05,2.954947
+0.0,6,"Perception, trust, and AI adoption surveys",1,willingness,0.00155429,4.283e-05,3.591426
+0.0,6,"Perception, trust, and AI adoption surveys",2,attitude_toward,0.00195966,5.564e-05,3.5617
+0.0,6,"Perception, trust, and AI adoption surveys",3,technology_acceptance,0.00129615,3.742e-05,3.544982
+0.0,6,"Perception, trust, and AI adoption surveys",4,adolescent,0.00155983,4.825e-05,3.475922
+0.0,6,"Perception, trust, and AI adoption surveys",5,respondent,0.00358623,0.00011373,3.450998
+0.0,6,"Perception, trust, and AI adoption surveys",6,perceive_usefulness,0.00125577,4.037e-05,3.437346
+0.0,6,"Perception, trust, and AI adoption surveys",7,adult,0.00243513,8.518e-05,3.353024
+0.0,6,"Perception, trust, and AI adoption surveys",8,attitude,0.00398639,0.00013983,3.350227
+0.0,6,"Perception, trust, and AI adoption surveys",9,questionnaire,0.00487467,0.00017675,3.317044
+0.0,6,"Perception, trust, and AI adoption surveys",10,self-reported,0.00143915,5.268e-05,3.30754
+0.0,7,"Agentic systems, architecture, and enterprise workflows",1,backend,0.00103151,3.25e-05,3.457688
+0.0,7,"Agentic systems, architecture, and enterprise workflows",2,mcp,0.00234737,7.779e-05,3.407016
+0.0,7,"Agentic systems, architecture, and enterprise workflows",3,context_protocol,0.00140485,4.727e-05,3.391896
+0.0,7,"Agentic systems, architecture, and enterprise workflows",4,agentic_ai,0.0111499,0.0003929,3.345637
+0.0,7,"Agentic systems, architecture, and enterprise workflows",5,invocation,0.00063058,2.314e-05,3.305055
+0.0,7,"Agentic systems, architecture, and enterprise workflows",6,agentic,0.01379752,0.00051106,3.295753
+0.0,7,"Agentic systems, architecture, and enterprise workflows",7,multi-agent,0.0122674,0.00045937,3.284855
+0.0,7,"Agentic systems, architecture, and enterprise workflows",8,orchestration,0.00542326,0.00020777,3.262007
+0.0,7,"Agentic systems, architecture, and enterprise workflows",9,multi-agent_system,0.00464167,0.0001802,3.248755
+0.0,7,"Agentic systems, architecture, and enterprise workflows",10,orchestrate,0.00186643,7.287e-05,3.243132
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",1,resume,0.00355857,7.582e-05,3.848722
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",2,occupation,0.00255513,5.514e-05,3.835921
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",3,gender_bias,0.00637563,0.00013835,3.830444
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",4,stereotype,0.00940352,0.00021467,3.779757
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",5,racial,0.00254434,5.908e-05,3.762694
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",6,perpetuate,0.00260346,6.154e-05,3.744842
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",7,stereotypical,0.00166866,4.037e-05,3.721618
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",8,gender,0.01395601,0.0003412,3.711196
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",9,religion,0.00163038,3.988e-05,3.71068
+0.0,8,"Bias, fairness, gender, and stereotype in prompts",10,implicit_bias,0.00163497,4.087e-05,3.689099
+0.0,9,"Clinical, medical, and healthcare AI",1,doctor,0.0024769,0.00010586,3.152684
+0.0,9,"Clinical, medical, and healthcare AI",2,diabetes,0.00141782,6.253e-05,3.121252
+0.0,9,"Clinical, medical, and healthcare AI",3,patient-specific,0.00062224,2.757e-05,3.116538
+0.0,9,"Clinical, medical, and healthcare AI",4,chronic,0.00134046,6.056e-05,3.097145
+0.0,9,"Clinical, medical, and healthcare AI",5,psychiatric,0.00152118,6.942e-05,3.087045
+0.0,9,"Clinical, medical, and healthcare AI",6,rehabilitation,0.00124541,5.761e-05,3.073607
+0.0,9,"Clinical, medical, and healthcare AI",7,healthcare_provider,0.0009641,4.48e-05,3.068892
+0.0,9,"Clinical, medical, and healthcare AI",8,primary_care,0.00106563,4.973e-05,3.064763
+0.0,9,"Clinical, medical, and healthcare AI",9,healthcare_professional,0.00165812,7.779e-05,3.059403
+0.0,9,"Clinical, medical, and healthcare AI",10,medical_record,0.00123455,5.81e-05,3.056336
+0.0,10,"Prediction, foundation models, and biological sequence learning",1,cellular,0.00271109,6.401e-05,3.74613
+0.0,10,"Prediction, foundation models, and biological sequence learning",2,cell,0.00730961,0.00017282,3.744719
+0.0,10,"Prediction, foundation models, and biological sequence learning",3,gene_expression,0.00178971,4.382e-05,3.709731
+0.0,10,"Prediction, foundation models, and biological sequence learning",4,chemical,0.00515317,0.00012801,3.695245
+0.0,10,"Prediction, foundation models, and biological sequence learning",5,gene,0.00693466,0.00017429,3.68355
+0.0,10,"Prediction, foundation models, and biological sequence learning",6,tissue,0.00158132,3.988e-05,3.680128
+0.0,10,"Prediction, foundation models, and biological sequence learning",7,protein,0.0068477,0.00017282,3.679442
+0.0,10,"Prediction, foundation models, and biological sequence learning",8,biologically,0.00162734,4.136e-05,3.672443
+0.0,10,"Prediction, foundation models, and biological sequence learning",9,single-cell,0.0029233,7.582e-05,3.652075
+0.0,10,"Prediction, foundation models, and biological sequence learning",10,genetic,0.00372524,9.749e-05,3.643179
+0.0,11,"Safety, cybersecurity, and adversarial robustness",1,malware,0.00175804,4.185e-05,3.737862
+0.0,11,"Safety, cybersecurity, and adversarial robustness",2,cyber,0.00467852,0.0001157,3.699712
+0.0,11,"Safety, cybersecurity, and adversarial robustness",3,phishing,0.0029742,7.385e-05,3.695654
+0.0,11,"Safety, cybersecurity, and adversarial robustness",4,cyber_threat,0.00209017,5.219e-05,3.69012
+0.0,11,"Safety, cybersecurity, and adversarial robustness",5,threat,0.02251772,0.00058492,3.650591
+0.0,11,"Safety, cybersecurity, and adversarial robustness",6,watermark,0.00336064,8.813e-05,3.641062
+0.0,11,"Safety, cybersecurity, and adversarial robustness",7,attacker,0.00166537,4.382e-05,3.637724
+0.0,11,"Safety, cybersecurity, and adversarial robustness",8,evade,0.0009343,2.462e-05,3.636329
+0.0,11,"Safety, cybersecurity, and adversarial robustness",9,countermeasure,0.00136285,3.594e-05,3.635431
+0.0,11,"Safety, cybersecurity, and adversarial robustness",10,hazard,0.00443798,0.00011767,3.630051
+0.0,12,Multimodal and vision-language models,1,aigc,0.00791858,0.00010438,4.328941
+0.0,12,Multimodal and vision-language models,2,video,0.02258656,0.00035499,4.153031
+0.0,12,Multimodal and vision-language models,3,text-to-image,0.00476452,7.681e-05,4.127656
+0.0,12,Multimodal and vision-language models,4,facial,0.00383802,6.204e-05,4.124991
+0.0,12,Multimodal and vision-language models,5,image_caption,0.00192998,3.151e-05,4.114941
+0.0,12,Multimodal and vision-language models,6,gans,0.00249645,4.136e-05,4.100367
+0.0,12,Multimodal and vision-language models,7,visual,0.0371366,0.0006179,4.096027
+0.0,12,Multimodal and vision-language models,8,caption,0.00329261,5.514e-05,4.089497
+0.0,12,Multimodal and vision-language models,9,unimodal,0.00187801,3.2e-05,4.072139
+0.0,12,Multimodal and vision-language models,10,vlm,0.00409745,7.238e-05,4.036248
+0.0,13,"Evaluation, benchmarks, and performance measurement",1,formula,0.00289229,0.0001546,2.928972
+0.0,13,"Evaluation, benchmarks, and performance measurement",2,open-weight,0.00136771,8.862e-05,2.736496
+0.0,13,"Evaluation, benchmarks, and performance measurement",3,mae,0.00050758,3.299e-05,2.733526
+0.0,13,"Evaluation, benchmarks, and performance measurement",4,disagreement,0.00088857,5.859e-05,2.719046
+0.0,13,"Evaluation, benchmarks, and performance measurement",5,absolute,0.00096162,6.401e-05,2.709645
+0.0,13,"Evaluation, benchmarks, and performance measurement",6,calibration,0.002496,0.00016691,2.705003
+0.0,13,"Evaluation, benchmarks, and performance measurement",7,held-out,0.00050699,3.397e-05,2.702938
+0.0,13,"Evaluation, benchmarks, and performance measurement",8,reproducible,0.002568,0.00017429,2.690145
+0.0,13,"Evaluation, benchmarks, and performance measurement",9,llm-as-a-judge,0.00071046,4.924e-05,2.669302
+0.0,13,"Evaluation, benchmarks, and performance measurement",10,cohen,0.00093122,6.647e-05,2.639777
+0.0,14,"Training, fine-tuning, and machine unlearning",1,neuron,0.00203133,8.764e-05,3.143221
+0.0,14,"Training, fine-tuning, and machine unlearning",2,retrain,0.00181904,8.567e-05,3.055569
+0.0,14,"Training, fine-tuning, and machine unlearning",3,gpu,0.00117235,5.613e-05,3.039127
+0.0,14,"Training, fine-tuning, and machine unlearning",4,trainable,0.00052462,2.56e-05,3.019985
+0.0,14,"Training, fine-tuning, and machine unlearning",5,forget,0.00358365,0.00017872,2.998294
+0.0,14,"Training, fine-tuning, and machine unlearning",6,machine_unlearn,0.00166947,8.37e-05,2.993021
+0.0,14,"Training, fine-tuning, and machine unlearning",7,low-rank_adaptation,0.00157002,7.878e-05,2.992227
+0.0,14,"Training, fine-tuning, and machine unlearning",8,slms,0.00132317,6.647e-05,2.99107
+0.0,14,"Training, fine-tuning, and machine unlearning",9,low-rank,0.00058698,2.954e-05,2.989212
+0.0,14,"Training, fine-tuning, and machine unlearning",10,peft,0.00075773,3.84e-05,2.982183
+0.0,15,"Intelligent management, markets, and energy systems",1,esg,0.00672246,0.00020334,3.498322
+0.0,15,"Intelligent management, markets, and energy systems",2,stock,0.00150548,4.579e-05,3.492828
+0.0,15,"Intelligent management, markets, and energy systems",3,investor,0.00190392,6.007e-05,3.456211
+0.0,15,"Intelligent management, markets, and energy systems",4,green,0.00234313,7.484e-05,3.443924
+0.0,15,"Intelligent management, markets, and energy systems",5,waste,0.00140046,4.48e-05,3.442255
+0.0,15,"Intelligent management, markets, and energy systems",6,environmental_social,0.00140805,4.579e-05,3.425919
+0.0,15,"Intelligent management, markets, and energy systems",7,emission,0.00311962,0.00010339,3.40692
+0.0,15,"Intelligent management, markets, and energy systems",8,price,0.00427431,0.00014377,3.392183
+0.0,15,"Intelligent management, markets, and energy systems",9,portfolio,0.00150059,5.071e-05,3.387445
+0.0,15,"Intelligent management, markets, and energy systems",10,carbon,0.00282858,0.00010093,3.333082
+0.0,16,"Public policy, digital services, and urban platforms",1,sdg,0.00394733,5.564e-05,4.261966
+0.0,16,"Public policy, digital services, and urban platforms",2,search_engine,0.00490769,6.942e-05,4.258359
+0.0,16,"Public policy, digital services, and urban platforms",3,sdgs,0.00203815,3.102e-05,4.185222
+0.0,16,"Public policy, digital services, and urban platforms",4,citizen,0.00709065,0.00010979,4.167921
+0.0,16,"Public policy, digital services, and urban platforms",5,tourism,0.00369981,5.761e-05,4.162422
+0.0,16,"Public policy, digital services, and urban platforms",6,public_administration,0.00226648,3.545e-05,4.157875
+0.0,16,"Public policy, digital services, and urban platforms",7,food,0.00962411,0.00015066,4.157001
+0.0,16,"Public policy, digital services, and urban platforms",8,rural,0.00291328,4.579e-05,4.152994
+0.0,16,"Public policy, digital services, and urban platforms",9,city,0.0076487,0.00012309,4.12939
+0.0,16,"Public policy, digital services, and urban platforms",10,web,0.01941349,0.0003156,4.119254
+0.0,17,"User interaction, chatbots, and conversational support",1,conversational_agent,0.00424423,0.00016789,3.229992
+0.0,17,"User interaction, chatbots, and conversational support",2,emotional_support,0.00165316,6.548e-05,3.228656
+0.0,17,"User interaction, chatbots, and conversational support",3,therapist,0.0009565,3.791e-05,3.22803
+0.0,17,"User interaction, chatbots, and conversational support",4,hci,0.00189066,7.878e-05,3.178068
+0.0,17,"User interaction, chatbots, and conversational support",5,psychotherapy,0.00110827,4.628e-05,3.175816
+0.0,17,"User interaction, chatbots, and conversational support",6,coach,0.00196832,8.222e-05,3.175502
+0.0,17,"User interaction, chatbots, and conversational support",7,mental_health,0.01429199,0.00059722,3.175163
+0.0,17,"User interaction, chatbots, and conversational support",8,recommender_system,0.00252633,0.00010733,3.158586
+0.0,17,"User interaction, chatbots, and conversational support",9,user_experience,0.00310504,0.00013195,3.158353
+0.0,17,"User interaction, chatbots, and conversational support",10,chatbot,0.0150772,0.00065483,3.136564
+0.0,18,"Human cognition, emotion, and social simulation",1,consciousness,0.00288604,7.336e-05,3.672252
+0.0,18,"Human cognition, emotion, and social simulation",2,reproduction_distribution,0.00102991,2.659e-05,3.656805
+0.0,18,"Human cognition, emotion, and social simulation",3,permission_original,0.00086149,2.265e-05,3.63858
+0.0,18,"Human cognition, emotion, and social simulation",4,access_page,0.00086149,2.265e-05,3.63858
+0.0,18,"Human cognition, emotion, and social simulation",5,specify_open,0.00086149,2.265e-05,3.63858
+0.0,18,"Human cognition, emotion, and social simulation",6,work_attribute,0.00087182,2.314e-05,3.628992
+0.0,18,"Human cognition, emotion, and social simulation",7,emotion,0.013371,0.00036631,3.597362
+0.0,18,"Human cognition, emotion, and social simulation",8,attribute_specify,0.00218269,6.056e-05,3.584689
+0.0,18,"Human cognition, emotion, and social simulation",9,attribution-noncommercial_permit,0.00201291,5.662e-05,3.570964
+0.0,18,"Human cognition, emotion, and social simulation",10,non-commercial_reproduction,0.00201291,5.662e-05,3.570964
+0.0,19,"Text detection, datasets, and classification",1,hate_speech,0.00208849,7.927e-05,3.271353
+0.0,19,"Text detection, datasets, and classification",2,roberta,0.00113396,4.48e-05,3.231173
+0.0,19,"Text detection, datasets, and classification",3,ner,0.00154365,6.45e-05,3.175266
+0.0,19,"Text detection, datasets, and classification",4,fake_news,0.0014402,6.351e-05,3.121287
+0.0,19,"Text detection, datasets, and classification",5,bert-based,0.00073589,3.348e-05,3.090127
+0.0,19,"Text detection, datasets, and classification",6,text_classification,0.00164494,7.681e-05,3.064163
+0.0,19,"Text detection, datasets, and classification",7,name_entity,0.00148335,6.942e-05,3.061861
+0.0,19,"Text detection, datasets, and classification",8,bert,0.00406375,0.00020334,2.994974
+0.0,19,"Text detection, datasets, and classification",9,tweet,0.0006688,3.397e-05,2.979934
+0.0,19,"Text detection, datasets, and classification",10,representation_transformer,0.0007744,3.939e-05,2.978623
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",1,knowledge_graph,0.00889855,0.00048841,2.90248
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",2,graphrag,0.00076723,4.48e-05,2.840487
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",3,ontology,0.00372353,0.00022107,2.823965
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",4,graph,0.00631763,0.00038994,2.785097
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",5,graph-based,0.00121186,7.533e-05,2.778034
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",6,multi-hop,0.00065287,4.234e-05,2.73559
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",7,question-answering_system,0.00074512,4.874e-05,2.726983
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",8,chunk,0.00107986,7.09e-05,2.723332
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",9,retriever,0.00062318,4.136e-05,2.712583
+0.0,20,"Retrieval, knowledge graphs, and semantic generation",10,retrieval,0.01317149,0.00089411,2.689978
+0.0,21,"Networks, robotics, simulation, and digital twins",1,maritime,0.00345978,5.662e-05,4.112589
+0.0,21,"Networks, robotics, simulation, and digital twins",2,digital_twin,0.01089988,0.00018512,4.075478
+0.0,21,"Networks, robotics, simulation, and digital twins",3,wearable,0.00382041,6.745e-05,4.036691
+0.0,21,"Networks, robotics, simulation, and digital twins",4,internet_thing,0.00271405,4.924e-05,4.009586
+0.0,21,"Networks, robotics, simulation, and digital twins",5,cyber-physical,0.00198781,3.693e-05,3.985862
+0.0,21,"Networks, robotics, simulation, and digital twins",6,iot,0.00776877,0.00014475,3.982847
+0.0,21,"Networks, robotics, simulation, and digital twins",7,physical,0.01575259,0.00029443,3.979729
+0.0,21,"Networks, robotics, simulation, and digital twins",8,traffic,0.01220682,0.00023091,3.967708
+0.0,21,"Networks, robotics, simulation, and digital twins",9,agi,0.00410658,7.779e-05,3.96631
+0.0,21,"Networks, robotics, simulation, and digital twins",10,robot,0.01544435,0.00029886,3.94503
+0.0,22,"Alignment, values, and moral decision-making",1,advisor,0.00237731,3.545e-05,4.205617
+0.0,22,"Alignment, values, and moral decision-making",2,moral,0.03341998,0.0005022,4.197911
+0.0,22,"Alignment, values, and moral decision-making",3,morality,0.00191102,2.954e-05,4.16961
+0.0,22,"Alignment, values, and moral decision-making",4,morally,0.00202442,3.151e-05,4.162715
+0.0,22,"Alignment, values, and moral decision-making",5,persuasion,0.00310907,5.071e-05,4.115909
+0.0,22,"Alignment, values, and moral decision-making",6,dpo,0.00268239,4.53e-05,4.081234
+0.0,22,"Alignment, values, and moral decision-making",7,military,0.00307574,5.268e-05,4.06703
+0.0,22,"Alignment, values, and moral decision-making",8,rlhf,0.00222317,3.89e-05,4.045801
+0.0,22,"Alignment, values, and moral decision-making",9,feedback_rlhf,0.00187506,3.299e-05,4.040265
+0.0,22,"Alignment, values, and moral decision-making",10,constitutional,0.00180476,3.2e-05,4.032353
+0.0,23,"Application challenges, reviews, and field advances",1,comprehensive_review,0.00175248,0.0001285,2.612827
+0.0,23,"Application challenges, reviews, and field advances",2,future_direction,0.00498662,0.00038404,2.563779
+0.0,23,"Application challenges, reviews, and field advances",3,emerge_trend,0.00052542,4.136e-05,2.541934
+0.0,23,"Application challenges, reviews, and field advances",4,comprehensive_survey,0.00110986,8.961e-05,2.516541
+0.0,23,"Application challenges, reviews, and field advances",5,cutting-edge,0.00091019,7.435e-05,2.504933
+0.0,23,"Application challenges, reviews, and field advances",6,tutorial,0.00074016,6.154e-05,2.487116
+0.0,23,"Application challenges, reviews, and field advances",7,comprehensive_overview,0.00098611,8.272e-05,2.478366
+0.0,23,"Application challenges, reviews, and field advances",8,stride,0.00029244,2.462e-05,2.474793
+0.0,23,"Application challenges, reviews, and field advances",9,researcher_practitioner,0.00128991,0.00011472,2.419849
+0.0,23,"Application challenges, reviews, and field advances",10,current_landscape,0.00048721,4.382e-05,2.408629
+0.0,24,"Language, culture, translation, and multilingual corpora",1,cultural_heritage,0.00397792,4.727e-05,4.432727
+0.0,24,"Language, culture, translation, and multilingual corpora",2,translator,0.00423967,5.219e-05,4.39736
+0.0,24,"Language, culture, translation, and multilingual corpora",3,writer,0.00394658,4.973e-05,4.374045
+0.0,24,"Language, culture, translation, and multilingual corpora",4,grammatical,0.0025182,3.299e-05,4.335168
+0.0,24,"Language, culture, translation, and multilingual corpora",5,english,0.03100973,0.00040865,4.329191
+0.0,24,"Language, culture, translation, and multilingual corpora",6,arabic,0.00767645,0.00010389,4.302614
+0.0,24,"Language, culture, translation, and multilingual corpora",7,multilingual,0.02618171,0.00035893,4.289702
+0.0,24,"Language, culture, translation, and multilingual corpora",8,culturally,0.01023994,0.0001418,4.279651
+0.0,24,"Language, culture, translation, and multilingual corpora",9,speaker,0.0040875,5.662e-05,4.279317
+0.0,24,"Language, culture, translation, and multilingual corpora",10,machine_translation,0.00428296,6.154e-05,4.242646
+0.0,25,ChatGPT in academic and systematic literature reviews,1,scientific_write,0.00193728,5.17e-05,3.623638
+0.0,25,ChatGPT in academic and systematic literature reviews,2,academic_write,0.00343081,9.502e-05,3.586422
+0.0,25,ChatGPT in academic and systematic literature reviews,3,peer_review,0.00415463,0.00012457,3.507148
+0.0,25,ChatGPT in academic and systematic literature reviews,4,cochrane,0.00080049,2.413e-05,3.501962
+0.0,25,ChatGPT in academic and systematic literature reviews,5,medline,0.0010956,3.348e-05,3.488108
+0.0,25,ChatGPT in academic and systematic literature reviews,6,manuscript,0.00504432,0.00015509,3.482006
+0.0,25,ChatGPT in academic and systematic literature reviews,7,scopus,0.00278138,8.616e-05,3.474477
+0.0,25,ChatGPT in academic and systematic literature reviews,8,bibliographic,0.00096456,3.003e-05,3.469361
+0.0,25,ChatGPT in academic and systematic literature reviews,9,editor,0.00245697,7.681e-05,3.465388
+0.0,25,ChatGPT in academic and systematic literature reviews,10,gai,0.00854594,0.00026981,3.455496
+0.0,26,"Law, regulation, compliance, and software requirements",1,legislative,0.00190472,6.401e-05,3.393117
+0.0,26,"Law, regulation, compliance, and software requirements",2,legal_document,0.00145068,4.924e-05,3.383181
+0.0,26,"Law, regulation, compliance, and software requirements",3,compliance_check,0.00182264,6.598e-05,3.318763
+0.0,26,"Law, regulation, compliance, and software requirements",4,court,0.00137628,5.022e-05,3.310725
+0.0,26,"Law, regulation, compliance, and software requirements",5,judicial,0.00195171,7.188e-05,3.301413
+0.0,26,"Law, regulation, compliance, and software requirements",6,bim,0.00235606,8.862e-05,3.280349
+0.0,26,"Law, regulation, compliance, and software requirements",7,statutory,0.00092145,3.545e-05,3.257844
+0.0,26,"Law, regulation, compliance, and software requirements",8,legal,0.03273538,0.00129193,3.232316
+0.0,26,"Law, regulation, compliance, and software requirements",9,contract,0.00424005,0.00016937,3.220247
+0.0,26,"Law, regulation, compliance, and software requirements",10,clause,0.00204512,8.321e-05,3.201873
+0.0,27,AI in education and student learning,1,learner,0.01049528,0.00037173,3.340523
+0.0,27,AI in education and student learning,2,learn_experience,0.00228195,8.124e-05,3.335398
+0.0,27,AI in education and student learning,3,faculty,0.00326911,0.00011816,3.320193
+0.0,27,AI in education and student learning,4,teach_learn,0.00235332,8.518e-05,3.318851
+0.0,27,AI in education and student learning,5,classroom,0.00477323,0.00017479,3.30722
+0.0,27,AI in education and student learning,6,program_course,0.00088312,3.25e-05,3.302365
+0.0,27,AI in education and student learning,7,higher_education,0.00992736,0.0003668,3.298226
+0.0,27,AI in education and student learning,8,self-regulated_learn,0.00134431,4.973e-05,3.297078
+0.0,27,AI in education and student learning,9,learn_outcome,0.0026204,9.699e-05,3.296437
+0.0,27,AI in education and student learning,10,personalize_learn,0.00253167,9.749e-05,3.256926
+0.6,1,Human problem-solving and AI-assisted work,1,make,0.01080798,0.00142536,-1.906138
+0.6,1,Human problem-solving and AI-assisted work,2,work,0.01115941,0.00208364,-2.026016
+0.6,1,Human problem-solving and AI-assisted work,3,problem,0.00809467,0.00100243,-2.054418
+0.6,1,Human problem-solving and AI-assisted work,4,one,0.00798024,0.0009916,-2.064309
+0.6,1,Human problem-solving and AI-assisted work,5,many,0.00674739,0.00070653,-2.09654
+0.6,1,Human problem-solving and AI-assisted work,6,way,0.00574678,0.00054503,-2.153251
+0.6,1,Human problem-solving and AI-assisted work,7,find,0.00730139,0.00107874,-2.186908
+0.6,1,Human problem-solving and AI-assisted work,8,help,0.00611003,0.00073951,-2.214016
+0.6,1,Human problem-solving and AI-assisted work,9,could,0.0059156,0.00069077,-2.219081
+0.6,1,Human problem-solving and AI-assisted work,10,give,0.00552788,0.00062233,-2.245138
+0.6,2,AI governance and framework design,1,governance,0.01839646,0.00183549,-1.475419
+0.6,2,AI governance and framework design,2,ai,0.0289868,0.01124534,-1.745794
+0.6,2,AI governance and framework design,3,framework,0.02104415,0.00640157,-1.840648
+0.6,2,AI governance and framework design,4,conceptual,0.00524629,0.00036631,-2.085422
+0.6,2,AI governance and framework design,5,institutional,0.00523321,0.00037025,-2.092197
+0.6,2,AI governance and framework design,6,epistemic,0.00458723,0.00026932,-2.096631
+0.6,2,AI governance and framework design,7,rather,0.00709108,0.00083651,-2.114407
+0.6,2,AI governance and framework design,8,system,0.01622019,0.00767184,-2.173419
+0.6,2,AI governance and framework design,9,design,0.01187783,0.00414019,-2.238277
+0.6,2,AI governance and framework design,10,evidence,0.00708866,0.00120085,-2.259368
+0.6,3,"Generative AI ethics, technology, and societal challenges",1,ai,0.09704903,0.01124534,-0.537418
+0.6,3,"Generative AI ethics, technology, and societal challenges",2,generative_ai,0.02436284,0.00210185,-1.248722
+0.6,3,"Generative AI ethics, technology, and societal challenges",3,genai,0.01471346,0.00118657,-1.524317
+0.6,3,"Generative AI ethics, technology, and societal challenges",4,ethical,0.01572187,0.00183894,-1.633276
+0.6,3,"Generative AI ethics, technology, and societal challenges",5,technology,0.01726802,0.00239136,-1.644542
+0.6,3,"Generative AI ethics, technology, and societal challenges",6,artificial_intelligence,0.01696076,0.00270548,-1.711862
+0.6,3,"Generative AI ethics, technology, and societal challenges",7,chapter,0.0067776,0.00050811,-1.960205
+0.6,3,"Generative AI ethics, technology, and societal challenges",8,generative_artificial,0.00832899,0.00088623,-1.976602
+0.6,3,"Generative AI ethics, technology, and societal challenges",9,development,0.00969937,0.00242976,-2.227709
+0.6,3,"Generative AI ethics, technology, and societal challenges",10,challenge,0.01138845,0.00378324,-2.244286
+0.6,4,"Privacy, explainability, and financial trust",1,explanation,0.0397573,0.00068289,-0.309293
+0.6,4,"Privacy, explainability, and financial trust",2,privacy,0.04144585,0.00116786,-0.482335
+0.6,4,"Privacy, explainability, and financial trust",3,financial,0.02985769,0.00065729,-0.580359
+0.6,4,"Privacy, explainability, and financial trust",4,audit,0.02120691,0.00065188,-0.919165
+0.6,4,"Privacy, explainability, and financial trust",5,explainable,0.01444011,0.00031609,-1.013952
+0.6,4,"Privacy, explainability, and financial trust",6,explainability,0.01522759,0.00040127,-1.056294
+0.6,4,"Privacy, explainability, and financial trust",7,xai,0.01115366,0.00019448,-1.077914
+0.6,4,"Privacy, explainability, and financial trust",8,explainable_ai,0.00810725,0.00013884,-1.262131
+0.6,4,"Privacy, explainability, and financial trust",9,transparency,0.01593533,0.00085029,-1.311245
+0.6,4,"Privacy, explainability, and financial trust",10,sensitive,0.01195784,0.00047315,-1.36393
+0.6,5,ChatGPT response quality and performance evaluation,1,response,0.02301965,0.00279016,-1.418745
+0.6,5,ChatGPT response quality and performance evaluation,2,chatgpt,0.02252725,0.00278819,-1.440085
+0.6,5,ChatGPT response quality and performance evaluation,3,question,0.01958102,0.0019763,-1.442584
+0.6,5,ChatGPT response quality and performance evaluation,4,score,0.01868489,0.00194578,-1.483203
+0.6,5,ChatGPT response quality and performance evaluation,5,accuracy,0.01935036,0.00282709,-1.597641
+0.6,5,ChatGPT response quality and performance evaluation,6,gemini,0.00717312,0.00039191,-1.799626
+0.6,5,ChatGPT response quality and performance evaluation,7,gpt-4,0.00912737,0.00072868,-1.806769
+0.6,5,ChatGPT response quality and performance evaluation,8,readability,0.00638825,0.00032151,-1.836298
+0.6,5,ChatGPT response quality and performance evaluation,9,performance,0.0172964,0.00388811,-1.837324
+0.6,5,ChatGPT response quality and performance evaluation,10,compare,0.01211663,0.00179019,-1.883004
+0.6,6,"Perception, trust, and AI adoption surveys",1,participant,0.01712835,0.00075527,-1.191646
+0.6,6,"Perception, trust, and AI adoption surveys",2,perceive,0.01373764,0.00051402,-1.258313
+0.6,6,"Perception, trust, and AI adoption surveys",3,perception,0.01250883,0.00059722,-1.412033
+0.6,6,"Perception, trust, and AI adoption surveys",4,survey,0.01382436,0.00116737,-1.580122
+0.6,6,"Perception, trust, and AI adoption surveys",5,group,0.01017613,0.00085374,-1.761356
+0.6,6,"Perception, trust, and AI adoption surveys",6,influence,0.00967478,0.00078776,-1.779708
+0.6,6,"Perception, trust, and AI adoption surveys",7,factor,0.00841255,0.00060116,-1.811373
+0.6,6,"Perception, trust, and AI adoption surveys",8,questionnaire,0.00487467,0.00017675,-1.867405
+0.6,6,"Perception, trust, and AI adoption surveys",9,among,0.00955412,0.00096649,-1.874047
+0.6,6,"Perception, trust, and AI adoption surveys",10,positive,0.00596752,0.00031264,-1.893245
+0.6,7,"Agentic systems, architecture, and enterprise workflows",1,agent,0.05793731,0.00256319,-0.461792
+0.6,7,"Agentic systems, architecture, and enterprise workflows",2,architecture,0.0237777,0.00163757,-1.173189
+0.6,7,"Agentic systems, architecture, and enterprise workflows",3,system,0.04271612,0.00767184,-1.205099
+0.6,7,"Agentic systems, architecture, and enterprise workflows",4,agentic,0.01379752,0.00051106,-1.251658
+0.6,7,"Agentic systems, architecture, and enterprise workflows",5,multi-agent,0.0122674,0.00045937,-1.326544
+0.6,7,"Agentic systems, architecture, and enterprise workflows",6,agentic_ai,0.0111499,0.0003929,-1.35954
+0.6,7,"Agentic systems, architecture, and enterprise workflows",7,enterprise,0.00769557,0.00041653,-1.75369
+0.6,7,"Agentic systems, architecture, and enterprise workflows",8,execution,0.0066992,0.00034317,-1.814853
+0.6,7,"Agentic systems, architecture, and enterprise workflows",9,orchestration,0.00542326,0.00020777,-1.825432
+0.6,7,"Agentic systems, architecture, and enterprise workflows",10,rag,0.0097517,0.00112552,-1.914509
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",1,bias,0.09143606,0.00278622,-0.038888
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",2,fairness,0.0230471,0.00073607,-0.88454
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",3,gender,0.01395601,0.0003412,-1.078629
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",4,stereotype,0.00940352,0.00021467,-1.2881
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",5,demographic,0.00849038,0.00026686,-1.4773
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",6,gender_bias,0.00637563,0.00013835,-1.500986
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",7,social,0.01164817,0.0012747,-1.786589
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",8,political,0.00613449,0.00026045,-1.792595
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",9,disparity,0.0051958,0.00017725,-1.804719
+0.6,8,"Bias, fairness, gender, and stereotype in prompts",10,race,0.00428905,0.00010979,-1.804931
+0.6,9,"Clinical, medical, and healthcare AI",1,clinical,0.04933922,0.00261882,-0.631024
+0.6,9,"Clinical, medical, and healthcare AI",2,medical,0.03906422,0.00218014,-0.791201
+0.6,9,"Clinical, medical, and healthcare AI",3,patient,0.0345997,0.00168828,-0.810292
+0.6,9,"Clinical, medical, and healthcare AI",4,healthcare,0.02761724,0.00168532,-1.034996
+0.6,9,"Clinical, medical, and healthcare AI",5,health,0.0165869,0.00108121,-1.367271
+0.6,9,"Clinical, medical, and healthcare AI",6,care,0.013652,0.00074542,-1.413245
+0.6,9,"Clinical, medical, and healthcare AI",7,medicine,0.00985512,0.00059427,-1.648493
+0.6,9,"Clinical, medical, and healthcare AI",8,clinician,0.00861307,0.00044164,-1.664469
+0.6,9,"Clinical, medical, and healthcare AI",9,diagnosis,0.0085717,0.00047414,-1.697683
+0.6,9,"Clinical, medical, and healthcare AI",10,physician,0.00707175,0.00034809,-1.766432
+0.6,10,"Prediction, foundation models, and biological sequence learning",1,prediction,0.02966793,0.00108022,-0.785453
+0.6,10,"Prediction, foundation models, and biological sequence learning",2,foundation_model,0.01866108,0.00095664,-1.200483
+0.6,10,"Prediction, foundation models, and biological sequence learning",3,biological,0.01113366,0.00029197,-1.242232
+0.6,10,"Prediction, foundation models, and biological sequence learning",4,ml,0.01208074,0.00040767,-1.29412
+0.6,10,"Prediction, foundation models, and biological sequence learning",5,cell,0.00730961,0.00017282,-1.453251
+0.6,10,"Prediction, foundation models, and biological sequence learning",6,sequence,0.00940977,0.00036976,-1.504941
+0.6,10,"Prediction, foundation models, and biological sequence learning",7,gene,0.00693466,0.00017429,-1.509314
+0.6,10,"Prediction, foundation models, and biological sequence learning",8,protein,0.0068477,0.00017282,-1.518529
+0.6,10,"Prediction, foundation models, and biological sequence learning",9,machine_learn,0.01249444,0.00078284,-1.521439
+0.6,10,"Prediction, foundation models, and biological sequence learning",10,predict,0.00963114,0.00049038,-1.594625
+0.6,11,"Safety, cybersecurity, and adversarial robustness",1,safety,0.04887505,0.00209299,-0.550824
+0.6,11,"Safety, cybersecurity, and adversarial robustness",2,security,0.02920412,0.00108268,-0.80212
+0.6,11,"Safety, cybersecurity, and adversarial robustness",3,threat,0.02251772,0.00058492,-0.815835
+0.6,11,"Safety, cybersecurity, and adversarial robustness",4,attack,0.02411839,0.00069668,-0.817106
+0.6,11,"Safety, cybersecurity, and adversarial robustness",5,vulnerability,0.02019687,0.0005539,-0.902815
+0.6,11,"Safety, cybersecurity, and adversarial robustness",6,risk,0.03609035,0.00267643,-0.952421
+0.6,11,"Safety, cybersecurity, and adversarial robustness",7,cybersecurity,0.01509085,0.00040718,-1.07116
+0.6,11,"Safety, cybersecurity, and adversarial robustness",8,adversarial,0.015075,0.00042589,-1.090181
+0.6,11,"Safety, cybersecurity, and adversarial robustness",9,defense,0.01040557,0.00030526,-1.327673
+0.6,11,"Safety, cybersecurity, and adversarial robustness",10,malicious,0.00646883,0.00018266,-1.597613
+0.6,12,Multimodal and vision-language models,1,multimodal,0.06764069,0.00146672,-0.083655
+0.6,12,Multimodal and vision-language models,2,image,0.0597962,0.00109745,-0.090908
+0.6,12,Multimodal and vision-language models,3,visual,0.0371366,0.0006179,-0.33748
+0.6,12,Multimodal and vision-language models,4,video,0.02258656,0.00035499,-0.613028
+0.6,12,Multimodal and vision-language models,5,modality,0.01596619,0.00031757,-0.915354
+0.6,12,Multimodal and vision-language models,6,mllms,0.0121624,0.00025307,-1.096667
+0.6,12,Multimodal and vision-language models,7,vision,0.0133519,0.00035499,-1.138724
+0.6,12,Multimodal and vision-language models,8,aigc,0.00791858,0.00010438,-1.17155
+0.6,12,Multimodal and vision-language models,9,diffusion,0.00869817,0.00016001,-1.248545
+0.6,12,Multimodal and vision-language models,10,vlms,0.0094605,0.00020383,-1.261348
+0.6,13,"Evaluation, benchmarks, and performance measurement",1,evaluation,0.02707055,0.00394178,-1.394859
+0.6,13,"Evaluation, benchmarks, and performance measurement",2,benchmark,0.01418333,0.00159818,-1.680131
+0.6,13,"Evaluation, benchmarks, and performance measurement",3,score,0.01201666,0.00194578,-1.924624
+0.6,13,"Evaluation, benchmarks, and performance measurement",4,metric,0.00868524,0.00094482,-1.960326
+0.6,13,"Evaluation, benchmarks, and performance measurement",5,across,0.01356426,0.00324608,-2.008194
+0.6,13,"Evaluation, benchmarks, and performance measurement",6,test,0.00896116,0.00198024,-2.225042
+0.6,13,"Evaluation, benchmarks, and performance measurement",7,baseline,0.00623393,0.00080647,-2.228612
+0.6,13,"Evaluation, benchmarks, and performance measurement",8,measure,0.00625438,0.00085965,-2.250878
+0.6,13,"Evaluation, benchmarks, and performance measurement",9,formula,0.00289229,0.0001546,-2.335834
+0.6,13,"Evaluation, benchmarks, and performance measurement",10,assessment,0.00771098,0.00180053,-2.337241
+0.6,14,"Training, fine-tuning, and machine unlearning",1,unlearn,0.00996595,0.00051008,-1.576202
+0.6,14,"Training, fine-tuning, and machine unlearning",2,train,0.0191294,0.00283497,-1.610239
+0.6,14,"Training, fine-tuning, and machine unlearning",3,fine-tune,0.01309238,0.00157504,-1.754334
+0.6,14,"Training, fine-tuning, and machine unlearning",4,inference,0.00876508,0.00072327,-1.844286
+0.6,14,"Training, fine-tuning, and machine unlearning",5,token,0.00638019,0.00034809,-1.869342
+0.6,14,"Training, fine-tuning, and machine unlearning",6,optimization,0.00739115,0.0008045,-2.057358
+0.6,14,"Training, fine-tuning, and machine unlearning",7,parameter,0.00575571,0.00048595,-2.105803
+0.6,14,"Training, fine-tuning, and machine unlearning",8,performance,0.01254561,0.00388811,-2.158451
+0.6,14,"Training, fine-tuning, and machine unlearning",9,forget,0.00358365,0.00017872,-2.179507
+0.6,14,"Training, fine-tuning, and machine unlearning",10,lightweight,0.00390087,0.00027523,-2.267388
+0.6,15,"Intelligent management, markets, and energy systems",1,market,0.01316985,0.0005214,-1.306229
+0.6,15,"Intelligent management, markets, and energy systems",2,management,0.01911602,0.00136382,-1.318241
+0.6,15,"Intelligent management, markets, and energy systems",3,energy,0.01155185,0.00044558,-1.374455
+0.6,15,"Intelligent management, markets, and energy systems",4,sustainability,0.00815046,0.00032545,-1.597554
+0.6,15,"Intelligent management, markets, and energy systems",5,esg,0.00672246,0.00020334,-1.602052
+0.6,15,"Intelligent management, markets, and energy systems",6,intelligent,0.01091034,0.00097978,-1.746772
+0.6,15,"Intelligent management, markets, and energy systems",7,environmental,0.00737869,0.00036877,-1.747026
+0.6,15,"Intelligent management, markets, and energy systems",8,forecast,0.00653632,0.00028212,-1.761107
+0.6,15,"Intelligent management, markets, and energy systems",9,power,0.00980236,0.00080401,-1.774774
+0.6,15,"Intelligent management, markets, and energy systems",10,business,0.00792761,0.00048792,-1.787261
+0.6,16,"Public policy, digital services, and urban platforms",1,service,0.04648052,0.00094532,-0.283126
+0.6,16,"Public policy, digital services, and urban platforms",2,policy,0.05046552,0.00136136,-0.346755
+0.6,16,"Public policy, digital services, and urban platforms",3,urban,0.02162267,0.00038994,-0.694209
+0.6,16,"Public policy, digital services, and urban platforms",4,web,0.01941349,0.0003156,-0.717371
+0.6,16,"Public policy, digital services, and urban platforms",5,public,0.02211562,0.00079909,-0.958656
+0.6,16,"Public policy, digital services, and urban platforms",6,government,0.01227557,0.00023239,-1.053307
+0.6,16,"Public policy, digital services, and urban platforms",7,food,0.00962411,0.00015066,-1.12329
+0.6,16,"Public policy, digital services, and urban platforms",8,platform,0.01944489,0.00102606,-1.18736
+0.6,16,"Public policy, digital services, and urban platforms",9,digital,0.01877323,0.00101326,-1.217491
+0.6,16,"Public policy, digital services, and urban platforms",10,library,0.01008008,0.00021614,-1.221366
+0.6,17,"User interaction, chatbots, and conversational support",1,user,0.04709577,0.00263507,-0.680034
+0.6,17,"User interaction, chatbots, and conversational support",2,chatbot,0.0150772,0.00065483,-1.262117
+0.6,17,"User interaction, chatbots, and conversational support",3,mental_health,0.01429199,0.00059722,-1.278768
+0.6,17,"User interaction, chatbots, and conversational support",4,chatbots,0.01595005,0.00090445,-1.335021
+0.6,17,"User interaction, chatbots, and conversational support",5,interaction,0.02058991,0.00179512,-1.353881
+0.6,17,"User interaction, chatbots, and conversational support",6,conversational,0.01283125,0.00056276,-1.362808
+0.6,17,"User interaction, chatbots, and conversational support",7,design,0.02716766,0.00414019,-1.410923
+0.6,17,"User interaction, chatbots, and conversational support",8,dialogue,0.01051015,0.00049629,-1.512075
+0.6,17,"User interaction, chatbots, and conversational support",9,conversation,0.00842754,0.00038551,-1.631875
+0.6,17,"User interaction, chatbots, and conversational support",10,personalize,0.00892673,0.00069766,-1.811596
+0.6,18,"Human cognition, emotion, and social simulation",1,human,0.03971581,0.003992,-1.01662
+0.6,18,"Human cognition, emotion, and social simulation",2,emotional,0.01548895,0.00050959,-1.134863
+0.6,18,"Human cognition, emotion, and social simulation",3,emotion,0.013371,0.00036631,-1.149856
+0.6,18,"Human cognition, emotion, and social simulation",4,cognitive,0.01865216,0.0008882,-1.17127
+0.6,18,"Human cognition, emotion, and social simulation",5,social,0.01980197,0.0012747,-1.255957
+0.6,18,"Human cognition, emotion, and social simulation",6,game,0.00829444,0.00025455,-1.481759
+0.6,18,"Human cognition, emotion, and social simulation",7,narrative,0.0103032,0.00048891,-1.525965
+0.6,18,"Human cognition, emotion, and social simulation",8,psychological,0.00886225,0.00034465,-1.536759
+0.6,18,"Human cognition, emotion, and social simulation",9,theory,0.0109641,0.00062775,-1.563782
+0.6,18,"Human cognition, emotion, and social simulation",10,story,0.00530702,0.00016642,-1.758315
+0.6,19,"Text detection, datasets, and classification",1,text,0.02252424,0.00199304,-1.305927
+0.6,19,"Text detection, datasets, and classification",2,detection,0.02007713,0.00149774,-1.306654
+0.6,19,"Text detection, datasets, and classification",3,dataset,0.01965405,0.00151349,-1.332138
+0.6,19,"Text detection, datasets, and classification",4,classification,0.01566997,0.00098667,-1.387541
+0.6,19,"Text detection, datasets, and classification",5,fine-tune,0.01368749,0.00157504,-1.709883
+0.6,19,"Text detection, datasets, and classification",6,annotation,0.00810026,0.00049088,-1.768131
+0.6,19,"Text detection, datasets, and classification",7,label,0.00792313,0.00055734,-1.841038
+0.6,19,"Text detection, datasets, and classification",8,prompt,0.01377471,0.0029807,-1.958682
+0.6,19,"Text detection, datasets, and classification",9,performance,0.01526005,0.00388811,-1.962584
+0.6,19,"Text detection, datasets, and classification",10,datasets,0.01010876,0.0014357,-1.975912
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",1,semantic,0.01866756,0.00131803,-1.328321
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",2,reason,0.02259872,0.00258338,-1.406399
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",3,knowledge,0.02226678,0.00273994,-1.444732
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",4,retrieval,0.01317149,0.00089411,-1.521829
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",5,rag,0.01275344,0.00112552,-1.64615
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",6,knowledge_graph,0.00889855,0.00048841,-1.672128
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",7,framework,0.02389704,0.00640157,-1.713516
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",8,query,0.00931138,0.0009335,-1.885891
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",9,graph,0.00631763,0.00038994,-1.924608
+0.6,20,"Retrieval, knowledge graphs, and semantic generation",10,retrieval-augmented_generation,0.00793533,0.00069717,-1.929039
+0.6,21,"Networks, robotics, simulation, and digital twins",1,plan,0.02520762,0.00088673,-0.86942
+0.6,21,"Networks, robotics, simulation, and digital twins",2,network,0.02448298,0.00086999,-0.890965
+0.6,21,"Networks, robotics, simulation, and digital twins",3,physical,0.01575259,0.00029443,-0.898559
+0.6,21,"Networks, robotics, simulation, and digital twins",4,robot,0.01544435,0.00029886,-0.924295
+0.6,21,"Networks, robotics, simulation, and digital twins",5,traffic,0.01220682,0.00023091,-1.056373
+0.6,21,"Networks, robotics, simulation, and digital twins",6,digital_twin,0.01089988,0.00018512,-1.081211
+0.6,21,"Networks, robotics, simulation, and digital twins",7,device,0.0110296,0.00023042,-1.156932
+0.6,21,"Networks, robotics, simulation, and digital twins",8,iot,0.00776877,0.00014475,-1.321447
+0.6,21,"Networks, robotics, simulation, and digital twins",9,environment,0.01786577,0.00121266,-1.338895
+0.6,21,"Networks, robotics, simulation, and digital twins",10,simulation,0.01402367,0.00067058,-1.344064
+0.6,22,"Alignment, values, and moral decision-making",1,alignment,0.05428683,0.00128652,-0.251147
+0.6,22,"Alignment, values, and moral decision-making",2,moral,0.03341998,0.0005022,-0.359996
+0.6,22,"Alignment, values, and moral decision-making",3,value,0.04458775,0.00132738,-0.460478
+0.6,22,"Alignment, values, and moral decision-making",4,human,0.0648497,0.003992,-0.526297
+0.6,22,"Alignment, values, and moral decision-making",5,preference,0.02524673,0.00055242,-0.678578
+0.6,22,"Alignment, values, and moral decision-making",6,reward,0.01224192,0.00022107,-1.03607
+0.6,22,"Alignment, values, and moral decision-making",7,align,0.02008177,0.00093793,-1.11921
+0.6,22,"Alignment, values, and moral decision-making",8,ethical,0.02282524,0.00183894,-1.260461
+0.6,22,"Alignment, values, and moral decision-making",9,decision,0.01886981,0.00117131,-1.270338
+0.6,22,"Alignment, values, and moral decision-making",10,norm,0.0094554,0.00022894,-1.308357
+0.6,23,"Application challenges, reviews, and field advances",1,application,0.02754549,0.00378915,-1.361671
+0.6,23,"Application challenges, reviews, and field advances",2,challenge,0.0196961,0.00378324,-1.696465
+0.6,23,"Application challenges, reviews, and field advances",3,review,0.01385164,0.00235295,-1.858518
+0.6,23,"Application challenges, reviews, and field advances",4,field,0.01029011,0.00134511,-1.93206
+0.6,23,"Application challenges, reviews, and field advances",5,survey,0.00913362,0.00116737,-1.994592
+0.6,23,"Application challenges, reviews, and field advances",6,development,0.01164203,0.00242976,-2.045148
+0.6,23,"Application challenges, reviews, and field advances",7,advance,0.00982957,0.00184632,-2.104536
+0.6,23,"Application challenges, reviews, and field advances",8,future_direction,0.00498662,0.00038404,-2.155087
+0.6,23,"Application challenges, reviews, and field advances",9,capability,0.00970708,0.00207477,-2.163739
+0.6,23,"Application challenges, reviews, and field advances",10,natural_language,0.007527,0.00117623,-2.191083
+0.6,24,"Language, culture, translation, and multilingual corpora",1,language,0.10671731,0.00180546,0.289205
+0.6,24,"Language, culture, translation, and multilingual corpora",2,cultural,0.04117079,0.00060313,-0.224677
+0.6,24,"Language, culture, translation, and multilingual corpora",3,english,0.03100973,0.00040865,-0.352396
+0.6,24,"Language, culture, translation, and multilingual corpora",4,translation,0.03142698,0.00047364,-0.398066
+0.6,24,"Language, culture, translation, and multilingual corpora",5,linguistic,0.03011146,0.00049875,-0.46149
+0.6,24,"Language, culture, translation, and multilingual corpora",6,multilingual,0.02618171,0.00035893,-0.469736
+0.6,24,"Language, culture, translation, and multilingual corpora",7,chinese,0.01976219,0.00044558,-0.83753
+0.6,24,"Language, culture, translation, and multilingual corpora",8,write,0.0221295,0.00084931,-0.982409
+0.6,24,"Language, culture, translation, and multilingual corpora",9,culturally,0.01023994,0.0001418,-1.037015
+0.6,24,"Language, culture, translation, and multilingual corpora",10,culture,0.00916175,0.00015164,-1.17513
+0.6,25,ChatGPT in academic and systematic literature reviews,1,chatgpt,0.04536126,0.00278819,-0.740152
+0.6,25,ChatGPT in academic and systematic literature reviews,2,review,0.02369045,0.00235295,-1.32185
+0.6,25,ChatGPT in academic and systematic literature reviews,3,publish,0.01280241,0.00059624,-1.388174
+0.6,25,ChatGPT in academic and systematic literature reviews,4,systematic_review,0.0103469,0.00041998,-1.460944
+0.6,25,ChatGPT in academic and systematic literature reviews,5,gai,0.00854594,0.00026981,-1.475181
+0.6,25,ChatGPT in academic and systematic literature reviews,6,scientific,0.01096161,0.00061544,-1.556087
+0.6,25,ChatGPT in academic and systematic literature reviews,7,scoping_review,0.00647836,0.00021713,-1.665278
+0.6,25,ChatGPT in academic and systematic literature reviews,8,qualitative,0.01031096,0.00070357,-1.670812
+0.6,25,ChatGPT in academic and systematic literature reviews,9,literature,0.01097341,0.00082272,-1.671123
+0.6,25,ChatGPT in academic and systematic literature reviews,10,search,0.00933377,0.00060559,-1.710396
+0.6,26,"Law, regulation, compliance, and software requirements",1,legal,0.03273538,0.00129193,-0.758653
+0.6,26,"Law, regulation, compliance, and software requirements",2,code,0.01807877,0.00108268,-1.281692
+0.6,26,"Law, regulation, compliance, and software requirements",3,requirement,0.0168686,0.00094089,-1.294826
+0.6,26,"Law, regulation, compliance, and software requirements",4,software,0.01208568,0.00058787,-1.440131
+0.6,26,"Law, regulation, compliance, and software requirements",5,automate,0.01647616,0.00163412,-1.53918
+0.6,26,"Law, regulation, compliance, and software requirements",6,compliance,0.01123277,0.0007725,-1.62257
+0.6,26,"Law, regulation, compliance, and software requirements",7,law,0.00883566,0.00043819,-1.635819
+0.6,26,"Law, regulation, compliance, and software requirements",8,process,0.02022271,0.00360599,-1.650886
+0.6,26,"Law, regulation, compliance, and software requirements",9,regulation,0.01129183,0.00102557,-1.730673
+0.6,26,"Law, regulation, compliance, and software requirements",10,regulatory,0.01134638,0.00105363,-1.736653
+0.6,27,AI in education and student learning,1,student,0.05736896,0.00221756,-0.413712
+0.6,27,AI in education and student learning,2,education,0.03225791,0.00173407,-0.891078
+0.6,27,AI in education and student learning,3,learn,0.03678828,0.00254349,-0.912889
+0.6,27,AI in education and student learning,4,educational,0.0221298,0.00095073,-1.02752
+0.6,27,AI in education and student learning,5,feedback,0.01903022,0.00108613,-1.231673
+0.6,27,AI in education and student learning,6,learner,0.01049528,0.00037173,-1.397888
+0.6,27,AI in education and student learning,7,teach,0.0107654,0.00042736,-1.428266
+0.6,27,AI in education and student learning,8,higher_education,0.00992736,0.0003668,-1.448186
+0.6,27,AI in education and student learning,9,teacher,0.0099167,0.00039536,-1.479249
+0.6,27,AI in education and student learning,10,skill,0.01138925,0.00057507,-1.490677
+1.0,1,Human problem-solving and AI-assisted work,1,work,0.01115941,0.00208364,-4.495472
+1.0,1,Human problem-solving and AI-assisted work,2,make,0.01080798,0.00142536,-4.52747
+1.0,1,Human problem-solving and AI-assisted work,3,system,0.00925281,0.00767184,-4.682828
+1.0,1,Human problem-solving and AI-assisted work,4,ai,0.00913764,0.01124534,-4.695354
+1.0,1,Human problem-solving and AI-assisted work,5,problem,0.00809467,0.00100243,-4.816549
+1.0,1,Human problem-solving and AI-assisted work,6,one,0.00798024,0.0009916,-4.830786
+1.0,1,Human problem-solving and AI-assisted work,7,human,0.00771961,0.003992,-4.863991
+1.0,1,Human problem-solving and AI-assisted work,8,task,0.00760871,0.00383247,-4.878462
+1.0,1,Human problem-solving and AI-assisted work,9,find,0.00730139,0.00107874,-4.919691
+1.0,1,Human problem-solving and AI-assisted work,10,question,0.0072818,0.0019763,-4.922377
+1.0,2,AI governance and framework design,1,ai,0.0289868,0.01124534,-3.540915
+1.0,2,AI governance and framework design,2,framework,0.02104415,0.00640157,-3.861133
+1.0,2,AI governance and framework design,3,governance,0.01839646,0.00183549,-3.995597
+1.0,2,AI governance and framework design,4,system,0.01622019,0.00767184,-4.121499
+1.0,2,AI governance and framework design,5,design,0.01187783,0.00414019,-4.433082
+1.0,2,AI governance and framework design,6,across,0.00828247,0.00324608,-4.793614
+1.0,2,AI governance and framework design,7,structure,0.00824994,0.00237363,-4.797549
+1.0,2,AI governance and framework design,8,rather,0.00709108,0.00083651,-4.948917
+1.0,2,AI governance and framework design,9,evidence,0.00708866,0.00120085,-4.949259
+1.0,2,AI governance and framework design,10,support,0.00655564,0.00345189,-5.02743
+1.0,3,"Generative AI ethics, technology, and societal challenges",1,ai,0.09704903,0.01124534,-2.332539
+1.0,3,"Generative AI ethics, technology, and societal challenges",2,generative_ai,0.02436284,0.00210185,-3.714696
+1.0,3,"Generative AI ethics, technology, and societal challenges",3,technology,0.01726802,0.00239136,-4.058899
+1.0,3,"Generative AI ethics, technology, and societal challenges",4,artificial_intelligence,0.01696076,0.00270548,-4.076853
+1.0,3,"Generative AI ethics, technology, and societal challenges",5,ethical,0.01572187,0.00183894,-4.152703
+1.0,3,"Generative AI ethics, technology, and societal challenges",6,genai,0.01471346,0.00118657,-4.218993
+1.0,3,"Generative AI ethics, technology, and societal challenges",7,challenge,0.01138845,0.00378324,-4.475156
+1.0,3,"Generative AI ethics, technology, and societal challenges",8,development,0.00969937,0.00242976,-4.635694
+1.0,3,"Generative AI ethics, technology, and societal challenges",9,tool,0.00909561,0.00344992,-4.699963
+1.0,3,"Generative AI ethics, technology, and societal challenges",10,generative_artificial,0.00832899,0.00088623,-4.788013
+1.0,4,"Privacy, explainability, and financial trust",1,privacy,0.04144585,0.00116786,-3.183368
+1.0,4,"Privacy, explainability, and financial trust",2,explanation,0.0397573,0.00068289,-3.224962
+1.0,4,"Privacy, explainability, and financial trust",3,financial,0.02985769,0.00065729,-3.511313
+1.0,4,"Privacy, explainability, and financial trust",4,audit,0.02120691,0.00065188,-3.853428
+1.0,4,"Privacy, explainability, and financial trust",5,framework,0.01640345,0.00640157,-4.110263
+1.0,4,"Privacy, explainability, and financial trust",6,transparency,0.01593533,0.00085029,-4.139217
+1.0,4,"Privacy, explainability, and financial trust",7,explainability,0.01522759,0.00040127,-4.184647
+1.0,4,"Privacy, explainability, and financial trust",8,explainable,0.01444011,0.00031609,-4.237745
+1.0,4,"Privacy, explainability, and financial trust",9,trust,0.01201056,0.00095123,-4.421969
+1.0,4,"Privacy, explainability, and financial trust",10,sensitive,0.01195784,0.00047315,-4.426368
+1.0,5,ChatGPT response quality and performance evaluation,1,response,0.02301965,0.00279016,-3.771407
+1.0,5,ChatGPT response quality and performance evaluation,2,chatgpt,0.02252725,0.00278819,-3.793029
+1.0,5,ChatGPT response quality and performance evaluation,3,question,0.01958102,0.0019763,-3.933195
+1.0,5,ChatGPT response quality and performance evaluation,4,accuracy,0.01935036,0.00282709,-3.945044
+1.0,5,ChatGPT response quality and performance evaluation,5,score,0.01868489,0.00194578,-3.98004
+1.0,5,ChatGPT response quality and performance evaluation,6,performance,0.0172964,0.00388811,-4.057257
+1.0,5,ChatGPT response quality and performance evaluation,7,compare,0.01211663,0.00179019,-4.413176
+1.0,5,ChatGPT response quality and performance evaluation,8,test,0.00932678,0.00198024,-4.674866
+1.0,5,ChatGPT response quality and performance evaluation,9,quality,0.00921647,0.00190984,-4.686763
+1.0,5,ChatGPT response quality and performance evaluation,10,gpt-4,0.00912737,0.00072868,-4.696478
+1.0,6,"Perception, trust, and AI adoption surveys",1,participant,0.01712835,0.00075527,-4.06702
+1.0,6,"Perception, trust, and AI adoption surveys",2,ai,0.01592875,0.01124534,-4.139629
+1.0,6,"Perception, trust, and AI adoption surveys",3,survey,0.01382436,0.00116737,-4.281323
+1.0,6,"Perception, trust, and AI adoption surveys",4,perceive,0.01373764,0.00051402,-4.287616
+1.0,6,"Perception, trust, and AI adoption surveys",5,perception,0.01250883,0.00059722,-4.381321
+1.0,6,"Perception, trust, and AI adoption surveys",6,finding,0.01199522,0.0020605,-4.423247
+1.0,6,"Perception, trust, and AI adoption surveys",7,group,0.01017613,0.00085374,-4.58771
+1.0,6,"Perception, trust, and AI adoption surveys",8,influence,0.00967478,0.00078776,-4.638233
+1.0,6,"Perception, trust, and AI adoption surveys",9,among,0.00955412,0.00096649,-4.650783
+1.0,6,"Perception, trust, and AI adoption surveys",10,impact,0.0086976,0.00142881,-4.744708
+1.0,7,"Agentic systems, architecture, and enterprise workflows",1,agent,0.05793731,0.00256319,-2.848394
+1.0,7,"Agentic systems, architecture, and enterprise workflows",2,system,0.04271612,0.00767184,-3.153179
+1.0,7,"Agentic systems, architecture, and enterprise workflows",3,architecture,0.0237777,0.00163757,-3.739007
+1.0,7,"Agentic systems, architecture, and enterprise workflows",4,framework,0.01558805,0.00640157,-4.161251
+1.0,7,"Agentic systems, architecture, and enterprise workflows",5,agentic,0.01379752,0.00051106,-4.283266
+1.0,7,"Agentic systems, architecture, and enterprise workflows",6,multi-agent,0.0122674,0.00045937,-4.40081
+1.0,7,"Agentic systems, architecture, and enterprise workflows",7,agentic_ai,0.0111499,0.0003929,-4.496325
+1.0,7,"Agentic systems, architecture, and enterprise workflows",8,ai,0.01020654,0.01124534,-4.584727
+1.0,7,"Agentic systems, architecture, and enterprise workflows",9,rag,0.0097517,0.00112552,-4.630313
+1.0,7,"Agentic systems, architecture, and enterprise workflows",10,workflow,0.00871135,0.00114324,-4.743128
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",1,bias,0.09143606,0.00278622,-2.392115
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",2,fairness,0.0230471,0.00073607,-3.770215
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",3,gender,0.01395601,0.0003412,-4.271845
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",4,prompt,0.01356286,0.0029807,-4.30042
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",5,social,0.01164817,0.0012747,-4.452606
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",6,stereotype,0.00940352,0.00021467,-4.666671
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",7,across,0.00880886,0.00324608,-4.731997
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",8,demographic,0.00849038,0.00026686,-4.768822
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",9,output,0.00703313,0.00172619,-4.957123
+1.0,8,"Bias, fairness, gender, and stereotype in prompts",10,group,0.00669571,0.00085374,-5.006288
+1.0,9,"Clinical, medical, and healthcare AI",1,clinical,0.04933922,0.00261882,-3.009036
+1.0,9,"Clinical, medical, and healthcare AI",2,medical,0.03906422,0.00218014,-3.242548
+1.0,9,"Clinical, medical, and healthcare AI",3,patient,0.0345997,0.00168828,-3.36391
+1.0,9,"Clinical, medical, and healthcare AI",4,healthcare,0.02761724,0.00168532,-3.589315
+1.0,9,"Clinical, medical, and healthcare AI",5,health,0.0165869,0.00108121,-4.099142
+1.0,9,"Clinical, medical, and healthcare AI",6,care,0.013652,0.00074542,-4.293869
+1.0,9,"Clinical, medical, and healthcare AI",7,support,0.01295854,0.00345189,-4.346001
+1.0,9,"Clinical, medical, and healthcare AI",8,medicine,0.00985512,0.00059427,-4.619764
+1.0,9,"Clinical, medical, and healthcare AI",9,include,0.00956449,0.00402498,-4.649698
+1.0,9,"Clinical, medical, and healthcare AI",10,clinician,0.00861307,0.00044164,-4.754475
+1.0,10,"Prediction, foundation models, and biological sequence learning",1,prediction,0.02966793,0.00108022,-3.517689
+1.0,10,"Prediction, foundation models, and biological sequence learning",2,foundation_model,0.01866108,0.00095664,-3.981315
+1.0,10,"Prediction, foundation models, and biological sequence learning",3,machine_learn,0.01249444,0.00078284,-4.382471
+1.0,10,"Prediction, foundation models, and biological sequence learning",4,ml,0.01208074,0.00040767,-4.416143
+1.0,10,"Prediction, foundation models, and biological sequence learning",5,biological,0.01113366,0.00029197,-4.497782
+1.0,10,"Prediction, foundation models, and biological sequence learning",6,feature,0.01086071,0.00114866,-4.522604
+1.0,10,"Prediction, foundation models, and biological sequence learning",7,learn,0.01047778,0.00254349,-4.558498
+1.0,10,"Prediction, foundation models, and biological sequence learning",8,predict,0.00963114,0.00049038,-4.642754
+1.0,10,"Prediction, foundation models, and biological sequence learning",9,sequence,0.00940977,0.00036976,-4.666007
+1.0,10,"Prediction, foundation models, and biological sequence learning",10,representation,0.0090794,0.00087934,-4.701747
+1.0,11,"Safety, cybersecurity, and adversarial robustness",1,safety,0.04887505,0.00209299,-3.018488
+1.0,11,"Safety, cybersecurity, and adversarial robustness",2,risk,0.03609035,0.00267643,-3.32173
+1.0,11,"Safety, cybersecurity, and adversarial robustness",3,security,0.02920412,0.00108268,-3.533445
+1.0,11,"Safety, cybersecurity, and adversarial robustness",4,attack,0.02411839,0.00069668,-3.724781
+1.0,11,"Safety, cybersecurity, and adversarial robustness",5,threat,0.02251772,0.00058492,-3.793453
+1.0,11,"Safety, cybersecurity, and adversarial robustness",6,vulnerability,0.02019687,0.0005539,-3.902228
+1.0,11,"Safety, cybersecurity, and adversarial robustness",7,cybersecurity,0.01509085,0.00040718,-4.193667
+1.0,11,"Safety, cybersecurity, and adversarial robustness",8,adversarial,0.015075,0.00042589,-4.194717
+1.0,11,"Safety, cybersecurity, and adversarial robustness",9,detection,0.0125833,0.00149774,-4.375384
+1.0,11,"Safety, cybersecurity, and adversarial robustness",10,defense,0.01040557,0.00030526,-4.565414
+1.0,12,Multimodal and vision-language models,1,multimodal,0.06764069,0.00146672,-2.693546
+1.0,12,Multimodal and vision-language models,2,image,0.0597962,0.00109745,-2.816813
+1.0,12,Multimodal and vision-language models,3,visual,0.0371366,0.0006179,-3.293152
+1.0,12,Multimodal and vision-language models,4,video,0.02258656,0.00035499,-3.7904
+1.0,12,Multimodal and vision-language models,5,modality,0.01596619,0.00031757,-4.137282
+1.0,12,Multimodal and vision-language models,6,vision,0.0133519,0.00035499,-4.316096
+1.0,12,Multimodal and vision-language models,7,mllms,0.0121624,0.00025307,-4.409406
+1.0,12,Multimodal and vision-language models,8,generation,0.01148927,0.00201717,-4.466342
+1.0,12,Multimodal and vision-language models,9,foundation_model,0.00981902,0.00095664,-4.623434
+1.0,12,Multimodal and vision-language models,10,vlms,0.0094605,0.00020383,-4.66063
+1.0,13,"Evaluation, benchmarks, and performance measurement",1,evaluation,0.02707055,0.00394178,-3.609309
+1.0,13,"Evaluation, benchmarks, and performance measurement",2,benchmark,0.01418333,0.00159818,-4.255688
+1.0,13,"Evaluation, benchmarks, and performance measurement",3,across,0.01356426,0.00324608,-4.300317
+1.0,13,"Evaluation, benchmarks, and performance measurement",4,score,0.01201666,0.00194578,-4.421461
+1.0,13,"Evaluation, benchmarks, and performance measurement",5,test,0.00896116,0.00198024,-4.714856
+1.0,13,"Evaluation, benchmarks, and performance measurement",6,metric,0.00868524,0.00094482,-4.74613
+1.0,13,"Evaluation, benchmarks, and performance measurement",7,prompt,0.00831345,0.0029807,-4.78988
+1.0,13,"Evaluation, benchmarks, and performance measurement",8,assessment,0.00771098,0.00180053,-4.86511
+1.0,13,"Evaluation, benchmarks, and performance measurement",9,performance,0.00752571,0.00388811,-4.88943
+1.0,13,"Evaluation, benchmarks, and performance measurement",10,framework,0.00735004,0.00640157,-4.913049
+1.0,14,"Training, fine-tuning, and machine unlearning",1,train,0.0191294,0.00283497,-3.956529
+1.0,14,"Training, fine-tuning, and machine unlearning",2,fine-tune,0.01309238,0.00157504,-4.335725
+1.0,14,"Training, fine-tuning, and machine unlearning",3,performance,0.01254561,0.00388811,-4.378384
+1.0,14,"Training, fine-tuning, and machine unlearning",4,task,0.01050532,0.00383247,-4.555873
+1.0,14,"Training, fine-tuning, and machine unlearning",5,unlearn,0.00996595,0.00051008,-4.608581
+1.0,14,"Training, fine-tuning, and machine unlearning",6,inference,0.00876508,0.00072327,-4.73698
+1.0,14,"Training, fine-tuning, and machine unlearning",7,optimization,0.00739115,0.0008045,-4.907471
+1.0,14,"Training, fine-tuning, and machine unlearning",8,introduce,0.00667134,0.00212893,-5.009934
+1.0,14,"Training, fine-tuning, and machine unlearning",9,framework,0.00659461,0.00640157,-5.021503
+1.0,14,"Training, fine-tuning, and machine unlearning",10,learn,0.00646976,0.00254349,-5.040617
+1.0,15,"Intelligent management, markets, and energy systems",1,management,0.01911602,0.00136382,-3.957229
+1.0,15,"Intelligent management, markets, and energy systems",2,system,0.01561768,0.00767184,-4.159352
+1.0,15,"Intelligent management, markets, and energy systems",3,framework,0.01352757,0.00640157,-4.303025
+1.0,15,"Intelligent management, markets, and energy systems",4,market,0.01316985,0.0005214,-4.329825
+1.0,15,"Intelligent management, markets, and energy systems",5,energy,0.01155185,0.00044558,-4.46091
+1.0,15,"Intelligent management, markets, and energy systems",6,intelligent,0.01091034,0.00097978,-4.518044
+1.0,15,"Intelligent management, markets, and energy systems",7,integrate,0.00988388,0.00267348,-4.61685
+1.0,15,"Intelligent management, markets, and energy systems",8,power,0.00980236,0.00080401,-4.625133
+1.0,15,"Intelligent management, markets, and energy systems",9,process,0.00963945,0.00360599,-4.641892
+1.0,15,"Intelligent management, markets, and energy systems",10,technology,0.00845712,0.00239136,-4.772747
+1.0,16,"Public policy, digital services, and urban platforms",1,policy,0.05046552,0.00136136,-2.986465
+1.0,16,"Public policy, digital services, and urban platforms",2,service,0.04648052,0.00094532,-3.068722
+1.0,16,"Public policy, digital services, and urban platforms",3,public,0.02211562,0.00079909,-3.811471
+1.0,16,"Public policy, digital services, and urban platforms",4,information,0.02205598,0.00299203,-3.814171
+1.0,16,"Public policy, digital services, and urban platforms",5,urban,0.02162267,0.00038994,-3.834013
+1.0,16,"Public policy, digital services, and urban platforms",6,platform,0.01944489,0.00102606,-3.940171
+1.0,16,"Public policy, digital services, and urban platforms",7,web,0.01941349,0.0003156,-3.941787
+1.0,16,"Public policy, digital services, and urban platforms",8,digital,0.01877323,0.00101326,-3.975323
+1.0,16,"Public policy, digital services, and urban platforms",9,government,0.01227557,0.00023239,-4.400144
+1.0,16,"Public policy, digital services, and urban platforms",10,access,0.01112982,0.00079613,-4.498127
+1.0,17,"User interaction, chatbots, and conversational support",1,user,0.04709577,0.00263507,-3.055572
+1.0,17,"User interaction, chatbots, and conversational support",2,design,0.02716766,0.00414019,-3.605728
+1.0,17,"User interaction, chatbots, and conversational support",3,interaction,0.02058991,0.00179512,-3.882954
+1.0,17,"User interaction, chatbots, and conversational support",4,system,0.02027754,0.00767184,-3.898241
+1.0,17,"User interaction, chatbots, and conversational support",5,support,0.01626176,0.00345189,-4.118939
+1.0,17,"User interaction, chatbots, and conversational support",6,chatbots,0.01595005,0.00090445,-4.138293
+1.0,17,"User interaction, chatbots, and conversational support",7,chatbot,0.0150772,0.00065483,-4.194572
+1.0,17,"User interaction, chatbots, and conversational support",8,mental_health,0.01429199,0.00059722,-4.248056
+1.0,17,"User interaction, chatbots, and conversational support",9,conversational,0.01283125,0.00056276,-4.355871
+1.0,17,"User interaction, chatbots, and conversational support",10,dialogue,0.01051015,0.00049629,-4.555414
+1.0,18,"Human cognition, emotion, and social simulation",1,human,0.03971581,0.003992,-3.226006
+1.0,18,"Human cognition, emotion, and social simulation",2,social,0.01980197,0.0012747,-3.921974
+1.0,18,"Human cognition, emotion, and social simulation",3,cognitive,0.01865216,0.0008882,-3.981793
+1.0,18,"Human cognition, emotion, and social simulation",4,emotional,0.01548895,0.00050959,-4.167628
+1.0,18,"Human cognition, emotion, and social simulation",5,emotion,0.013371,0.00036631,-4.314667
+1.0,18,"Human cognition, emotion, and social simulation",6,agent,0.01161324,0.00256319,-4.455609
+1.0,18,"Human cognition, emotion, and social simulation",7,theory,0.0109641,0.00062775,-4.513129
+1.0,18,"Human cognition, emotion, and social simulation",8,narrative,0.0103032,0.00048891,-4.575301
+1.0,18,"Human cognition, emotion, and social simulation",9,behavior,0.00963212,0.00110484,-4.642652
+1.0,18,"Human cognition, emotion, and social simulation",10,interaction,0.00941412,0.00179512,-4.665544
+1.0,19,"Text detection, datasets, and classification",1,text,0.02252424,0.00199304,-3.793163
+1.0,19,"Text detection, datasets, and classification",2,detection,0.02007713,0.00149774,-3.908174
+1.0,19,"Text detection, datasets, and classification",3,dataset,0.01965405,0.00151349,-3.929472
+1.0,19,"Text detection, datasets, and classification",4,classification,0.01566997,0.00098667,-4.156009
+1.0,19,"Text detection, datasets, and classification",5,performance,0.01526005,0.00388811,-4.182517
+1.0,19,"Text detection, datasets, and classification",6,prompt,0.01377471,0.0029807,-4.284921
+1.0,19,"Text detection, datasets, and classification",7,fine-tune,0.01368749,0.00157504,-4.291273
+1.0,19,"Text detection, datasets, and classification",8,generate,0.01156316,0.00312496,-4.459931
+1.0,19,"Text detection, datasets, and classification",9,task,0.01116157,0.00383247,-4.495279
+1.0,19,"Text detection, datasets, and classification",10,datasets,0.01010876,0.0014357,-4.594353
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",1,framework,0.02389704,0.00640157,-3.734001
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",2,reason,0.02259872,0.00258338,-3.789862
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",3,knowledge,0.02226678,0.00273994,-3.804659
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",4,semantic,0.01866756,0.00131803,-3.980968
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",5,retrieval,0.01317149,0.00089411,-4.329701
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",6,rag,0.01275344,0.00112552,-4.361954
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",7,structure,0.01139265,0.00237363,-4.474786
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",8,system,0.00992568,0.00767184,-4.61263
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",9,generation,0.00952698,0.00201717,-4.653627
+1.0,20,"Retrieval, knowledge graphs, and semantic generation",10,query,0.00931138,0.0009335,-4.676518
+1.0,21,"Networks, robotics, simulation, and digital twins",1,plan,0.02520762,0.00088673,-3.680609
+1.0,21,"Networks, robotics, simulation, and digital twins",2,system,0.02503133,0.00767184,-3.687627
+1.0,21,"Networks, robotics, simulation, and digital twins",3,network,0.02448298,0.00086999,-3.709777
+1.0,21,"Networks, robotics, simulation, and digital twins",4,environment,0.01786577,0.00121266,-4.024869
+1.0,21,"Networks, robotics, simulation, and digital twins",5,physical,0.01575259,0.00029443,-4.150751
+1.0,21,"Networks, robotics, simulation, and digital twins",6,robot,0.01544435,0.00029886,-4.170512
+1.0,21,"Networks, robotics, simulation, and digital twins",7,simulation,0.01402367,0.00067058,-4.267008
+1.0,21,"Networks, robotics, simulation, and digital twins",8,control,0.01268519,0.00135692,-4.36732
+1.0,21,"Networks, robotics, simulation, and digital twins",9,scenario,0.01236476,0.00139188,-4.392905
+1.0,21,"Networks, robotics, simulation, and digital twins",10,traffic,0.01220682,0.00023091,-4.40576
+1.0,22,"Alignment, values, and moral decision-making",1,human,0.0648497,0.003992,-2.735683
+1.0,22,"Alignment, values, and moral decision-making",2,alignment,0.05428683,0.00128652,-2.913474
+1.0,22,"Alignment, values, and moral decision-making",3,value,0.04458775,0.00132738,-3.110296
+1.0,22,"Alignment, values, and moral decision-making",4,moral,0.03341998,0.0005022,-3.398601
+1.0,22,"Alignment, values, and moral decision-making",5,preference,0.02524673,0.00055242,-3.679059
+1.0,22,"Alignment, values, and moral decision-making",6,ethical,0.02282524,0.00183894,-3.779888
+1.0,22,"Alignment, values, and moral decision-making",7,align,0.02008177,0.00093793,-3.907943
+1.0,22,"Alignment, values, and moral decision-making",8,decision,0.01886981,0.00117131,-3.970192
+1.0,22,"Alignment, values, and moral decision-making",9,decision-making,0.01491727,0.0011329,-4.205235
+1.0,22,"Alignment, values, and moral decision-making",10,reason,0.01407488,0.00258338,-4.263364
+1.0,23,"Application challenges, reviews, and field advances",1,application,0.02754549,0.00378915,-3.591916
+1.0,23,"Application challenges, reviews, and field advances",2,challenge,0.0196961,0.00378324,-3.927335
+1.0,23,"Application challenges, reviews, and field advances",3,review,0.01385164,0.00235295,-4.279352
+1.0,23,"Application challenges, reviews, and field advances",4,development,0.01164203,0.00242976,-4.453133
+1.0,23,"Application challenges, reviews, and field advances",5,include,0.0110642,0.00402498,-4.504041
+1.0,23,"Application challenges, reviews, and field advances",6,field,0.01029011,0.00134511,-4.576572
+1.0,23,"Application challenges, reviews, and field advances",7,advance,0.00982957,0.00184632,-4.62236
+1.0,23,"Application challenges, reviews, and field advances",8,capability,0.00970708,0.00207477,-4.6349
+1.0,23,"Application challenges, reviews, and field advances",9,potential,0.009667,0.00288913,-4.639037
+1.0,23,"Application challenges, reviews, and field advances",10,survey,0.00913362,0.00116737,-4.695793
+1.0,24,"Language, culture, translation, and multilingual corpora",1,language,0.10671731,0.00180546,-2.237572
+1.0,24,"Language, culture, translation, and multilingual corpora",2,cultural,0.04117079,0.00060313,-3.190026
+1.0,24,"Language, culture, translation, and multilingual corpora",3,translation,0.03142698,0.00047364,-3.460089
+1.0,24,"Language, culture, translation, and multilingual corpora",4,english,0.03100973,0.00040865,-3.473454
+1.0,24,"Language, culture, translation, and multilingual corpora",5,linguistic,0.03011146,0.00049875,-3.502849
+1.0,24,"Language, culture, translation, and multilingual corpora",6,multilingual,0.02618171,0.00035893,-3.642694
+1.0,24,"Language, culture, translation, and multilingual corpora",7,write,0.0221295,0.00084931,-3.810844
+1.0,24,"Language, culture, translation, and multilingual corpora",8,chinese,0.01976219,0.00044558,-3.923985
+1.0,24,"Language, culture, translation, and multilingual corpora",9,text,0.01528678,0.00199304,-4.180767
+1.0,24,"Language, culture, translation, and multilingual corpora",10,context,0.01117373,0.00210136,-4.49419
+1.0,25,ChatGPT in academic and systematic literature reviews,1,chatgpt,0.04536126,0.00278819,-3.093097
+1.0,25,ChatGPT in academic and systematic literature reviews,2,review,0.02369045,0.00235295,-3.742683
+1.0,25,ChatGPT in academic and systematic literature reviews,3,include,0.01302105,0.00402498,-4.341188
+1.0,25,ChatGPT in academic and systematic literature reviews,4,publish,0.01280241,0.00059624,-4.358122
+1.0,25,ChatGPT in academic and systematic literature reviews,5,tool,0.01254786,0.00344992,-4.378205
+1.0,25,ChatGPT in academic and systematic literature reviews,6,identify,0.01160456,0.00237609,-4.456358
+1.0,25,ChatGPT in academic and systematic literature reviews,7,literature,0.01097341,0.00082272,-4.51228
+1.0,25,ChatGPT in academic and systematic literature reviews,8,scientific,0.01096161,0.00061544,-4.513356
+1.0,25,ChatGPT in academic and systematic literature reviews,9,systematic_review,0.0103469,0.00041998,-4.571068
+1.0,25,ChatGPT in academic and systematic literature reviews,10,qualitative,0.01031096,0.00070357,-4.574548
+1.0,26,"Law, regulation, compliance, and software requirements",1,legal,0.03273538,0.00129193,-3.419299
+1.0,26,"Law, regulation, compliance, and software requirements",2,process,0.02022271,0.00360599,-3.900949
+1.0,26,"Law, regulation, compliance, and software requirements",3,code,0.01807877,0.00108268,-4.013017
+1.0,26,"Law, regulation, compliance, and software requirements",4,requirement,0.0168686,0.00094089,-4.082301
+1.0,26,"Law, regulation, compliance, and software requirements",5,automate,0.01647616,0.00163412,-4.105841
+1.0,26,"Law, regulation, compliance, and software requirements",6,software,0.01208568,0.00058787,-4.415734
+1.0,26,"Law, regulation, compliance, and software requirements",7,regulatory,0.01134638,0.00105363,-4.478857
+1.0,26,"Law, regulation, compliance, and software requirements",8,regulation,0.01129183,0.00102557,-4.483675
+1.0,26,"Law, regulation, compliance, and software requirements",9,compliance,0.01123277,0.0007725,-4.48892
+1.0,26,"Law, regulation, compliance, and software requirements",10,case,0.01098474,0.00205557,-4.511248
+1.0,27,AI in education and student learning,1,student,0.05736896,0.00221756,-2.858252
+1.0,27,AI in education and student learning,2,learn,0.03678828,0.00254349,-3.302576
+1.0,27,AI in education and student learning,3,education,0.03225791,0.00173407,-3.433992
+1.0,27,AI in education and student learning,4,educational,0.0221298,0.00095073,-3.81083
+1.0,27,AI in education and student learning,5,feedback,0.01903022,0.00108613,-3.961727
+1.0,27,AI in education and student learning,6,tool,0.01220326,0.00344992,-4.406052
+1.0,27,AI in education and student learning,7,skill,0.01138925,0.00057507,-4.475085
+1.0,27,AI in education and student learning,8,assessment,0.01131244,0.00180053,-4.481852
+1.0,27,AI in education and student learning,9,chatgpt,0.01093196,0.00278819,-4.516064
+1.0,27,AI in education and student learning,10,teach,0.0107654,0.00042736,-4.531418

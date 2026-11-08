@@ -2,14 +2,13 @@
 """
 phase3_visualizations.py
 ========================
-Phase 3 - visualizations for LDA (+ BERTopic if available).
+Phase 3 - visualizations for LDA.
 
 Outputs (PNG + SVG, in outputs/visualizations/):
     LDA_Similitud_{Coseno,Hellinger,JensenShannon}.png/.svg
     LDA_TopWords_Heatmap.png/.svg
     LDA_Topic_x_Year.png/.svg
     LDA_Topic_x_Country.png/.svg  (if a country column is present)
-    BERTopic_* (if bertopic_final model exists)
 """
 from __future__ import annotations
 
@@ -211,58 +210,6 @@ def main() -> dict:
             _heatmap_topico_pais(theta, "dominant_topic", country_col, etiquetas,
                                 "LDA_Topic_x_Country")
             generated.append("LDA_Topic_x_Country")
-
-    # BERTopic (optional)
-    print("\n-- BERTopic --")
-    bt_model_path = RUTAS["models_bertopic"] / "bertopic_final"
-    bt_info_path = RUTAS["results"] / "bertopic" / "bertopic_topic_info.csv"
-    bt_docs_path = RUTAS["results"] / "bertopic" / "resultados_bertopic.csv"
-    if bt_model_path.exists() and bt_docs_path.exists():
-        try:
-            from bertopic import BERTopic
-            topic_model = BERTopic.load(str(bt_model_path))
-            info = pd.read_csv(bt_info_path)
-            docs_df = pd.read_csv(bt_docs_path)
-            # topwords heatmap
-            if "Topic" in info.columns and "Representation" in info.columns:
-                val = info[info["Topic"] != -1].sort_values("Count", ascending=False).head(
-                    CFG["viz"]["max_topics_heatmap"])
-                todas = set(); rows = {}
-                for _, r in val.iterrows():
-                    rep = r["Representation"]
-                    pal = (rep if isinstance(rep, list)
-                           else str(rep).strip("[]").replace("'", "").split(","))
-                    pal = [p.strip() for p in pal if p.strip()][:TOP_WORDS]
-                    rows[r["Topic"]] = pal; todas |= set(pal)
-                vocab = sorted(todas)
-                M = np.array([[1.0 if w in rows[t] else 0.0 for w in vocab]
-                              for t in val["Topic"]])
-                nombres = [str(n)[:38] for n in val["Name"]]
-                fig, ax = plt.subplots(figsize=(max(10, len(vocab) * 0.18),
-                                                max(5, len(nombres) * 0.32)))
-                ax.imshow(M, aspect="auto", cmap="Reds")
-                ax.set_xticks(range(len(vocab)))
-                ax.set_xticklabels(vocab, rotation=90, fontsize=6)
-                ax.set_yticks(range(len(nombres)))
-                ax.set_yticklabels(nombres, fontsize=8)
-                fig.tight_layout()
-                _guardar_fig(fig, "BERTopic_TopWords_Heatmap")
-                generated.append("BERTopic_TopWords_Heatmap")
-
-            bt_etiquetas = dict(zip(info["Topic"], info["Name"])) if "Topic" in info.columns else {}
-            col_topic = "topic_reduced" if "topic_reduced" in docs_df.columns else "topic_original"
-            if "anio" in docs_df.columns:
-                _heatmap_topico_anio(docs_df, col_topic, "anio", bt_etiquetas,
-                                    "BERTopic_Topic_x_Year")
-                generated.append("BERTopic_Topic_x_Year")
-            if "country" in docs_df.columns:
-                _heatmap_topico_pais(docs_df, col_topic, "country", bt_etiquetas,
-                                    "BERTopic_Topic_x_Country")
-                generated.append("BERTopic_Topic_x_Country")
-        except Exception as e:
-            print(f"  BERTopic visualizations failed: {e}")
-    else:
-        print("  No BERTopic model found; skipping.")
 
     print_separador("PHASE 3 COMPLETED")
     print(f"  Generated: {len(generated)}")

@@ -1,48 +1,47 @@
-# Metodología y resultados preliminares — Modelado de tópicos con LDA
+# Topic Modeling with Latent Dirichlet Allocation: Methodology and Preliminary Results
 
-**Corpus:** ética de la inteligencia artificial, IA generativa y grandes modelos de lenguaje (Scopus, 2018–2026)  
-**Documento generado:** 2026-11-08 00:28  
-**Repositorio:** `https://github.com/JeanVydes/bertlda`  
-**Configuración completa exportada:** `outputs/results/config/model_configuration_full.json`
+**Corpus:** AI ethics, generative AI, and large language models (Scopus, 2018–2026)
+**Generated:** 2026-11-08 04:33
+**Repository:** `https://github.com/JeanVydes/bertlda`
+**Full configuration:** `outputs/results/config/model_configuration_full.json`
 
-> **Nota de alcance.** Este documento integra la metodología y los resultados
-> preliminares del modelo LDA. La entrega anterior (PRISMA, integración
-> Scopus + Web of Science) se retoma en la sección 1; el corpus de modelado
-> disponible en este repositorio es el export de Scopus de 20,000 registros.
-> Los campos marcados como `[COMPLETAR]` deben tomarse de la Entrega 1 para la
-> versión final.
+> **Scope note.** This document presents the methodology and preliminary results
+> of the LDA topic model. The previous delivery (PRISMA, Scopus + Web of
+> Science integration) is summarized in Section 1; the modeling corpus in this
+> repository is the Scopus export of 20,000 records. Fields marked
+> `[TO COMPLETE]` must be taken from the previous delivery for the final version.
 
 ---
 
-## 1. Recolección y depuración del corpus
+## 1. Corpus collection and de-duplication
 
-### 1.1 Fuentes consultadas y ecuación de búsqueda
+### 1.1 Sources and search strategy
 
-La revisión sistemática de la Entrega 1 combinó registros de **Scopus** y
-**Web of Science (WoS)**. El corpus consolidado se orientó a la intersección
-entre inteligencia artificial, IA generativa, grandes modelos de lenguaje y
-sus dimensiones éticas, sociales, regulatorias y de seguridad. La ecuación
-exacta de búsqueda, las fechas de consulta y los conteos de la integración
-WoS se documentan en la Entrega 1:
+The systematic review of the previous delivery combined records from **Scopus**
+and **Web of Science (WoS)**. The consolidated corpus targets the intersection
+of artificial intelligence, generative AI, large language models, and their
+ethical, social, regulatory, and safety dimensions. The exact search string,
+query dates, and WoS integration counts are documented in the previous
+delivery:
 
-- **Ecuación de búsqueda Scopus:** `[COMPLETAR con la cadena exacta de la Entrega 1]`
-- **Ecuación de búsqueda WoS:** `[COMPLETAR con la cadena exacta de la Entrega 1]`
-- **Fecha de consulta Scopus:** `[COMPLETAR]`
-- **Fecha de consulta WoS:** `[COMPLETAR]`
-- **Registros WoS integrados:** `[COMPLETAR]`
-- **Duplicados eliminados en la integración:** `[COMPLETAR]`
+- **Scopus search string:** `[TO COMPLETE with the exact string from the previous delivery]`
+- **WoS search string:** `[TO COMPLETE with the exact string from the previous delivery]`
+- **Scopus query date:** `[TO COMPLETE]`
+- **WoS query date:** `[TO COMPLETE]`
+- **WoS records integrated:** `[TO COMPLETE]`
+- **Duplicates removed during integration:** `[TO COMPLETE]`
 
-El export utilizado en esta entrega contiene **20,000 registros de Scopus**
-(campo `Source = Scopus`), con título, resumen, palabras clave, año, fuente,
-afiliaciones, país de afiliación, tipo de documento y DOI. La ventana temporal
-observada es **2018-2026**; el año 2026 está
-incompleto porque el export se realizó durante ese año.
+The export used in this delivery contains **20,000 Scopus records**
+(field `Source = Scopus`), with title, abstract, keywords, year, source,
+affiliations, affiliation country, document type, and DOI. The observed time
+window is **2018-2026**; the year 2026 is
+incomplete because the export was performed during that year.
 
-### 1.2 Proceso PRISMA
+### 1.2 PRISMA process
 
-El proceso PRISMA 2020 (Page et al., 2021) se resume a continuación para el
-corpus de modelado. Los conteos de la integración Scopus + WoS de la Entrega 1
-deben verificarse antes de la versión final.
+The PRISMA 2020 process (Page et al., 2021) is summarized below for the
+modeling corpus. The Scopus + WoS integration counts from the previous
+delivery must be verified before the final version.
 
 | Metric | Value |
 |---|---|
@@ -62,26 +61,26 @@ deben verificarse antes de la versión final.
 | Docs >350 words | 739 |
 | Distinct sources | 5697 |
 
-- **Registros identificados (Scopus):** 20,000
-- **Registros sin título o resumen:** 0
-- **Excluidos por longitud (< 20 palabras):** 495
-- **Duplicados detectados:** 20 por DOI y 59 por título (se conservan y se reportan como limitación)
-- **Documentos finales para LDA:** **19,505**
-- **Países normalizados:** 86
-- **Fuentes distintas:** 5,697
+- **Records identified (Scopus):** 20,000
+- **Records without title or abstract:** 0
+- **Excluded by length (< 20 words):** 495
+- **Duplicates detected:** 20 by DOI and 59 by title (retained and reported as a limitation)
+- **Final documents for LDA:** **19,505**
+- **Normalized countries:** 86
+- **Distinct sources:** 5,697
 
-### 1.3 Diagrama de flujo PRISMA
+### 1.3 PRISMA flow diagram
 
-![Diagrama de flujo PRISMA](../outputs/visualizations/PRISMA_Flow.png)
+![PRISMA flow diagram](../outputs/visualizations/PRISMA_Flow.png)
 
-El diagrama completo de la integración Scopus + WoS se conserva en la Entrega 1.
-El diagrama anterior documenta el flujo del corpus efectivamente modelado.
+The full Scopus + WoS integration diagram is kept in the previous delivery.
+The diagram above documents the flow of the corpus actually modeled.
 
-### 1.4 Corpus final
+### 1.4 Final corpus
 
-El corpus final contiene **19,505 documentos** con texto suficiente para el
-modelado. La distribución anual muestra una concentración muy fuerte en los
-últimos años, coherente con el auge de la IA generativa:
+The final corpus contains **19,505 documents** with sufficient text for
+modeling. The annual distribution shows a strong concentration in recent years,
+consistent with the rise of generative AI:
 
 | Year | Documents | % |
 |---|---|---|
@@ -96,69 +95,69 @@ modelado. La distribución anual muestra una concentración muy fuerte en los
 
 ---
 
-## 2. Preprocesamiento del texto
+## 2. Text preprocessing
 
-### 2.1 Campos utilizados
+### 2.1 Fields used
 
-Se utilizaron **título** y **resumen** (`Title` + `Abstract`). Las palabras clave
-de autor e índice (`Author Keywords`, `Index Keywords`) están disponibles en el
-export, pero no se concatenaron al texto de entrada para evitar duplicar
-términos y para mantener una representación homogénea entre documentos.
+**Title** and **abstract** (`Title` + `Abstract`) were used. Author and index
+keywords (`Author Keywords`, `Index Keywords`) are available in the export but
+were not concatenated to the input text, in order to avoid duplicating terms
+and to keep a homogeneous representation across documents.
 
-### 2.2 Técnicas aplicadas
+### 2.2 Techniques applied
 
-1. **Normalización Unicode y minúsculas.**
-2. **Eliminación de ruido editorial:** URLs, correos, citas numéricas,
-   avisos de copyright, licencias y frases de “publicado por”.
-3. **Tokenización** por espacios sobre texto limpio.
-4. **Lematización con WordNet** (primero sustantivos, luego verbos).
-5. **Eliminación de stopwords en cuatro capas:**
-   - stopwords funcionales del inglés (NLTK);
-   - stopwords editoriales (Elsevier, Springer, MDPI, “journal”, “abstract”, etc.);
-   - stopwords metodológicas (“study”, “results”, “method”, “approach”, etc.);
-   - términos de dominio de ética de la IA y acrónimos válidos.
-6. **Filtrado por longitud:** se descartan tokens de menos de 3 caracteres,
-   salvo acrónimos válidos (`ai`, `llm`, `gpt`, `nlp`, `gdpr`, etc.).
-7. **Bigramas:** se detectan colocaciones con `gensim.models.phrases`
+1. **Unicode normalization and lowercasing.**
+2. **Editorial noise removal:** URLs, e-mail addresses, numeric citations,
+   copyright notices, licenses, and "published by" sentences.
+3. **Tokenization** by whitespace over cleaned text.
+4. **WordNet lemmatization** (nouns first, then verbs).
+5. **Stopword removal in four layers:**
+   - English functional stopwords (NLTK);
+   - editorial stopwords (Elsevier, Springer, MDPI, "journal", "abstract", etc.);
+   - methodological stopwords ("study", "results", "method", "approach", etc.);
+   - AI-ethics domain terms and valid acronyms.
+6. **Length filtering:** tokens shorter than 3 characters are discarded, except
+   valid acronyms (`ai`, `llm`, `gpt`, `nlp`, `gdpr`, etc.).
+7. **Bigrams:** collocations are detected with `gensim.models.phrases`
    (`min_count=59`,
-   `threshold=8`), por ejemplo
+   `threshold=8`), for example
    `generative_ai`, `artificial_intelligence`, `machine_learning`.
-8. **Filtrado de vocabulario:** el diccionario de entrenamiento elimina términos
-   con frecuencia documental menor que `39` y
-   presentes en más del `0.5` de los documentos.
-9. **Sin stemming agresivo:** se prefiere la lematización para preservar la
-   interpretabilidad de los tópicos.
+8. **Vocabulary filtering:** the training dictionary removes terms with
+   document frequency below `39` and above
+   `0.5` of documents.
+9. **No aggressive stemming:** lemmatization is preferred to preserve topic
+   interpretability.
 
-### 2.3 Herramientas
+### 2.3 Tools
 
-- **Python 3.13** y **NLTK** para tokenización, stopwords y lematización.
-- **Gensim 4.4** para bigramas, diccionario, corpus BoW y LDA.
-- **pandas / NumPy** para la manipulación de datos.
-- **Matplotlib** para las figuras.
+- **Python 3.13** and **NLTK** for tokenization, stopwords, and lemmatization.
+- **Gensim 4.4** for bigrams, dictionary, BoW corpus, and LDA.
+- **pandas / NumPy** for data manipulation.
+- **Matplotlib** for figures.
 
-### 2.4 Resultados del preprocesamiento
+### 2.4 Preprocessing results
 
-| Indicador | Valor |
+| Metric | Value |
 |---|---:|
-| Documentos modelados | 19,505 |
-| Tokens totales | 2,361,836 |
-| Tokens por documento (media) | 121.09 |
-| Vocabulario de entrenamiento | 4,533 |
-| Vocabulario de evaluación | 23,887 |
-| Documentos con BoW vacío | 0 |
-| Stopwords totales | 288 |
+| Modeled documents | 19,505 |
+| Total tokens | 2,361,836 |
+| Tokens per document (mean) | 121.09 |
+| Training vocabulary | 4,533 |
+| Evaluation vocabulary | 23,887 |
+| Documents with empty BoW | 0 |
+| Total stopwords | 288 |
 
-La limpieza se implementó en `src/bertlda/text_processing.py` y se aplicó de
-forma determinista en `src/bertlda/phase1a_lda_diagnostic.py`.
+Cleaning is implemented in `src/bertlda/text_processing.py` and applied
+deterministically in `src/bertlda/phase1a_lda_diagnostic.py`.
 
 ---
 
-## 3. Fundamento del modelo LDA
+## 3. LDA model foundations
 
-Latent Dirichlet Allocation (Blei, Ng & Jordan, 2003) es un modelo generativo
-jerárquico para colecciones de documentos discretos. Cada documento se
-representa como una mezcla de un número fijo de tópicos y cada tópico como una
-distribución sobre el vocabulario. Formalmente, para un documento $d$:
+Latent Dirichlet Allocation (Blei, Ng & Jordan, 2003) is a hierarchical
+generative model for collections of discrete documents. Each document is
+represented as a mixture of a fixed number of topics, and each topic as a
+distribution over the vocabulary. Formally, for a document $d$:
 
 $$
 \theta_d \sim \mathrm{Dirichlet}(\alpha), \qquad
@@ -166,65 +165,65 @@ z_{d,n} \sim \mathrm{Categorical}(\theta_d), \qquad
 w_{d,n} \sim \mathrm{Categorical}(\phi_{z_{d,n}}),
 $$
 
-donde $\theta_d$ es la proporción de tópicos del documento, $z_{d,n}$ es el
-tópico latente de la palabra $n$ y $\phi_k \sim \mathrm{Dirichlet}(\eta)$ es
-la distribución de palabras del tópico $k$. La verosimilitud conjunta integra
-las variables latentes y se aproxima mediante inferencia variacional o
-muestreo de Gibbs; Gensim utiliza inferencia variacional en línea.
+where $\theta_d$ is the document's topic proportion vector, $z_{d,n}$ is
+the latent topic of word $n$, and $\phi_k \sim \mathrm{Dirichlet}(\eta)$
+is the word distribution of topic $k$. The joint likelihood integrates out the
+latent variables, and is approximated by variational inference or Gibbs
+sampling; Gensim uses online variational inference.
 
-LDA es apropiado para este corpus porque:
+LDA is appropriate for this corpus because:
 
-- los documentos son textos cortos y heterogéneos (título + resumen), donde un
-  modelo probabilístico de mezclas es más estable que un clustering duro;
-- el objetivo es **describir** la estructura temática y su evolución, no
-  clasificar documentos en categorías predefinidas;
-- la matriz documento-tópico ($\Theta$) permite análisis posteriores con
-  HJ-Biplot, LDAvis y modelos de tendencia;
-- la literatura de ética de la IA es interdisciplinaria: un mismo documento
-  puede combinar gobernanza, sesgo, privacidad y evaluación técnica, lo que
-  favorece una representación mixta.
+- documents are short, heterogeneous texts (title + abstract), where a
+  probabilistic mixture model is more stable than hard clustering;
+- the objective is to **describe** the thematic structure and its evolution,
+  not to classify documents into predefined categories;
+- the document-topic matrix ($\Theta$) supports downstream analysis with
+  HJ-Biplot, LDAvis, and trend models;
+- AI-ethics literature is interdisciplinary: a single document can combine
+  governance, bias, privacy, and technical evaluation, which favors a mixed
+  representation.
 
 ---
 
-## 4. Selección del número de tópicos (K)
+## 4. Selecting the number of topics (K)
 
-### 4.1 Métricas de coherencia
+### 4.1 Coherence metrics
 
-Se evaluaron dos métricas complementarias:
+Two complementary metrics were evaluated:
 
-- **C_v** (Röder, Both & Hinneburg, 2015): combina similitud semántica entre
-  palabras, ventana deslizante y confirmación mutua; es la métrica de referencia
-  para comparar tópicos en corpus científicos.
-- **NPMI** (Bouma, 2009): información mutua puntual normalizada; penaliza
-  asociaciones espurias y es fácilmente interpretable en el rango [-1, 1].
+- **C_v** (Röder, Both & Hinneburg, 2015): combines semantic similarity
+  between words, a sliding window, and mutual confirmation; it is the
+  reference metric for comparing topics in scientific corpora.
+- **NPMI** (Bouma, 2009): normalized pointwise mutual information; it
+  penalizes spurious associations and is easily interpretable in [-1, 1].
 
-También se registraron **diversidad de tópicos** (proporción de palabras únicas
-en el top-10 de todos los tópicos), **perplejidad**, **dominancia** (cuota del
-tópico más frecuente) y **entropía normalizada** de la distribución de tamaños.
+**Topic diversity** (proportion of unique words in the top-10 of all topics),
+**perplexity**, **dominance** (share of the most frequent topic), and the
+**normalized entropy** of the size distribution were also recorded.
 
-### 4.2 Rango evaluado y criterio de decisión
+### 4.2 Evaluated range and decision criterion
 
-Se evaluó **K = 4–23** (20 valores).
-La curva de coherencia muestra un máximo global en **K = 21**
-(C_v = 0.5556), pero la ganancia respecto de K = 14 es marginal
-(+0.0150) y se concentra en la zona de meseta
-K ≈ 14–23. Se seleccionó **K = 14** por las siguientes razones:
+**K = 4–40** (37 values)
+was evaluated. The coherence curve reaches its global maximum at
+**K = 40** (C_v = 0.5696), but the gain over K = 27 is
+marginal (+0.0056) and concentrated in the plateau region.
+**K = 27** was selected for the following reasons:
 
-1. **Meseta de coherencia:** K = 14 ya se encuentra en la meseta
-   (C_v = 0.5406; NPMI = +0.0581).
-2. **Parsimonia e interpretabilidad:** 14 tópicos producen una estructura
-   temática manejable y alineada con las dimensiones de la ética de la IA
-   (seguridad, sesgo, gobernanza, educación, salud, etc.).
-3. **Diversidad:** la diversidad del top-10 es 0.8000, alta para el
-   tamaño del corpus.
-4. **Dominancia:** el tópico más frecuente concentra 17.7%
-   de los documentos, por debajo del umbral de dominancia excesiva (40%).
-5. **Estabilidad:** el análisis de sensibilidad (sección 6) confirma que la
-   estructura de K = 14 es comparable a la de sus vecinos.
+1. **Coherence plateau:** K = 27 already lies on the plateau
+   (C_v = 0.5640; NPMI = +0.0749).
+2. **Parsimony and interpretability:** 27 topics produce a manageable
+   thematic structure aligned with the dimensions of AI ethics (safety, bias,
+   governance, education, health, etc.).
+3. **Diversity:** the top-10 diversity is 0.7889, high for this
+   corpus size.
+4. **Dominance:** the most frequent topic concentrates 10.6%
+   of documents, below the excessive-dominance threshold (40%).
+5. **Stability:** the sensitivity analysis (Section 6) confirms that the
+   K = 27 structure is comparable to its neighbours.
 
-![Coherencia LDA por número de tópicos](../outputs/visualizations/LDA_K_Coherence.png)
+![LDA coherence by number of topics](../outputs/visualizations/LDA_K_Coherence.png)
 
-### 4.3 Tabla completa de la búsqueda de K
+### 4.3 Full K-search table
 
 | K | C_v | NPMI | Diversity | Perplexity | Dominance | Entropy | Empty topics |
 |---|---|---|---|---|---|---|---|
@@ -248,52 +247,68 @@ K ≈ 14–23. Se seleccionó **K = 14** por las siguientes razones:
 | 21 | 0.5556 | 0.0710 | 0.7952 | -7.3287 | 0.1251 | 0.9556 | 0.0000 |
 | 22 | 0.5535 | 0.0715 | 0.7818 | -7.3270 | 0.1247 | 0.9444 | 0.0000 |
 | 23 | 0.5463 | 0.0665 | 0.7826 | -7.3371 | 0.1059 | 0.9505 | 0.0000 |
+| 24 | 0.5583 | 0.0696 | 0.7792 | -7.3304 | 0.1160 | 0.9568 | 0.0000 |
+| 25 | 0.5508 | 0.0650 | 0.7800 | -7.3335 | 0.1264 | 0.9047 | 0.0000 |
+| 26 | 0.5561 | 0.0661 | 0.7654 | -7.3405 | 0.1183 | 0.9474 | 0.0000 |
+| 27 | 0.5640 | 0.0749 | 0.7889 | -7.3363 | 0.1056 | 0.9398 | 0.0000 |
+| 28 | 0.5638 | 0.0732 | 0.7679 | -7.3404 | 0.0852 | 0.9367 | 0.0000 |
+| 29 | 0.5606 | 0.0725 | 0.7655 | -7.3312 | 0.0864 | 0.9199 | 0.0000 |
+| 30 | 0.5449 | 0.0622 | 0.7867 | -7.3426 | 0.0854 | 0.9192 | 0.0000 |
+| 31 | 0.5545 | 0.0697 | 0.8065 | -7.3472 | 0.0843 | 0.9157 | 0.0000 |
+| 32 | 0.5654 | 0.0755 | 0.7781 | -7.3458 | 0.0757 | 0.9279 | 0.0000 |
+| 33 | 0.5520 | 0.0660 | 0.7545 | -7.3501 | 0.0744 | 0.9278 | 0.0000 |
+| 34 | 0.5598 | 0.0672 | 0.7647 | -7.3557 | 0.0783 | 0.9224 | 0.0000 |
+| 35 | 0.5534 | 0.0707 | 0.7800 | -7.3563 | 0.1022 | 0.9203 | 0.0000 |
+| 36 | 0.5647 | 0.0737 | 0.7833 | -7.3615 | 0.1113 | 0.9030 | 0.0000 |
+| 37 | 0.5641 | 0.0740 | 0.7892 | -7.3628 | 0.0750 | 0.9268 | 0.0000 |
+| 38 | 0.5659 | 0.0758 | 0.7421 | -7.3675 | 0.0748 | 0.9174 | 0.0000 |
+| 39 | 0.5508 | 0.0606 | 0.7615 | -7.3717 | 0.0898 | 0.8916 | 0.0000 |
+| 40 | 0.5696 | 0.0781 | 0.7825 | -7.3704 | 0.0928 | 0.9118 | 0.0000 |
 
 ---
 
-## 5. Configuración y ejecución del modelo
+## 5. Model configuration and execution
 
-### 5.1 Librería y software
+### 5.1 Library and software
 
-- **Gensim 4.4.0**, implementación `LdaModel` en un solo proceso.
-- **Python 3.13**; el entorno se reproduce con `uv sync`.
-- Semilla global **42**.
-- Exportaciones exclusivamente en **CSV** (nunca xlsx); los checkpoints
-  intermedios usan `.pkl`.
+- **Gensim 4.4.0**, single-process `LdaModel` implementation.
+- **Python 3.13**; the environment is reproduced with `uv sync`.
+- Global seed **42**.
+- Exports are CSV-only (never xlsx); intermediate checkpoints use `.pkl`.
 
-### 5.2 Hiperparámetros
+### 5.2 Hyperparameters
 
-| Parámetro | Valor |
+| Parameter | Value |
 |---|---|
-| Número de tópicos (K) | 14 |
-| Alpha (prior documento-tópico) | `asymmetric` |
-| Eta / beta (prior tópico-palabra) | `symmetric` |
-| Iteraciones (passes) | 50 |
-| Iteraciones internas por documento | 50 |
-| Semilla aleatoria | 42 |
-| Documentos | 19,505 |
-| Vocabulario | 4,533 |
-| Implementación | `gensim.models.ldamodel.LdaModel` |
+| Number of topics (K) | 27 |
+| Alpha (document-topic prior) | `asymmetric` |
+| Eta / beta (topic-word prior) | `0.5` |
+| Iterations (passes) | 50 |
+| Internal iterations per document | 50 |
+| Random seed | 42 |
+| Documents | 19,505 |
+| Vocabulary | 4,533 |
+| Implementation | `gensim.models.ldamodel.LdaModel` |
 
-La búsqueda de alpha/eta evaluó **16 combinaciones** (4 valores de
-alpha × 4 de eta). La mejor combinación fue
-**alpha = `asymmetric`, eta = `symmetric`** (C_v = 0.5039).
-Las 8 mejores combinaciones se muestran a continuación:
+The alpha/eta search evaluated **16 combinations** (4 alpha values ×
+4 eta values). The best combination was
+**alpha = `asymmetric`, eta = `0.5`**
+(C_v = 0.5861). The 8 best combinations are:
 
 | alpha | eta | C_v | NPMI | Dominance |
 |---|---|---|---|---|
-| asymmetric | symmetric | 0.5039 | 0.0474 | 0.1136 |
-| asymmetric | 0.05 | 0.5006 | 0.0459 | 0.1147 |
-| asymmetric | 0.01 | 0.5002 | 0.0458 | 0.1158 |
-| asymmetric | 0.5 | 0.5000 | 0.0464 | 0.1115 |
-| symmetric | 0.05 | 0.4988 | 0.0453 | 0.1156 |
-| symmetric | symmetric | 0.4988 | 0.0453 | 0.1155 |
-| 0.1 | symmetric | 0.4988 | 0.0453 | 0.1150 |
-| 0.01 | 0.01 | 0.4986 | 0.0455 | 0.1174 |
+| asymmetric | 0.5 | 0.5861 | 0.0861 | 0.0890 |
+| 0.01 | 0.5 | 0.5779 | 0.0812 | 0.0771 |
+| symmetric | 0.5 | 0.5748 | 0.0808 | 0.0789 |
+| 0.1 | 0.5 | 0.5713 | 0.0793 | 0.0815 |
+| asymmetric | 0.01 | 0.5657 | 0.0776 | 0.1273 |
+| asymmetric | 0.05 | 0.5656 | 0.0765 | 0.1268 |
+| 0.01 | 0.05 | 0.5649 | 0.0748 | 0.1023 |
+| symmetric | symmetric | 0.5640 | 0.0749 | 0.1056 |
 
-### 5.3 Reproducibilidad
+### 5.3 Reproducibility
 
-El código completo está en `src/bertlda/`. La secuencia es:
+The full code lives in `src/bertlda/`. The sequence is:
 
 ```bash
 uv sync
@@ -306,296 +321,370 @@ uv run python src/bertlda/phase5_sensitivity.py
 uv run python src/bertlda/phase6_report.py
 ```
 
-La configuración completa, las versiones de las librerías, las métricas y el
-inventario de artefactos se exportan en
-`outputs/results/config/model_configuration_full.json`.
+The full configuration, library versions, metrics, and artifact inventory are
+exported to `outputs/results/config/model_configuration_full.json`.
 
-### 5.4 Métricas del modelo final
+### 5.4 Final model metrics
 
-| Métrica | Valor |
+| Metric | Value |
 |---|---:|
-| C_v | 0.5249 |
-| NPMI | +0.0518 |
-| Diversidad (top-10) | 0.7929 |
-| Perplejidad | -7.3229 |
-| Dominancia | 0.1824 |
-| Entropía normalizada | 0.9497 |
-| Tópicos vacíos | 0 |
+| C_v | 0.5761 |
+| NPMI | +0.0818 |
+| Diversity (top-10) | 0.7741 |
+| Perplexity | -7.2693 |
+| Dominance | 0.0844 |
+| Normalized entropy | 0.9475 |
+| Empty topics | 0 |
 
-> **Nota sobre la comparación de C_v.** La grilla de K (sección 4) usa
-> `alpha="symmetric"` y `passes=30`; el modelo final usa
-> `alpha="asymmetric"`, `eta="symmetric"` y `passes=50`.
-> Por eso su C_v (0.5249) no coincide exactamente
-> con el valor de la grilla para K = 14 (0.5406). La comparación
-> válida es dentro de cada configuración.
+> **Note on C_v comparability.** The K grid (Section 4) uses
+> `alpha="symmetric"` and `passes=30`; the final model
+> uses `alpha="asymmetric"`, `eta="0.5"`, and
+> `passes=50`. Its C_v
+> (0.5761) therefore does not exactly match the
+> grid value for K = 27 (0.5640). Comparisons are valid within
+> each configuration.
 
 ---
 
-## 6. Análisis de sensibilidad del modelo
+## 6. Model sensitivity analysis
 
-El análisis de sensibilidad evalúa tres fuentes de variación: **semilla
-aleatoria**, **vecindario de K** y **hiperparámetros alpha/eta**. Para comparar
-corridas se usan dos métricas:
+The sensitivity analysis evaluates three sources of variation: **random seed**,
+**K neighbourhood**, and **alpha/eta hyperparameters**. Two metrics are used to
+compare runs:
 
-- **Jaccard** entre las 10 palabras principales de tópicos alineados. La
-  alineación se resuelve con el algoritmo húngaro sobre la similitud coseno
-  entre las distribuciones tópico-palabra.
-- **Adjusted Rand Index (ARI)** entre las asignaciones del tópico dominante de
-  cada documento.
+- **Jaccard** overlap between the top-10 words of aligned topics. Alignment is
+  solved with the Hungarian algorithm over cosine similarity between
+  topic-word distributions.
+- **Adjusted Rand Index (ARI)** between the dominant-topic assignments of two
+  runs.
 
-### 6.1 Estabilidad ante la semilla aleatoria
+### 6.1 Stability across random seeds
 
-Se entrenaron **5 semillas**
-(42, 43, 44, 45, 46) para cada
-K ∈ [12, 13, 14, 15, 16], con `passes=10`.
-La tabla siguiente reporta la media y la desviación estándar sobre todos los
-pares de semillas:
+**5 seeds**
+(42, 43, 44, 45, 46) were trained for
+each K in the neighbourhood, with `passes=10`.
+The table reports the mean and standard deviation over all seed pairs:
 
 | K | Jaccard mean | Jaccard SD | Jaccard min | ARI mean | ARI SD | ARI min | C_v mean | C_v SD |
 |---|---|---|---|---|---|---|---|---|
-| 12 | 0.4321 | 0.0544 | 0.3557 | 0.2808 | 0.0292 | 0.2412 | 0.5203 | 0.0123 |
-| 13 | 0.3673 | 0.0427 | 0.3008 | 0.2705 | 0.0256 | 0.2216 | 0.5322 | 0.0114 |
-| 14 | 0.3785 | 0.0444 | 0.2915 | 0.2806 | 0.0358 | 0.2141 | 0.5244 | 0.0126 |
-| 15 | 0.3074 | 0.0376 | 0.2565 | 0.2472 | 0.0346 | 0.2221 | 0.5333 | 0.0156 |
-| 16 | 0.3308 | 0.0461 | 0.2468 | 0.2532 | 0.0316 | 0.2097 | 0.5243 | 0.0104 |
+| 25 | 0.3459 | 0.0344 | 0.3005 | 0.2457 | 0.0270 | 0.2085 | 0.5458 | 0.0100 |
+| 26 | 0.3102 | 0.0393 | 0.2361 | 0.2464 | 0.0333 | 0.2021 | 0.5460 | 0.0118 |
+| 27 | 0.3192 | 0.0242 | 0.2756 | 0.2413 | 0.0280 | 0.1985 | 0.5511 | 0.0095 |
+| 28 | 0.2942 | 0.0355 | 0.2585 | 0.2228 | 0.0281 | 0.1761 | 0.5433 | 0.0074 |
+| 29 | 0.3050 | 0.0257 | 0.2631 | 0.2594 | 0.0329 | 0.1995 | 0.5497 | 0.0096 |
 
-La tabla anterior resume la estabilidad entre semillas para cada valor de K del vecindario. El Jaccard se calcula sobre las 10 palabras principales de tópicos alineados con el algoritmo húngaro; el ARI se calcula sobre la asignación del tópico dominante de cada documento.
+The table above summarizes seed stability for each K in the neighbourhood. Jaccard is computed over the top-10 words of topics aligned with the Hungarian algorithm; ARI is computed over the dominant-topic assignment of each document.
 
-![Estabilidad LDA entre semillas](../outputs/visualizations/LDA_Sensitivity_Stability.png)
+![LDA stability across seeds](../outputs/visualizations/LDA_Sensitivity_Stability.png)
 
-### 6.2 Estabilidad ante variaciones de K
+### 6.2 Stability across K
 
-La tabla siguiente compara cada modelo del vecindario con el modelo de
-referencia (K = 14, semilla 42). `Best Jaccard` es el mejor
-solapamiento de cada tópico del modelo con un tópico de referencia; la última
-columna indica cuántos tópicos de referencia quedan cubiertos con Jaccard ≥ 0.5.
+The table compares each neighbourhood model against the reference model
+(K = 27, seed 42). `Best Jaccard` is the best overlap of
+each model topic with a reference topic; the last column reports how many
+reference topics are covered with Jaccard ≥ 0.5.
 
 | K | Best Jaccard mean | Median | Min | Max | Topics ≥ 0.5 | Topics | Reference topics covered ≥ 0.5 |
 |---|---|---|---|---|---|---|---|
-| 12 | 0.6647 | 0.6667 | 0.1111 | 1 | 10 | 12 | 10 |
-| 13 | 0.5309 | 0.5385 | 0.1111 | 1 | 7 | 13 | 7 |
-| 14 | 1 | 1 | 1 | 1 | 14 | 14 | 14 |
-| 15 | 0.5255 | 0.5385 | 0.0000 | 1 | 8 | 15 | 8 |
-| 16 | 0.4404 | 0.3810 | 0.0000 | 1 | 7 | 16 | 7 |
+| 25 | 0.4412 | 0.4286 | 0.0000 | 1 | 11 | 25 | 11 |
+| 26 | 0.4048 | 0.3810 | 0.0000 | 1 | 8 | 26 | 8 |
+| 27 | 1 | 1 | 1 | 1 | 27 | 27 | 27 |
+| 28 | 0.3844 | 0.4286 | 0.0000 | 1 | 10 | 28 | 10 |
+| 29 | 0.3715 | 0.3333 | 0.0000 | 0.8182 | 11 | 29 | 11 |
 
-![Solapamiento entre valores de K](../outputs/visualizations/LDA_Sensitivity_K_Overlap.png)
+![Overlap across K values](../outputs/visualizations/LDA_Sensitivity_K_Overlap.png)
 
-### 6.3 Sensibilidad a alpha y eta
+### 6.3 Sensitivity to alpha and eta
 
-La grilla de **16 combinaciones** muestra que las diferencias de C_v
-entre configuraciones son pequeñas (rango
-0.0124). La configuración elegida
-(`alpha=asymmetric`, `eta=symmetric`) se mantiene entre las mejores y
-produce la mayor coherencia. Esto sugiere que la estructura temática es
-razonablemente robusta a la elección de priors, siempre que se mantenga un
-alpha asimétrico o cercano a la simetría.
+The **16-combination** grid shows small C_v differences between
+configurations (range 0.0288). The
+selected configuration (`alpha=asymmetric`, `eta=0.5`) remains
+among the best and yields the highest coherence. This suggests the thematic
+structure is reasonably robust to prior choice, as long as alpha remains
+asymmetric or close to symmetric.
 
-### 6.4 Conclusión sobre robustez
+### 6.4 Robustness conclusion
 
-Para el K elegido (14) la estabilidad entre semillas es **moderada**: Jaccard medio 0.3785 (SD 0.0444, mínimo 0.2915) y ARI medio 0.2806 (SD 0.0358, mínimo 0.2141). Los tópicos con mayor volumen (T3, T10, T4, T11) se recuperan de forma más consistente, mientras que los tópicos pequeños (T13) son más sensibles. La estructura de 14 tópicos se considera **suficientemente robusta para un análisis exploratorio**, con la recomendación de reportar los tópicos de baja frecuencia como provisionales. Este resultado es consistente con la literatura sobre estabilidad en topic models (Greene, O'Callaghan & Cunningham, 2014; De Waal & Barnard, 2008; Koltcov, Koltsova & Nikolenko, 2014).
+For the selected K (27), seed stability is **moderate**: mean Jaccard 0.3192 (SD 0.0242, minimum 0.2756) and mean ARI 0.2413 (SD 0.0280, minimum 0.1985). The highest-volume topics (T3, T23, T20, T1) are recovered most consistently, while the smallest topic (T16) is more sensitive. The 27-topic structure is considered **sufficiently robust for an exploratory analysis**, with the recommendation to report low-frequency topics as provisional. This result is consistent with the topic-model stability literature (Greene, O'Callaghan & Cunningham, 2014; De Waal & Barnard, 2008; Koltcov, Koltsova & Nikolenko, 2014).
 
 ---
 
-## 7. Métodos Biplot y LDAvis
+## 7. Biplot and LDAvis methods
 
 ### 7.1 HJ-Biplot
 
-El **HJ-Biplot** (Galindo-Villardón, 1986), extensión del biplot de Gabriel
-(1971), representa simultáneamente filas y columnas de una matriz mediante una
-descomposición en valores singulares. Para una matriz centrada $X$:
+The **HJ-Biplot** (Galindo-Villardón, 1986), an extension of Gabriel's biplot
+(1971), represents rows and columns of a matrix simultaneously through a
+singular value decomposition. For a centered matrix $X$:
 
 $$
 X = U D V^\top,
 $$
 
-las coordenadas de filas son $A = U D$ y las de columnas $B = V D$. La
-propiedad clave es que el producto escalar $a_i \cdot b_j$ aproxima el valor
-$x_{ij}$, de modo que filas y columnas se interpretan en el mismo espacio. La
-**calidad de representación** de cada marcador se mide con el coseno al
-cuadrado:
+row coordinates are $A = U D$ and column coordinates $B = V D$. The key
+property is that the scalar product $a_i \cdot b_j$ approximates the value
+$x_{ij}$, so rows and columns are interpreted in the same space. The
+**representation quality** of each marker is measured with the squared cosine:
 
 $$
 \cos^2_{i} = \frac{a_{i1}^2 + a_{i2}^2}{\sum_k a_{ik}^2},
 $$
 
-y de forma análoga para las columnas. La **calidad global** es el promedio de
-los cosenos al cuadrado. Se construyeron tres biplots:
+and analogously for columns. The **global quality** is the mean of the squared
+cosines. Three biplots were built:
 
-1. **Años × tópicos:** cada fila es un año (con al menos 20 documentos) y cada
-   columna un tópico; el valor es la probabilidad media del tópico en ese año.
-2. **Países × tópicos:** cada fila es uno de los 12 países con más documentos;
-   el valor es la probabilidad media del tópico.
-3. **Documentos × tópicos:** muestra aleatoria de 1500
-   documentos, coloreada por tópico dominante.
+1. **Years × topics:** each row is a year (with at least 20 documents) and each
+   column a topic; the value is the mean topic probability for that year.
+2. **Countries × topics:** each row is one of the 12 countries with most documents;
+   the value is the mean topic probability.
+3. **Documents × topics:** a random sample of 1500
+   documents, colored by dominant topic.
 
 | Dataset | Rows | Columns | Axis 1 (%) | Axis 2 (%) | Mean row cos² | Mean column cos² |
 |---|---|---|---|---|---|---|
-| Years x topics | 5 | 14 | 72.3300 | 25.1500 | 0.9237 | 0.9646 |
-| Countries x topics | 12 | 14 | 61.2000 | 26.8900 | 0.6774 | 0.6355 |
-| Document sample x topics | 1500 | 14 | 20.2900 | 11.7200 | 0.3113 | 0.2109 |
+| Years x topics | 5 | 27 | 77.5300 | 18.1100 | 0.8999 | 0.8827 |
+| Countries x topics | 12 | 27 | 59.6600 | 23.1100 | 0.5619 | 0.4612 |
+| Document sample x topics | 1500 | 27 | 10.3400 | 8.2100 | 0.1760 | 0.1080 |
 
-![HJ-Biplot años × tópicos](../outputs/visualizations/LDA_HJBiplot_Years.png)
+![HJ-Biplot years × topics](../outputs/visualizations/LDA_HJBiplot_Years.png)
 
-![HJ-Biplot países × tópicos](../outputs/visualizations/LDA_HJBiplot_Countries.png)
+![HJ-Biplot countries × topics](../outputs/visualizations/LDA_HJBiplot_Countries.png)
 
-![HJ-Biplot documentos × tópicos](../outputs/visualizations/LDA_HJBiplot_Documents.png)
+![HJ-Biplot documents × topics](../outputs/visualizations/LDA_HJBiplot_Documents.png)
 
-**Lectura.** En el biplot de años, la cercanía entre un año y un tópico indica
-que ese tópico gana peso relativo en ese año; los años recientes (2024–2026)
-se desplazan hacia los tópicos de IA generativa, agentes y evaluación de
-modelos. En el biplot de países, los países se identifican con un número y la
-leyenda lateral; la posición de cada país resume su perfil temático medio:
-países con alta producción en IA aplicada se acercan a los tópicos de sistemas
-y aplicaciones, mientras que los países con producción más orientada a
-gobernanza se acercan a los tópicos de ética y política. La calidad media de
-representación (cos²) indica cuánta de la variación de cada marcador queda
-capturada por los dos ejes; valores altos (> 0.7) permiten interpretar con
-confianza la posición de ese marcador.
+**Reading.** In the years biplot, proximity between a year and a topic means
+that topic gains relative weight in that year; recent years (2024–2026) shift
+toward generative AI, agents, and model evaluation topics. In the countries
+biplot, countries are identified by number with a side legend; each country's
+position summarizes its mean thematic profile: countries with high applied-AI
+output align with systems and applications topics, while countries more
+oriented to governance align with ethics and policy topics. Mean
+representation quality (cos²) indicates how much of each marker's variation
+the two axes capture; high values (> 0.7) allow confident reading of that
+marker position.
 
 ### 7.2 LDAvis
 
-LDAvis (Sievert & Shirley, 2014) combina dos vistas:
+LDAvis (Sievert & Shirley, 2014) combines two views:
 
-- **Mapa de distancia intertópica:** los tópicos se proyectan en dos
-  dimensiones a partir de la distancia entre sus distribuciones de palabras.
-  El tamaño de cada burbuja es proporcional a la **prevalencia** del tópico en
-  el corpus. Tópicos cercanos comparten vocabulario y pueden solaparse.
-- **Ranking de términos relevantes:** para cada tópico se ordenan las palabras
-  por **relevancia**:
+- **Intertopic distance map:** topics are projected into two dimensions from
+  the distance between their word distributions. Bubble size is proportional
+  to topic **prevalence** in the corpus. Nearby topics share vocabulary and
+  may overlap.
+- **Relevant-term ranking:** for each topic, words are ranked by
+  **relevance**:
 
 $$
 \mathrm{relevance}(w \mid t) = \lambda \, p(w \mid t)
 + (1-\lambda) \, \frac{p(w \mid t)}{p(w)},
 $$
 
-  donde $\lambda \in [0,1]$ controla el peso de la frecuencia condicional
-  frente a la exclusividad del término. Se usó **λ = 0.6** (valor
-  recomendado por Sievert & Shirley para exploración), y se exportaron también
-  los rankings para λ = 0 y λ = 1.
+  where $\lambda \in [0,1]$ weights conditional frequency against term
+  exclusivity. **λ = 0.6** was used (the value recommended by Sievert &
+  Shirley for exploration), and rankings for λ = 0 and λ = 1 were also
+  exported.
 
-![Mapa intertópico de LDAvis](../outputs/visualizations/LDAvis_Intertopic_Map.png)
+![LDAvis intertopic distance map](../outputs/visualizations/LDAvis_Intertopic_Map.png)
 
-![Relevancia de términos por tópico](../outputs/visualizations/LDAvis_Relevance_Heatmap.png)
+![LDAvis term relevance heatmap](../outputs/visualizations/LDAvis_Relevance_Heatmap.png)
 
-El visor interactivo completo está en
+The full interactive viewer is in
 [`outputs/visualizations/LDAvis.html`](../outputs/visualizations/LDAvis.html).
 
-**Ranking de términos relevantes (λ = 0.6):**
+**Relevant-term ranking (λ = 0.6):**
 
 | Topic | Term | Relevance (λ=0.6) |
 |---|---|---|
-| 1 | threat | -1.5314 |
-| 1 | attack | -1.5339 |
-| 1 | risk | -1.5447 |
-| 1 | vulnerability | -1.6186 |
-| 1 | safety | -1.6776 |
-| 1 | detection | -1.6955 |
-| 2 | reason | -1.4546 |
-| 2 | framework | -1.6932 |
-| 2 | cognitive | -1.9913 |
-| 2 | agent | -2.0507 |
-| 2 | dynamic | -2.1526 |
-| 2 | interaction | -2.2510 |
-| 3 | ai | -1.1649 |
-| 3 | generative_ai | -1.9799 |
-| 3 | ethical | -2.0215 |
-| 3 | technology | -2.0804 |
-| 3 | artificial_intelligence | -2.1238 |
-| 3 | genai | -2.2855 |
-| 4 | user | -1.3274 |
-| 4 | human | -1.8089 |
-| 4 | ai | -1.9765 |
-| 4 | system | -2.1392 |
-| 4 | chatbots | -2.1937 |
-| 4 | interaction | -2.2010 |
-| 5 | score | -1.5251 |
-| 5 | chatgpt | -1.6044 |
-| 5 | response | -1.7492 |
-| 5 | question | -1.7982 |
-| 5 | accuracy | -1.8294 |
-| 5 | performance | -1.9337 |
-| 6 | student | -0.7245 |
-| 6 | education | -1.1052 |
-| 6 | learn | -1.2418 |
-| 6 | educational | -1.2950 |
-| 6 | feedback | -1.4234 |
-| 6 | learner | -1.7081 |
-| 7 | system | -1.5446 |
-| 7 | agent | -1.7277 |
-| 7 | governance | -1.7959 |
-| 7 | architecture | -1.8714 |
-| 7 | agentic | -2.0518 |
-| 7 | financial | -2.0743 |
-| 8 | bias | -0.8739 |
-| 8 | cultural | -1.5214 |
-| 8 | moral | -1.6592 |
-| 8 | fairness | -1.7271 |
-| 8 | language | -1.8357 |
-| 8 | gender | -1.8364 |
-| 9 | clinical | -0.8877 |
-| 9 | medical | -1.0558 |
-| 9 | patient | -1.0668 |
-| 9 | healthcare | -1.2840 |
-| 9 | health | -1.3391 |
-| 9 | care | -1.6335 |
-| 10 | fine-tune | -1.6886 |
-| 10 | train | -1.8042 |
-| 10 | performance | -1.8848 |
-| 10 | label | -2.0548 |
-| 10 | dataset | -2.1195 |
-| 10 | classification | -2.1266 |
-| 11 | rag | -1.5160 |
-| 11 | legal | -1.6052 |
-| 11 | retrieval | -1.6675 |
-| 11 | document | -1.7644 |
-| 11 | retrieval-augmented_generation | -1.8039 |
-| 11 | query | -1.8548 |
-| 12 | multimodal | -1.6435 |
-| 12 | image | -1.6949 |
-| 12 | text | -1.8625 |
-| 12 | application | -1.8789 |
-| 12 | visual | -1.8940 |
-| 12 | nlp | -1.9633 |
-| 13 | unlearn | -0.7481 |
-| 13 | urban | -0.8188 |
-| 13 | policy | -0.8377 |
-| 13 | environmental | -0.9349 |
-| 13 | safety | -0.9882 |
-| 13 | plan | -0.9921 |
-| 14 | network | -1.5529 |
-| 14 | ml | -1.5935 |
-| 14 | energy | -1.6186 |
-| 14 | market | -1.8352 |
-| 14 | prediction | -1.8513 |
-| 14 | biological | -1.8663 |
+| 1 | make | -1.9061 |
+| 1 | work | -2.0260 |
+| 1 | problem | -2.0544 |
+| 1 | one | -2.0643 |
+| 1 | many | -2.0965 |
+| 1 | way | -2.1533 |
+| 2 | governance | -1.4754 |
+| 2 | ai | -1.7458 |
+| 2 | framework | -1.8406 |
+| 2 | conceptual | -2.0854 |
+| 2 | institutional | -2.0922 |
+| 2 | epistemic | -2.0966 |
+| 3 | ai | -0.5374 |
+| 3 | generative_ai | -1.2487 |
+| 3 | genai | -1.5243 |
+| 3 | ethical | -1.6333 |
+| 3 | technology | -1.6445 |
+| 3 | artificial_intelligence | -1.7119 |
+| 4 | explanation | -0.3093 |
+| 4 | privacy | -0.4823 |
+| 4 | financial | -0.5804 |
+| 4 | audit | -0.9192 |
+| 4 | explainable | -1.0140 |
+| 4 | explainability | -1.0563 |
+| 5 | response | -1.4187 |
+| 5 | chatgpt | -1.4401 |
+| 5 | question | -1.4426 |
+| 5 | score | -1.4832 |
+| 5 | accuracy | -1.5976 |
+| 5 | gemini | -1.7996 |
+| 6 | participant | -1.1916 |
+| 6 | perceive | -1.2583 |
+| 6 | perception | -1.4120 |
+| 6 | survey | -1.5801 |
+| 6 | group | -1.7614 |
+| 6 | influence | -1.7797 |
+| 7 | agent | -0.4618 |
+| 7 | architecture | -1.1732 |
+| 7 | system | -1.2051 |
+| 7 | agentic | -1.2517 |
+| 7 | multi-agent | -1.3265 |
+| 7 | agentic_ai | -1.3595 |
+| 8 | bias | -0.0389 |
+| 8 | fairness | -0.8845 |
+| 8 | gender | -1.0786 |
+| 8 | stereotype | -1.2881 |
+| 8 | demographic | -1.4773 |
+| 8 | gender_bias | -1.5010 |
+| 9 | clinical | -0.6310 |
+| 9 | medical | -0.7912 |
+| 9 | patient | -0.8103 |
+| 9 | healthcare | -1.0350 |
+| 9 | health | -1.3673 |
+| 9 | care | -1.4132 |
+| 10 | prediction | -0.7855 |
+| 10 | foundation_model | -1.2005 |
+| 10 | biological | -1.2422 |
+| 10 | ml | -1.2941 |
+| 10 | cell | -1.4533 |
+| 10 | sequence | -1.5049 |
+| 11 | safety | -0.5508 |
+| 11 | security | -0.8021 |
+| 11 | threat | -0.8158 |
+| 11 | attack | -0.8171 |
+| 11 | vulnerability | -0.9028 |
+| 11 | risk | -0.9524 |
+| 12 | multimodal | -0.0837 |
+| 12 | image | -0.0909 |
+| 12 | visual | -0.3375 |
+| 12 | video | -0.6130 |
+| 12 | modality | -0.9154 |
+| 12 | mllms | -1.0967 |
+| 13 | evaluation | -1.3949 |
+| 13 | benchmark | -1.6801 |
+| 13 | score | -1.9246 |
+| 13 | metric | -1.9603 |
+| 13 | across | -2.0082 |
+| 13 | test | -2.2250 |
+| 14 | unlearn | -1.5762 |
+| 14 | train | -1.6102 |
+| 14 | fine-tune | -1.7543 |
+| 14 | inference | -1.8443 |
+| 14 | token | -1.8693 |
+| 14 | optimization | -2.0574 |
+| 15 | market | -1.3062 |
+| 15 | management | -1.3182 |
+| 15 | energy | -1.3745 |
+| 15 | sustainability | -1.5976 |
+| 15 | esg | -1.6021 |
+| 15 | intelligent | -1.7468 |
+| 16 | service | -0.2831 |
+| 16 | policy | -0.3468 |
+| 16 | urban | -0.6942 |
+| 16 | web | -0.7174 |
+| 16 | public | -0.9587 |
+| 16 | government | -1.0533 |
+| 17 | user | -0.6800 |
+| 17 | chatbot | -1.2621 |
+| 17 | mental_health | -1.2788 |
+| 17 | chatbots | -1.3350 |
+| 17 | interaction | -1.3539 |
+| 17 | conversational | -1.3628 |
+| 18 | human | -1.0166 |
+| 18 | emotional | -1.1349 |
+| 18 | emotion | -1.1499 |
+| 18 | cognitive | -1.1713 |
+| 18 | social | -1.2560 |
+| 18 | game | -1.4818 |
+| 19 | text | -1.3059 |
+| 19 | detection | -1.3067 |
+| 19 | dataset | -1.3321 |
+| 19 | classification | -1.3875 |
+| 19 | fine-tune | -1.7099 |
+| 19 | annotation | -1.7681 |
+| 20 | semantic | -1.3283 |
+| 20 | reason | -1.4064 |
+| 20 | knowledge | -1.4447 |
+| 20 | retrieval | -1.5218 |
+| 20 | rag | -1.6462 |
+| 20 | knowledge_graph | -1.6721 |
+| 21 | plan | -0.8694 |
+| 21 | network | -0.8910 |
+| 21 | physical | -0.8986 |
+| 21 | robot | -0.9243 |
+| 21 | traffic | -1.0564 |
+| 21 | digital_twin | -1.0812 |
+| 22 | alignment | -0.2511 |
+| 22 | moral | -0.3600 |
+| 22 | value | -0.4605 |
+| 22 | human | -0.5263 |
+| 22 | preference | -0.6786 |
+| 22 | reward | -1.0361 |
+| 23 | application | -1.3617 |
+| 23 | challenge | -1.6965 |
+| 23 | review | -1.8585 |
+| 23 | field | -1.9321 |
+| 23 | survey | -1.9946 |
+| 23 | development | -2.0451 |
+| 24 | language | 0.2892 |
+| 24 | cultural | -0.2247 |
+| 24 | english | -0.3524 |
+| 24 | translation | -0.3981 |
+| 24 | linguistic | -0.4615 |
+| 24 | multilingual | -0.4697 |
+| 25 | chatgpt | -0.7402 |
+| 25 | review | -1.3218 |
+| 25 | publish | -1.3882 |
+| 25 | systematic_review | -1.4609 |
+| 25 | gai | -1.4752 |
+| 25 | scientific | -1.5561 |
+| 26 | legal | -0.7587 |
+| 26 | code | -1.2817 |
+| 26 | requirement | -1.2948 |
+| 26 | software | -1.4401 |
+| 26 | automate | -1.5392 |
+| 26 | compliance | -1.6226 |
+| 27 | student | -0.4137 |
+| 27 | education | -0.8911 |
+| 27 | learn | -0.9129 |
+| 27 | educational | -1.0275 |
+| 27 | feedback | -1.2317 |
+| 27 | learner | -1.3979 |
 
-### 7.3 Comparación y complementariedad
+### 7.3 Comparison and complementarity
 
-El **HJ-Biplot** aporta una lectura multivariante y estructural: permite ver
-cómo años, países y documentos se posicionan respecto de los tópicos, con una
-medida explícita de calidad de representación (cos²). Es útil para responder
-preguntas del tipo “¿qué tópicos caracterizan a los países con más producción?”
-o “¿cómo cambia el perfil temático entre años?”.
+The **HJ-Biplot** provides a multivariate, structural reading: it shows how
+years, countries, and documents are positioned relative to topics, with an
+explicit representation-quality measure (cos²). It answers questions such as
+"which topics characterize the most productive countries?" or "how does the
+thematic profile change over years?".
 
-**LDAvis** aporta una lectura término-tópico: muestra qué palabras definen cada
-tópico, cómo se solapan los tópicos y cuáles son los términos más relevantes
-para un λ dado. Es útil para **interpretar y etiquetar** los tópicos, y para
-detectar tópicos redundantes.
+**LDAvis** provides a term-topic reading: it shows which words define each
+topic, how topics overlap, and which terms are most relevant for a given λ.
+It is useful for **interpreting and labeling** topics and for detecting
+redundant topics.
 
-Los dos métodos son complementarios: el biplot dice **dónde** se ubican los
-documentos, años y países en el espacio temático; LDAvis dice **por qué** un
-tópico se interpreta de una manera, a partir de sus términos. La convergencia
-entre ambos —tópicos cercanos en LDAvis que también aparecen próximos en el
-biplot— refuerza la validez de la estructura temática.
+The two methods are complementary: the biplot says **where** documents, years,
+and countries lie in the thematic space; LDAvis says **why** a topic is
+interpreted in a given way, from its terms. Their convergence — topics close
+in LDAvis that also appear close in the biplot — reinforces the validity of
+the thematic structure.
 
 ---
 
-## 8. Resultados preliminares y su interpretación
+## 8. Preliminary results and interpretation
 
-### 8.1 Caracterización descriptiva del corpus
+### 8.1 Descriptive corpus characterization
 
-**Distribución temporal.** El corpus cubre 2018-2026,
-con una explosión de publicaciones a partir de 2023:
+**Temporal distribution.** The corpus covers 2018-2026,
+with an explosion of publications from 2023:
 
 | Year | Documents | % |
 |---|---|---|
@@ -608,8 +697,8 @@ con una explosión de publicaciones a partir de 2023:
 | 2025 | 6883 | 35.2900 |
 | 2026 | 9268 | 47.5200 |
 
-**Principales fuentes/revistas.** La producción se concentra en actas de
-conferencias de NLP/IA y en revistas de acceso abierto:
+**Main sources/journals.** Output concentrates in NLP/AI conference proceedings
+and open-access journals:
 
 | Source | Documents | % |
 |---|---|---|
@@ -624,9 +713,9 @@ conferencias de NLP/IA y en revistas de acceso abierto:
 | Lecture Notes in Networks and Systems | 164 | 0.8400 |
 | Applied Sciences (Switzerland) | 158 | 0.8100 |
 
-**Países.** Estados Unidos y China concentran algo más de dos quintas partes
-del corpus; la cola incluye India, Alemania, Reino Unido, Italia, Canadá y
-Australia:
+**Countries.** The United States and China concentrate slightly more than two
+fifths of the corpus; the tail includes India, Germany, the United Kingdom,
+Italy, Canada, and Australia:
 
 | Country | Documents | % |
 |---|---|---|
@@ -641,8 +730,8 @@ Australia:
 | South Korea | 449 | 2.3500 |
 | Spain | 316 | 1.6500 |
 
-**Tipos de documento.** Predominan artículos y ponencias de congreso, con una
-presencia relevante de revisiones:
+**Document types.** Articles and conference papers predominate, with a
+relevant share of reviews:
 
 | Document type | Documents | % |
 |---|---|---|
@@ -657,8 +746,8 @@ presencia relevante de revisiones:
 | Short survey | 47 | 0.2400 |
 | Conference review | 42 | 0.2200 |
 
-**Instituciones.** Las afiliaciones se extrajeron de la columna `Affiliations`
-de Scopus. La tabla siguiente muestra las instituciones con más documentos:
+**Institutions.** Affiliations were extracted from the Scopus `Affiliations`
+column. The table shows the institutions with most documents:
 
 | Institution | Documents | % |
 |---|---|---|
@@ -673,105 +762,124 @@ de Scopus. La tabla siguiente muestra las instituciones con más documentos:
 | Shanghai Jiao Tong University | 203 | 1.0400 |
 | University of Washington | 201 | 1.0300 |
 
-**Panorama bibliométrico.** El corpus es reciente, dominado por conferencias y
-revistas de IA/NLP, con una fuerte presencia de Estados Unidos y China. La
-combinación de tipos de documento (artículos, ponencias, revisiones) sugiere
-un campo en consolidación, con mucha producción aplicada y una capa creciente
-de reflexión ética y regulatoria.
+**Bibliometric overview.** The corpus is recent, dominated by AI/NLP
+conferences and journals, with a strong presence of the United States and
+China. The mix of document types (articles, conference papers, reviews)
+suggests a consolidating field, with much applied output and a growing layer
+of ethical and regulatory reflection.
 
-### 8.2 Resultados del modelo LDA
+### 8.2 LDA model results
 
-La tabla siguiente resume los 14 tópicos: identificador, etiqueta propuesta,
-número de documentos con tópico dominante, términos principales y país con más
-documentos en el tópico (por volumen).
+The table below summarizes the 27 topics: identifier, proposed label,
+number of documents with dominant topic, main terms, and the country with most
+documents in the topic (by volume).
 
 | Topic | Proposed label | Documents | Top terms | Leading country |
 |---|---|---|---|---|
-| 1 | Adversarial attacks, privacy and cybersecurity | 1019 | risk, safety, detection, privacy, attack, security, threat, vulnerability, content, prompt | United States |
-| 2 | Reasoning agents, alignment and cognitive frameworks | 1401 | framework, reason, agent, design, structure, interaction, evaluation, cognitive, system, dynamic | China |
-| 3 | Generative AI ethics, governance and societal challenges | 3558 | ai, generative_ai, artificial_intelligence, technology, ethical, challenge, development, tool, genai, framework | United States |
-| 4 | Human-AI interaction and conversational agents | 1722 | user, ai, human, system, design, interaction, make, work, chatbots, understand | United States |
-| 5 | ChatGPT evaluation and benchmark performance | 1468 | chatgpt, score, response, performance, accuracy, question, compare, test, evaluation, quality | United States |
-| 6 | AI in education and student learning | 1002 | student, learn, education, chatgpt, educational, feedback, tool, support, ai, skill | United States |
-| 7 | Agentic systems, governance and enterprise deployment | 1462 | system, agent, framework, governance, architecture, ai, workflow, control, deployment, financial | United States |
-| 8 | Bias, fairness, culture and language | 995 | bias, human, language, cultural, value, across, fairness, social, moral, prompt | United States |
-| 9 | Clinical, medical and mental-health AI | 1091 | clinical, medical, patient, healthcare, health, support, include, care, application, ai | United States |
-| 10 | Model training, fine-tuning and predictive performance | 1949 | performance, train, fine-tune, task, dataset, datasets, achieve, classification, feature, prompt | China |
-| 11 | Retrieval-augmented generation and document automation | 1617 | system, rag, process, legal, knowledge, information, retrieval, automate, document, framework | China |
-| 12 | Multimodal applications and natural-language tasks | 1245 | application, multimodal, task, text, challenge, image, language, include, natural_language, understand | China |
-| 13 | Safety policy, machine unlearning and spatial/environmental applications | 153 | safety, policy, unlearn, plan, urban, environmental, construction, management, scenario, spatial | China |
-| 14 | Neural networks, prediction and energy/market applications | 823 | network, prediction, system, intelligent, energy, ml, machine_learn, integrate, power, market | China |
+| 1 | Human problem-solving and AI-assisted work | 1168 | work, make, system, ai, problem, one, human, task, find, question | United States |
+| 2 | AI governance and framework design | 1064 | ai, framework, governance, system, design, across, structure, rather, evidence, support | United States |
+| 3 | Generative AI ethics, technology, and societal challenges | 1647 | ai, generative_ai, technology, artificial_intelligence, ethical, genai, challenge, development, tool, generative_artificial | United States |
+| 4 | Privacy, explainability, and financial trust | 181 | privacy, explanation, financial, audit, framework, transparency, explainability, explainable, trust, sensitive | United States |
+| 5 | ChatGPT response quality and performance evaluation | 996 | response, chatgpt, question, accuracy, score, performance, compare, test, quality, gpt-4 | United States |
+| 6 | Perception, trust, and AI adoption surveys | 437 | participant, ai, survey, perceive, perception, finding, group, influence, among, impact | United States |
+| 7 | Agentic systems, architecture, and enterprise workflows | 686 | agent, system, architecture, framework, agentic, multi-agent, agentic_ai, ai, rag, workflow | United States |
+| 8 | Bias, fairness, gender, and stereotype in prompts | 644 | bias, fairness, gender, prompt, social, stereotype, across, demographic, output, group | United States |
+| 9 | Clinical, medical, and healthcare AI | 881 | clinical, medical, patient, healthcare, health, care, support, medicine, include, clinician | United States |
+| 10 | Prediction, foundation models, and biological sequence learning | 503 | prediction, foundation_model, machine_learn, ml, biological, feature, learn, predict, sequence, representation | China |
+| 11 | Safety, cybersecurity, and adversarial robustness | 512 | safety, risk, security, attack, threat, vulnerability, cybersecurity, adversarial, detection, defense | United States |
+| 12 | Multimodal and vision-language models | 182 | multimodal, image, visual, video, modality, vision, mllms, generation, foundation_model, vlms | China |
+| 13 | Evaluation, benchmarks, and performance measurement | 784 | evaluation, benchmark, across, score, test, metric, prompt, assessment, performance, framework | United States |
+| 14 | Training, fine-tuning, and machine unlearning | 1098 | train, fine-tune, performance, task, unlearn, inference, optimization, introduce, framework, learn | China |
+| 15 | Intelligent management, markets, and energy systems | 700 | management, system, framework, market, energy, intelligent, integrate, power, process, technology | China |
+| 16 | Public policy, digital services, and urban platforms | 111 | policy, service, public, information, urban, platform, web, digital, government, access | United States |
+| 17 | User interaction, chatbots, and conversational support | 768 | user, design, interaction, system, support, chatbots, chatbot, mental_health, conversational, dialogue | United States |
+| 18 | Human cognition, emotion, and social simulation | 551 | human, social, cognitive, emotional, emotion, agent, theory, narrative, behavior, interaction | United States |
+| 19 | Text detection, datasets, and classification | 1081 | text, detection, dataset, classification, performance, prompt, fine-tune, generate, task, datasets | United States |
+| 20 | Retrieval, knowledge graphs, and semantic generation | 1277 | framework, reason, knowledge, semantic, retrieval, rag, structure, system, generation, query | China |
+| 21 | Networks, robotics, simulation, and digital twins | 223 | plan, system, network, environment, physical, robot, simulation, control, scenario, traffic | China |
+| 22 | Alignment, values, and moral decision-making | 244 | human, alignment, value, moral, preference, ethical, align, decision, decision-making, reason | United States |
+| 23 | Application challenges, reviews, and field advances | 1498 | application, challenge, review, development, include, field, advance, capability, potential, survey | China |
+| 24 | Language, culture, translation, and multilingual corpora | 126 | language, cultural, translation, english, linguistic, multilingual, write, chinese, text, context | China |
+| 25 | ChatGPT in academic and systematic literature reviews | 499 | chatgpt, review, include, publish, tool, identify, literature, scientific, systematic_review, qualitative | United States |
+| 26 | Law, regulation, compliance, and software requirements | 732 | legal, process, code, requirement, automate, software, regulatory, regulation, compliance, case | United States |
+| 27 | AI in education and student learning | 912 | student, learn, education, educational, feedback, tool, skill, assessment, chatgpt, teach | United States |
 
-**Lectura temática.** Los tópicos pueden agruparse en cuatro bloques:
+**Thematic reading.** The topics can be grouped into five blocks:
 
-1. **Riesgos y seguridad:** T1 (ataques adversarios, privacidad, ciberseguridad),
-   T13 (política de seguridad, *machine unlearning*) y parte de T3.
-2. **Gobernanza y ética:** T3 (IA generativa, ética, gobernanza), T8 (sesgo,
-   equidad, cultura) y T7 (sistemas agénticos, auditoría, empresa).
-3. **Aplicaciones y evaluación:** T5 (ChatGPT, benchmarks), T9 (salud clínica),
-   T6 (educación), T10 (entrenamiento y *fine-tuning*), T11 (RAG y automatización
-   documental), T12 (multimodalidad) y T14 (redes neuronales, energía).
-4. **Interacción y agentes:** T2 (razonamiento, alineación) y T4 (interacción
-   humano-IA, chatbots).
+1. **Risk, security, and policy:** T11 (cybersecurity, adversarial robustness),
+   T4 (privacy, explainability, trust), T26 (law, regulation, compliance),
+   T16 (public policy, digital services), and T22 (alignment, values).
+2. **Governance and ethics:** T3 (generative AI, ethics, societal challenges),
+   T2 (AI governance frameworks), T8 (bias, fairness, gender), T6 (perception,
+   trust, adoption), and T24 (culture, language, translation).
+3. **Applications and evaluation:** T9 (clinical health), T27 (education),
+   T14 (training, fine-tuning, unlearning), T13 (benchmarks, evaluation),
+   T23 (application reviews and advances), and T15 (management, energy).
+4. **Interaction and agents:** T17 (chatbots, conversational support),
+   T7 (agentic systems, enterprise workflows), T18 (cognition, emotion),
+   T20 (retrieval, knowledge graphs), and T21 (networks, robotics, simulation).
+5. **Technical core:** T19 (text detection, datasets, classification),
+   T10 (prediction, foundation models), T12 (multimodal, vision-language),
+   T5 (ChatGPT evaluation), T25 (academic reviews), and T1 (human
+   problem-solving and AI-assisted work).
 
-Los tópicos de mayor volumen (T3, T10, T4, T11) son también los más estables
-en el análisis de sensibilidad; T13 es el más pequeño (153 documentos) y debe
-interpretarse como un tópico residual o emergente.
+The highest-volume topics are also the most stable in the sensitivity
+analysis; the smallest topics should be read as residual or emerging themes.
 
-### 8.3 Interpretación del Biplot
+### 8.3 Biplot interpretation
 
-- **Años:** los años 2022–2023 se asocian con tópicos de fundamentos y
-  aplicaciones tempranas; 2024–2026 se desplazan hacia IA generativa, agentes,
-  RAG y evaluación de modelos. La dirección de los vectores de los tópicos
-  permite leer qué temas ganan peso relativo.
-- **Países:** Estados Unidos y China, por volumen, ocupan posiciones centrales;
-  los países europeos y latinoamericanos se distribuyen hacia tópicos de
-  gobernanza, salud y educación. La posición debe leerse junto con la calidad
-  de representación: si un país tiene cos² bajo, su posición en el plano es
-  poco fiable.
-- **Documentos:** la nube de documentos muestra una separación clara entre
-  documentos de evaluación técnica (T10, T5) y documentos de ética/gobernanza
-  (T3, T8), con una zona de solapamiento en interacción y agentes (T2, T4).
+- **Years:** 2022–2023 align with foundational and early-application topics;
+  2024–2026 shift toward generative AI, agents, RAG, and model evaluation. The
+  direction of topic vectors shows which themes gain relative weight.
+- **Countries:** by volume, the United States and China occupy central
+  positions; European and Latin American countries spread toward governance,
+  health, and education topics. Positions must be read together with
+  representation quality: if a country has low cos², its plane position is
+  unreliable.
+- **Documents:** the document cloud shows a clear separation between technical
+  evaluation documents (T13, T5, T19) and ethics/governance documents (T3,
+  T8, T11), with an overlap zone in interaction and agents (T17, T7).
 
-La calidad global del biplot se reporta en la tabla de la sección 7.1. Valores
-medios de cos² altos indican que los dos primeros ejes capturan una parte
-importante de la estructura; valores bajos obligan a interpretar con cautela.
+Global biplot quality is reported in the Section 7.1 table. High mean cos²
+values mean the first two axes capture a large part of the structure; low
+values call for cautious interpretation.
 
-### 8.4 Interpretación de LDAvis
+### 8.4 LDAvis interpretation
 
-- **Mapa intertópico:** los tópicos de IA generativa (T3), evaluación (T5) y
-  entrenamiento (T10) aparecen próximos porque comparten vocabulario técnico.
-  Los tópicos de ética (T8) y gobernanza (T7) se separan del núcleo técnico.
-  T13 aparece aislado, consistente con su bajo volumen y su mezcla de términos.
-- **Tamaño de burbuja:** T3 es el tópico más prevalente, seguido de T10, T4 y
-  T11; T13 es el menos prevalente.
-- **Relevancia:** con λ = 0.6, los términos más relevantes de cada tópico
-  combinan frecuencia y exclusividad. Por ejemplo, T1 se define por
-  `adversarial`, `attack`, `privacy`, `hallucination`; T9 por `clinical`,
-  `patient`, `diagnosis`; T11 por `rag`, `retrieval`, `document`. El ranking
-  completo está en `outputs/results/lda/ldavis_relevance_terms.csv`.
+- **Intertopic map:** generative-AI (T3), evaluation (T13), and training
+  (T14) topics appear close because they share technical vocabulary. Ethics
+  (T8) and governance (T2) topics separate from the technical core. Small
+  topics (T16, T24) appear isolated, consistent with their low volume.
+- **Bubble size:** T3 is the most prevalent topic, followed by the other
+  large applied and evaluation topics; the smallest topics have the smallest
+  bubbles.
+- **Relevance:** with λ = 0.6, the most relevant terms per topic combine
+  frequency and exclusivity. For example, T11 is defined by `adversarial`,
+  `attack`, `privacy`, `security`; T9 by `clinical`, `patient`, `diagnosis`;
+  T20 by `rag`, `retrieval`, `knowledge`. The full ranking is in
+  `outputs/results/lda/ldavis_relevance_terms.csv`.
 
-### 8.5 Síntesis integradora
+### 8.5 Integrative synthesis
 
-Las tres fuentes convergen en una estructura temática coherente:
+The three sources converge on a coherent thematic structure:
 
-- **Descripción del corpus:** crecimiento explosivo, dominio de conferencias y
-  revistas de IA, alta concentración en Estados Unidos y China.
-- **Biplot:** separación entre un núcleo técnico (evaluación, entrenamiento,
-  aplicaciones) y un núcleo ético-regulatorio (gobernanza, sesgo, seguridad),
-  con los años recientes desplazándose hacia el primero.
-- **LDAvis:** los tópicos técnicos comparten vocabulario y se solapan; los
-  tópicos éticos se separan; los tópicos pequeños son más frágiles.
+- **Corpus description:** explosive growth, conference and AI-journal
+  dominance, high concentration in the United States and China.
+- **Biplot:** separation between a technical core (evaluation, training,
+  applications) and a normative core (governance, bias, security), with recent
+  years shifting toward the former.
+- **LDAvis:** technical topics share vocabulary and overlap; ethics topics
+  separate; small topics are more fragile.
 
-En conjunto, el corpus no es un campo homogéneo: combina una **capa técnica**
-(evaluación de modelos, *fine-tuning*, RAG, multimodalidad) con una **capa
-normativa** (ética, gobernanza, sesgo, privacidad, seguridad). El modelo LDA de
-14 tópicos captura esa dualidad y proporciona una base defendible para el
-análisis de tendencias de la fase 4.
+Overall, the corpus is not homogeneous: it combines a **technical layer**
+(model evaluation, *fine-tuning*, RAG, multimodality) with a **normative
+layer** (ethics, governance, bias, privacy, security). The 27-topic
+LDA captures this duality and provides a defensible basis for the phase-4
+trend analysis.
 
 ---
 
-## 9. Referencias
+## 9. References
 
 Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? In *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency* (pp. 610–623). https://doi.org/10.1145/3442188.3445922
 
@@ -813,7 +921,7 @@ Weidinger, L., Mellor, J., Rauh, M., Griffin, C., Uesato, J., Huang, P.-S., Chen
 
 ---
 
-## Anexo A. Reproducibilidad y estructura del repositorio
+## Appendix A. Reproducibility and repository structure
 
 ```text
 bertlda/
@@ -823,7 +931,7 @@ bertlda/
 │   ├── text_processing.py          # cleaning, stopwords, lemmatization
 │   ├── phase0_audit.py             # corpus audit + descriptive figures
 │   ├── phase1a_lda_diagnostic.py   # tokenization + K search
-│   ├── phase1b_lda_decision.py     # stability + alpha/eta search
+│   ├── phase1b_lda_decision.py     # K decision + alpha/eta search
 │   ├── phase1c_lda_final.py        # final LDA + Theta + topic summary
 │   ├── phase3_visualizations.py    # similarity, top-words, topic x year/country
 │   ├── phase5_sensitivity.py       # seed/K sensitivity
@@ -836,18 +944,18 @@ bertlda/
 └── docs/Methodology_LDA.md
 ```
 
-## Anexo B. Inventario de artefactos principales
+## Appendix B. Main artifact inventory
 
-- `outputs/models/lda/lda_final.model` — modelo LDA final.
-- `outputs/results/lda/lda_theta.csv` — matriz documento-tópico (19,505 × 14).
-- `outputs/results/lda/lda_topic_summary.csv` — etiquetas, palabras clave y país líder.
-- `outputs/results/lda/lda_ranking.csv` — ranking de tópicos por frecuencia.
-- `outputs/results/lda/lda_k_search.csv` — grilla de K.
-- `outputs/results/lda/lda_alpha_eta_search.csv` — grilla alpha/eta.
-- `outputs/results/lda/lda_sensitivity_seeds.csv` — estabilidad entre semillas.
-- `outputs/results/lda/lda_sensitivity_k.csv` — estabilidad en el vecindario de K.
-- `outputs/results/lda/hjbiplot_*.csv` — coordenadas y calidades del HJ-Biplot.
-- `outputs/results/lda/ldavis_relevance_terms.csv` — relevancia de términos.
-- `outputs/results/config/model_configuration_full.json` — configuración completa.
-- `outputs/visualizations/LDAvis.html` — visor interactivo.
-- `docs/Methodology_LDA.md` — este documento.
+- `outputs/models/lda/lda_final.model` — final LDA model.
+- `outputs/results/lda/lda_theta.csv` — document-topic matrix (19,505 × 27).
+- `outputs/results/lda/lda_topic_summary.csv` — labels, keywords, and leading country.
+- `outputs/results/lda/lda_ranking.csv` — topic ranking by frequency.
+- `outputs/results/lda/lda_k_search.csv` — K grid.
+- `outputs/results/lda/lda_alpha_eta_search.csv` — alpha/eta grid.
+- `outputs/results/lda/lda_sensitivity_seeds.csv` — seed stability.
+- `outputs/results/lda/lda_sensitivity_k.csv` — stability in the K neighbourhood.
+- `outputs/results/lda/hjbiplot_*.csv` — HJ-Biplot coordinates and qualities.
+- `outputs/results/lda/ldavis_relevance_terms.csv` — term relevance.
+- `outputs/results/config/model_configuration_full.json` — full configuration.
+- `outputs/visualizations/LDAvis.html` — interactive viewer.
+- `docs/Methodology_LDA.md` — this document.

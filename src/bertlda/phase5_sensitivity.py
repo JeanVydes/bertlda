@@ -215,6 +215,11 @@ def main() -> dict:
     except Exception:
         chosen_k = int(CFG["lda"].get("k_default", 14))
 
+    global K_NEAR
+    if chosen_k not in K_NEAR:
+        K_NEAR = sorted(max(4, chosen_k + d) for d in (-2, -1, 0, 1, 2))
+        print(f"  Sensitivity K neighbourhood adjusted to {K_NEAR}")
+
     print(f"  Documents: {len(corpus):,} | vocab: {len(id2word):,}")
     print(f"  K neighbourhood: {K_NEAR} | seeds: {SEEDS} | passes={PASSES}")
     print(f"  Reference K: {chosen_k}")
