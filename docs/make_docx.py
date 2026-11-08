@@ -27,7 +27,7 @@ MD_PATH = ROOT / "docs" / "Methodology_LDA.md"
 DOCX_PATH = ROOT / "docs" / "Methodology_LDA.docx"
 
 FONT = "Times New Roman"
-ACCENT = RGBColor(0x1F, 0x3A, 0x5F)
+ACCENT = RGBColor(0x00, 0x00, 0x00)  # black: single-font academic style
 GREY = RGBColor(0x44, 0x44, 0x44)
 
 
@@ -70,7 +70,7 @@ def add_inline(paragraph, text: str, base_size: int = 11,
             run.italic = True
         elif part.startswith("`") and part.endswith("`"):
             run.text = part[1:-1]
-            run.font.name = "Consolas"
+            run.font.name = FONT
             run.font.size = Pt(9)
         elif part.startswith("[") and "](" in part:
             inner = part[1:-1]
@@ -105,12 +105,19 @@ def main() -> None:
 
     doc = Document()
 
-    # -- page setup: A4-ish margins -------------------------------------
+    # -- page setup: A4, narrow margins, TWO COLUMNS --------------------
     for section in doc.sections:
-        section.top_margin = Inches(1.0)
-        section.bottom_margin = Inches(1.0)
-        section.left_margin = Inches(1.1)
-        section.right_margin = Inches(1.1)
+        section.top_margin = Inches(0.8)
+        section.bottom_margin = Inches(0.8)
+        section.left_margin = Inches(0.7)
+        section.right_margin = Inches(0.7)
+        sect_pr = section._sectPr
+        cols = sect_pr.find(qn("w:cols"))
+        if cols is None:
+            cols = OxmlElement("w:cols")
+            sect_pr.append(cols)
+        cols.set(qn("w:num"), "2")
+        cols.set(qn("w:space"), "360")
 
     style = doc.styles["Normal"]
     style.font.name = FONT
@@ -169,7 +176,7 @@ def main() -> None:
                 p.paragraph_format.space_after = Pt(1)
                 p.paragraph_format.left_indent = Inches(0.25)
                 run = p.add_run(cl)
-                run.font.name = "Consolas"
+                run.font.name = FONT
                 run.font.size = Pt(8.5)
             continue
 
@@ -234,7 +241,7 @@ def main() -> None:
                 add_inline(hdr[j].paragraphs[0], h, base_size=9)
                 for run in hdr[j].paragraphs[0].runs:
                     run.bold = True
-                _set_cell_bg(hdr[j], "DCE6F2")
+                _set_cell_bg(hdr[j], "E7E7E7")
             for row in rows:
                 cells = table.add_row().cells
                 for j in range(len(header)):

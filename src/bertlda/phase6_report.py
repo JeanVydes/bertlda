@@ -1123,15 +1123,10 @@ generative model for collections of discrete documents. Each document is
 represented as a mixture of a fixed number of topics, and each topic as a
 distribution over the vocabulary. Formally, for a document $d$:
 
-$$
-\\theta_d \\sim \\mathrm{{Dirichlet}}(\\alpha), \\qquad
-z_{{d,n}} \\sim \\mathrm{{Categorical}}(\\theta_d), \\qquad
-w_{{d,n}} \\sim \\mathrm{{Categorical}}(\\phi_{{z_{{d,n}}}}),
-$$
+> θ_d ~ Dirichlet(α),    z_{{d,n}} ~ Categorical(θ_d),    w_{{d,n}} ~ Categorical(φ_{{z_{{d,n}}}})
 
-where $\\theta_d$ is the document's topic proportion vector, $z_{{d,n}}$ is
-the latent topic of word $n$, and $\\phi_k \\sim \\mathrm{{Dirichlet}}(\\eta)$
-is the word distribution of topic $k$. The joint likelihood integrates out the
+where θ_d is the document's topic proportion vector, z_{{d,n}} is the latent
+topic of word n, and φ_k ~ Dirichlet(η) is the word distribution of topic k. The joint likelihood integrates out the
 latent variables, and is approximated by variational inference or Gibbs
 sampling; Gensim uses online variational inference.
 
@@ -1141,7 +1136,7 @@ LDA is appropriate for this corpus because:
   probabilistic mixture model is more stable than hard clustering;
 - the objective is to **describe** the thematic structure and its evolution,
   not to classify documents into predefined categories;
-- the document-topic matrix ($\\Theta$) supports downstream analysis with
+- the document-topic matrix (Theta) supports downstream analysis with
   HJ-Biplot, LDAvis, and trend models;
 - AI-ethics literature is interdisciplinary: a single document can combine
   governance, bias, privacy, and technical evaluation, which favors a mixed
@@ -1322,18 +1317,14 @@ The **HJ-Biplot** (Galindo-Villardón, 1986), an extension of Gabriel's biplot
 (1971), represents rows and columns of a matrix simultaneously through a
 singular value decomposition. For a centered matrix $X$:
 
-$$
-X = U D V^\\top,
-$$
+> X = U · D · Vᵀ
 
-row coordinates are $A = U D$ and column coordinates $B = V D$. The key
-property is that the scalar product $a_i \\cdot b_j$ approximates the value
-$x_{{ij}}$, so rows and columns are interpreted in the same space. The
-**representation quality** of each marker is measured with the squared cosine:
+row coordinates are A = U·D and column coordinates B = V·D. The key property
+is that the scalar product a_i · b_j approximates the value x_ij, so rows
+and columns are interpreted in the same space. The **representation quality**
+of each marker is measured with the squared cosine:
 
-$$
-\\cos^2_{{i}} = \\frac{{a_{{i1}}^2 + a_{{i2}}^2}}{{\\sum_k a_{{ik}}^2}},
-$$
+> cos²_i = (a_i1² + a_i2²) / Σ_k a_ik²
 
 and analogously for columns. The **global quality** is the mean of the squared
 cosines. Three biplots were built:
@@ -1375,13 +1366,9 @@ LDAvis (Sievert & Shirley, 2014) combines two views:
 - **Relevant-term ranking:** for each topic, words are ranked by
   **relevance**:
 
-$$
-\\mathrm{{relevance}}(w \\mid t) = \\lambda \\, p(w \\mid t)
-+ (1-\\lambda) \\, \\frac{{p(w \\mid t)}}{{p(w)}},
-$$
+> relevance(w | t) = λ · p(w | t) + (1 − λ) · p(w | t) / p(w)
 
-  where $\\lambda \\in [0,1]$ weights conditional frequency against term
-  exclusivity. **λ = {LAMBDA}** was used (the value recommended by Sievert &
+  where λ ∈ [0,1] weights conditional frequency against term exclusivity. **λ = {LAMBDA}** was used (the value recommended by Sievert &
   Shirley for exploration), and rankings for λ = 0 and λ = 1 were also
   exported.
 
