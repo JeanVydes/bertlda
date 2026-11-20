@@ -78,7 +78,6 @@ bertlda --phase phase6
 
 # Build the final paper DOCX (then export to PDF with LibreOffice)
 uv run python docs/make_paper_docx.py
-bertlda --phase phase6
 ```
 
 ## Resumability notes
