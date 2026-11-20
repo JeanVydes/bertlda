@@ -340,7 +340,7 @@ def _prisma_flow(quality: dict) -> None:
         "#F8D7DA")
     ax.text(0.5, 0.10,
             "The Scopus search string and query date (2026-10-11)\n"
-            "are documented in Section 1.1 (PRISMA 2020).",
+            "are documented in Section 2.1 (PRISMA 2020).",
             ha="center", va="center", fontsize=8.4, style="italic", color="#444444")
     ax.set_title("PRISMA flow for the modelling corpus", fontsize=13, pad=8)
     fig.tight_layout()
