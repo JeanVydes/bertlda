@@ -142,6 +142,24 @@ TEXT_REPLACEMENTS = {
         "Biplot quality. The countries and documents biplots have moderate "
         "and low representation quality, respectively, after the centered "
         "log-ratio transformation.",
+    # --- Discussion (Section 4.3): the CLR transformation was APPLIED ------
+    "The biplots were computed on column-centered mean topic probabilities. "
+    "Because topic proportions are compositional data, log-ratio "
+    "transformations are generally recommended for biplots [40]; the present "
+    "biplots should therefore be regarded as exploratory, and repeating them "
+    "after a log-ratio transformation is a priority.":
+        "The biplots were computed on column-centered, centered log-ratio "
+        "(CLR) transformed mean topic proportions. Because topic proportions "
+        "are compositional data confined to the simplex, the CLR map [40] was "
+        "applied before column centering, so the HJ-Biplot approximation is "
+        "computed in the appropriate Aitchison geometry rather than on "
+        "constrained raw proportions. Representation quality remains high "
+        "for the years biplot but is lower for the countries and documents "
+        "biplots, which should therefore be regarded as exploratory.",
+    # --- Conclusions (Section 5): no longer a pending recommendation -------
+    "to repeat the biplots with a log-ratio transformation, and to compare "
+    "LDA with embedding-based topic models":
+        "to compare LDA with embedding-based topic models",
 }
 
 # Table 16 ("Biplot, axis / Negative pole / Positive pole"): overwrite the
@@ -178,7 +196,7 @@ EQUATION_TEXT = {
     "(2)": "z_{d,n} ~ Categorical(θ_d)",
     "(3)": "w_{d,n} ~ Categorical(φ_{z_{d,n}})",
     "(4)": "φ_k ~ Dirichlet(η)",
-    "(5)": "NPMI(w_i, w_j) = log[P(w_i,w_j)/(P(w_i)P(w_j))] − log P(w_i,w_j)",
+    "(5)": "NPMI(w_i, w_j) = log[P(w_i,w_j)/(P(w_i)P(w_j))] / (−log P(w_i,w_j))",
     "(6)": "H̃ = −Σ_{k=1}^{K} p_k log p_k / log K",
     "(7)": "J(A,B) = |A ∩ B| / |A ∪ B|",
     "(8)": "X_c = U · D · Vᵀ",
