@@ -1,4 +1,4 @@
-﻿dataset,n_rows,n_cols,explained_axis1,explained_axis2,mean_row_cos2,mean_col_cos2
-years,5,27,77.53,18.11,0.8999,0.8827
-countries,12,27,59.66,23.11,0.5619,0.4612
-documents,1500,27,10.34,8.21,0.176,0.108
+﻿dataset,n_rows,n_cols,transformation,explained_axis1,explained_axis2,mean_row_cos2,mean_col_cos2
+years,5,27,centered log-ratio (CLR),74.74,22.78,0.9307,0.9523
+countries,12,27,centered log-ratio (CLR),32.75,26.66,0.434,0.4682
+documents,1500,27,centered log-ratio (CLR),9.17,7.65,0.1694,0.1332

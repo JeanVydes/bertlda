@@ -1,33 +1,33 @@
-﻿marker_type,label,axis1,axis2,cos2
-row,2022,-0.144997,0.049513,0.9989
-row,2023,-0.039774,-0.0513,0.8464
-row,2024,0.006987,-0.040363,0.8589
-row,2025,0.060651,-0.008566,0.8152
-row,2026,0.117133,0.050715,0.9801
-column,T1,-0.166559,0.010999,0.9925
-column,T2,0.040925,0.036899,0.8893
-column,T3,-0.027689,-0.032433,0.9877
-column,T4,0.012837,-0.006644,0.9834
-column,T5,0.030703,-0.029316,0.9844
-column,T6,0.008637,0.003576,0.8069
-column,T7,0.033706,0.017757,0.9863
-column,T8,-0.022949,0.006097,0.9153
-column,T9,0.028651,-0.014957,0.9756
-column,T10,0.009853,0.001208,0.9919
-column,T11,0.001202,0.003321,0.2318
-column,T12,-0.007197,0.008191,0.8299
-column,T13,0.034001,0.029945,0.9199
-column,T14,-0.020859,0.026302,0.8125
-column,T15,0.021294,0.005673,0.9392
-column,T16,0.008346,-0.002496,0.9655
-column,T17,0.006324,-0.002051,0.4357
-column,T18,-0.012058,0.014568,0.9799
-column,T19,-0.029407,-0.005501,0.8949
-column,T20,0.044339,0.006843,0.9746
-column,T21,0.013437,0.002294,0.9995
-column,T22,-0.013626,0.009652,0.8948
-column,T23,-0.007489,-0.03927,0.9409
-column,T24,-0.014409,0.011373,0.9178
-column,T25,0.006445,-0.030488,0.6539
-column,T26,0.013951,-0.007583,0.995
-column,T27,0.007593,-0.023958,0.9347
+﻿marker_type,label,axis1,axis2,cos2,transformation
+row,2022,-4.792705,0.461839,1.0,centered log-ratio (CLR)
+row,2023,0.739263,-1.847566,0.9329,centered log-ratio (CLR)
+row,2024,0.827631,-1.059274,0.8903,centered log-ratio (CLR)
+row,2025,1.293451,0.420462,0.8487,centered log-ratio (CLR)
+row,2026,1.93236,2.02454,0.9815,centered log-ratio (CLR)
+column,T1,-1.545845,-0.897277,0.9843,centered log-ratio (CLR)
+column,T2,0.097599,1.235455,0.8822,centered log-ratio (CLR)
+column,T3,-0.618028,-0.595792,0.9881,centered log-ratio (CLR)
+column,T4,1.754285,-0.347095,0.993,centered log-ratio (CLR)
+column,T5,3.098783,-0.858798,0.9995,centered log-ratio (CLR)
+column,T6,-0.227577,0.209583,0.7858,centered log-ratio (CLR)
+column,T7,1.226361,1.252806,0.9897,centered log-ratio (CLR)
+column,T8,-1.098749,-0.304034,0.9901,centered log-ratio (CLR)
+column,T9,1.285902,-0.30975,0.9956,centered log-ratio (CLR)
+column,T10,-0.056386,0.121286,0.9728,centered log-ratio (CLR)
+column,T11,-0.511876,0.07127,0.9401,centered log-ratio (CLR)
+column,T12,-0.967593,0.187959,0.986,centered log-ratio (CLR)
+column,T13,0.063848,1.131441,0.9248,centered log-ratio (CLR)
+column,T14,-0.972595,0.232793,0.9712,centered log-ratio (CLR)
+column,T15,0.244661,0.465197,0.8038,centered log-ratio (CLR)
+column,T16,0.479853,-0.0341,0.9371,centered log-ratio (CLR)
+column,T17,-0.309414,-0.052334,0.8747,centered log-ratio (CLR)
+column,T18,-0.933259,0.158333,0.9819,centered log-ratio (CLR)
+column,T19,-0.884847,-0.457547,0.9925,centered log-ratio (CLR)
+column,T20,0.958039,0.393643,0.9803,centered log-ratio (CLR)
+column,T21,0.887322,0.394717,0.9869,centered log-ratio (CLR)
+column,T22,-1.179583,0.046113,0.9853,centered log-ratio (CLR)
+column,T23,-0.378294,-0.603496,0.9744,centered log-ratio (CLR)
+column,T24,-1.339687,0.164401,0.9885,centered log-ratio (CLR)
+column,T25,0.688844,-0.870596,0.8474,centered log-ratio (CLR)
+column,T26,0.085079,-0.140831,0.9953,centered log-ratio (CLR)
+column,T27,0.153157,-0.593345,0.9605,centered log-ratio (CLR)

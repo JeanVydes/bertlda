@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-08T18:24:48",
+  "generated_at": "2026-11-19T19:24:23",
   "project": "bertlda — LDA on an AI-ethics / generative-AI corpus",
-  "git_commit": "f4f61789c0580e831653c3bea31368c189f57cbc",
+  "git_commit": "894fa1894c64fdeea9219dfb2e904f44c4e06154",
   "environment": {
     "python": "3.13.5",
     "platform": "Linux-7.2.8-1-liquorix-amd64-x86_64-with-glibc2.41",

@@ -1,7 +1,7 @@
 # Topic Modeling with Latent Dirichlet Allocation: Methodology and Preliminary Results
 
 **Corpus:** AI ethics, generative AI, and large language models (Scopus, 2018–2026)
-**Generated:** 2026-11-08 18:24
+**Generated:** 2026-11-19 19:24
 **Repository:** `https://github.com/JeanVydes/bertlda`
 **Full configuration:** `outputs/results/config/model_configuration_full.json`
 
@@ -402,9 +402,27 @@ For the selected K (27), seed stability is **moderate**: mean Jaccard 0.3192 (SD
 
 ### 7.1 HJ-Biplot
 
+**Compositional-data treatment.** LDA topic proportions are compositions:
+each row of the document-topic matrix is a vector of non-negative parts that
+sums to one and lies in the simplex. Applying an unconstrained Euclidean
+method such as the HJ-Biplot directly to such data is a substantive error: the
+constant-sum constraint forces spurious negative correlations among parts
+(the closure problem; Aitchison, 1986). To correct this, every biplot in this
+delivery is built on **centered log-ratio (CLR) transformed** proportions.
+For a composition x = (x_1, …, x_D) with geometric mean
+g(x) = (∏_j x_j)^(1/D), the CLR map is
+
+> clr(x) = [ log(x_j / g(x)) ]_j ,   with Σ_j clr(x_j) = 0
+
+Zero parts (none occur in this corpus, minimum proportion 3e-05) would be
+replaced by 1e-06 and rows renormalized before the transform. The CLR map is
+an isometry from the simplex to a D−1 dimensional Euclidean subspace, so
+distances, angles, and the biplot approximation are now computed in the
+appropriate Aitchison geometry.
+
 The **HJ-Biplot** (Galindo-Villardón, 1986), an extension of Gabriel's biplot
 (1971), represents rows and columns of a matrix simultaneously through a
-singular value decomposition. For a centered matrix $X$:
+singular value decomposition. For the column-centered CLR matrix X:
 
 > X = U · D · Vᵀ
 
@@ -416,20 +434,20 @@ of each marker is measured with the squared cosine:
 > cos²_i = (a_i1² + a_i2²) / Σ_k a_ik²
 
 and analogously for columns. The **global quality** is the mean of the squared
-cosines. Three biplots were built:
+cosines. Three biplots were built, all on CLR-transformed proportions:
 
 1. **Years × topics:** each row is a year (with at least 20 documents) and each
-   column a topic; the value is the mean topic probability for that year.
+   column a topic; the value is the mean topic proportion for that year.
 2. **Countries × topics:** each row is one of the 12 countries with most documents;
-   the value is the mean topic probability.
+   the value is the mean topic proportion.
 3. **Documents × topics:** a random sample of 1500
    documents, colored by dominant topic.
 
-| Dataset | Rows | Columns | Axis 1 (%) | Axis 2 (%) | Mean row cos² | Mean column cos² |
-|---|---|---|---|---|---|---|
-| Years x topics | 5 | 27 | 77.5300 | 18.1100 | 0.8999 | 0.8827 |
-| Countries x topics | 12 | 27 | 59.6600 | 23.1100 | 0.5619 | 0.4612 |
-| Document sample x topics | 1500 | 27 | 10.3400 | 8.2100 | 0.1760 | 0.1080 |
+| Dataset | Rows | Columns | Transformation | Axis 1 (%) | Axis 2 (%) | Mean row cos² | Mean column cos² |
+|---|---|---|---|---|---|---|---|
+| Years x topics | 5 | 27 | centered log-ratio (CLR) | 74.7400 | 22.7800 | 0.9307 | 0.9523 |
+| Countries x topics | 12 | 27 | centered log-ratio (CLR) | 32.7500 | 26.6600 | 0.4340 | 0.4682 |
+| Document sample x topics | 1500 | 27 | centered log-ratio (CLR) | 9.1700 | 7.6500 | 0.1694 | 0.1332 |
 
 ![HJ-Biplot years × topics](../outputs/visualizations/LDA_HJBiplot_Years.png)
 
@@ -861,6 +879,8 @@ trend analysis.
 ---
 
 ## 9. References
+
+Aitchison, J. (1986). *The statistical analysis of compositional data*. Chapman and Hall. https://doi.org/10.1007/978-94-009-3225-4
 
 Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? In *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency* (pp. 610–623). https://doi.org/10.1145/3442188.3445922
 

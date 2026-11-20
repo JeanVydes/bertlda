@@ -383,9 +383,33 @@ def _k_coherence_plot(df_k: pd.DataFrame, chosen_k: int) -> None:
 # ---------------------------------------------------------------------------
 # HJ-Biplot
 # ---------------------------------------------------------------------------
+def clr_transform(X, epsilon: float = 1e-6) -> np.ndarray:
+    """Centered log-ratio (CLR) transform of row-wise compositional data.
+
+    Topic proportions are compositions: each row (a document, year, or
+    country) is a vector of non-negative parts summing to one and confined to
+    the simplex. Euclidean methods such as the HJ-Biplot assume unconstrained
+    data, so applying them to raw proportions induces spurious negative
+    correlations (the closure problem). The CLR map
+
+        clr(x) = [ log(x_j / g(x)) ]_j ,  g(x) = (prod_j x_j)^(1/D)
+
+    moves the compositions isometrically into a D-1 dimensional Euclidean
+    subspace (Aitchison geometry), where the HJ-Biplot is valid. Zero parts
+    are replaced by `epsilon` and rows are renormalized before the transform.
+    """
+    X = np.asarray(X, dtype=float)
+    X = np.maximum(X, 0.0)
+    X = np.where(X <= 0.0, epsilon, X)          # zero replacement
+    X = X / X.sum(axis=1, keepdims=True)         # renormalize to the simplex
+    gmean = np.exp(np.log(X).mean(axis=1, keepdims=True))
+    return np.log(X / gmean)
+
+
 def _hj_biplot(X, row_labels, col_labels, title, out_csv, out_fig,
                row_colors=None, row_size=40, annotate_rows=True,
-               annotate_cols=True, legend_title=None, row_numbering=False):
+               annotate_cols=True, legend_title=None, row_numbering=False,
+               transformation="raw proportions"):
     X = np.asarray(X, dtype=float)
     n, p = X.shape
     Xc = X - X.mean(axis=0, keepdims=True)
@@ -410,6 +434,7 @@ def _hj_biplot(X, row_labels, col_labels, title, out_csv, out_fig,
             "axis1": round(float(row[i, 0]), 6) if r > 0 else np.nan,
             "axis2": round(float(row[i, 1]), 6) if r > 1 else np.nan,
             "cos2": round(float(row_cos2[i]), 4),
+            "transformation": transformation,
         })
     for j, lab in enumerate(col_labels):
         rows.append({
@@ -417,6 +442,7 @@ def _hj_biplot(X, row_labels, col_labels, title, out_csv, out_fig,
             "axis1": round(float(col[j, 0]), 6) if r > 0 else np.nan,
             "axis2": round(float(col[j, 1]), 6) if r > 1 else np.nan,
             "cos2": round(float(col_cos2[j]), 4),
+            "transformation": transformation,
         })
     guardar_csv(pd.DataFrame(rows), out_csv, subdir=RUTAS["results"] / "lda")
 
@@ -483,6 +509,7 @@ def _hj_biplot(X, row_labels, col_labels, title, out_csv, out_fig,
 
     return {
         "n_rows": int(n), "n_cols": int(p),
+        "transformation": transformation,
         "explained_axis1": round(float(var[0]) * 100, 2) if len(var) else np.nan,
         "explained_axis2": round(float(var[1]) * 100, 2) if len(var) > 1 else np.nan,
         "mean_row_cos2": round(float(np.mean(row_cos2)), 4),
@@ -504,11 +531,13 @@ def _biplots(theta: pd.DataFrame, chosen_k: int) -> dict:
     years = [y for y in sorted(counts.index) if counts[y] >= 20]
     d = d[d["anio"].isin(years)]
     if len(years) >= 3:
-        X = d.groupby("anio")[topic_cols].mean().reindex(years).values
+        X = clr_transform(
+            d.groupby("anio")[topic_cols].mean().reindex(years).values)
         summary["years"] = _hj_biplot(
             X, [str(y) for y in years], col_labels,
-            "HJ-Biplot: years x topics (mean topic probability)",
+            "HJ-Biplot: years x topics (CLR-transformed topic proportions)",
             "hjbiplot_years.csv", "LDA_HJBiplot_Years",
+            transformation="centered log-ratio (CLR)",
         )
 
     # Countries
@@ -517,27 +546,30 @@ def _biplots(theta: pd.DataFrame, chosen_k: int) -> dict:
         int(CFG["report"]["top_countries"])).index.tolist()
     d = d[d["country_normalized"].isin(top)]
     if len(top) >= 3:
-        X = (d.groupby("country_normalized")[topic_cols].mean()
-             .reindex(top).values)
+        X = clr_transform(
+            (d.groupby("country_normalized")[topic_cols].mean()
+             .reindex(top).values))
         summary["countries"] = _hj_biplot(
             X, top, col_labels,
-            "HJ-Biplot: countries x topics (mean topic probability)",
+            "HJ-Biplot: countries x topics (CLR-transformed topic proportions)",
             "hjbiplot_countries.csv", "LDA_HJBiplot_Countries",
             annotate_rows=False, row_numbering=True,
+            transformation="centered log-ratio (CLR)",
         )
 
     # Documents (random sample for legibility)
     max_docs = int(CFG["viz"]["biplot_max_documents"])
     sample = theta.sample(n=min(max_docs, len(theta)),
                           random_state=int(CFG["seed"])).copy()
-    X = sample[topic_cols].values
+    X = clr_transform(sample[topic_cols].values)
     dom = sample["dominant_topic"].astype(int).values
     summary["documents"] = _hj_biplot(
         X, sample["doc_id"].astype(str).tolist(), col_labels,
-        "HJ-Biplot: document sample x topics (colour = dominant topic)",
+        "HJ-Biplot: document sample x topics (CLR, colour = dominant topic)",
         "hjbiplot_documents_sample.csv", "LDA_HJBiplot_Documents",
         row_colors=dom, row_size=14, annotate_rows=False,
         legend_title="Dominant topic",
+        transformation="centered log-ratio (CLR)",
     )
     guardar_csv(pd.DataFrame([
         {"dataset": k, **v} for k, v in summary.items()
@@ -990,8 +1022,10 @@ def _report_markdown(ctx: dict, cfg_json: dict, biplot_summary: dict,
         {"dataset": "Years x topics", **biplot_years},
         {"dataset": "Countries x topics", **biplot_countries},
         {"dataset": "Document sample x topics", **biplot_docs},
-    ]), headers=["Dataset", "Rows", "Columns", "Axis 1 (%)", "Axis 2 (%)",
-                 "Mean row cos²", "Mean column cos²"])
+    ])[["dataset", "n_rows", "n_cols", "transformation", "explained_axis1",
+        "explained_axis2", "mean_row_cos2", "mean_col_cos2"]],
+        headers=["Dataset", "Rows", "Columns", "Transformation", "Axis 1 (%)",
+                 "Axis 2 (%)", "Mean row cos²", "Mean column cos²"])
 
     md = f"""# Topic Modeling with Latent Dirichlet Allocation: Methodology and Preliminary Results
 
@@ -1313,9 +1347,27 @@ asymmetric or close to symmetric.
 
 ### 7.1 HJ-Biplot
 
+**Compositional-data treatment.** LDA topic proportions are compositions:
+each row of the document-topic matrix is a vector of non-negative parts that
+sums to one and lies in the simplex. Applying an unconstrained Euclidean
+method such as the HJ-Biplot directly to such data is a substantive error: the
+constant-sum constraint forces spurious negative correlations among parts
+(the closure problem; Aitchison, 1986). To correct this, every biplot in this
+delivery is built on **centered log-ratio (CLR) transformed** proportions.
+For a composition x = (x_1, …, x_D) with geometric mean
+g(x) = (∏_j x_j)^(1/D), the CLR map is
+
+> clr(x) = [ log(x_j / g(x)) ]_j ,   with Σ_j clr(x_j) = 0
+
+Zero parts (none occur in this corpus, minimum proportion 3e-05) would be
+replaced by 1e-06 and rows renormalized before the transform. The CLR map is
+an isometry from the simplex to a D−1 dimensional Euclidean subspace, so
+distances, angles, and the biplot approximation are now computed in the
+appropriate Aitchison geometry.
+
 The **HJ-Biplot** (Galindo-Villardón, 1986), an extension of Gabriel's biplot
 (1971), represents rows and columns of a matrix simultaneously through a
-singular value decomposition. For a centered matrix $X$:
+singular value decomposition. For the column-centered CLR matrix X:
 
 > X = U · D · Vᵀ
 
@@ -1327,12 +1379,12 @@ of each marker is measured with the squared cosine:
 > cos²_i = (a_i1² + a_i2²) / Σ_k a_ik²
 
 and analogously for columns. The **global quality** is the mean of the squared
-cosines. Three biplots were built:
+cosines. Three biplots were built, all on CLR-transformed proportions:
 
 1. **Years × topics:** each row is a year (with at least 20 documents) and each
-   column a topic; the value is the mean topic probability for that year.
+   column a topic; the value is the mean topic proportion for that year.
 2. **Countries × topics:** each row is one of the {CFG['report']['top_countries']} countries with most documents;
-   the value is the mean topic probability.
+   the value is the mean topic proportion.
 3. **Documents × topics:** a random sample of {CFG['viz']['biplot_max_documents']}
    documents, colored by dominant topic.
 
@@ -1524,6 +1576,8 @@ trend analysis.
 ---
 
 ## 9. References
+
+Aitchison, J. (1986). *The statistical analysis of compositional data*. Chapman and Hall. https://doi.org/10.1007/978-94-009-3225-4
 
 Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? In *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency* (pp. 610–623). https://doi.org/10.1145/3442188.3445922
 
