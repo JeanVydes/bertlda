@@ -5,9 +5,11 @@ Scopus export of the AI-ethics / generative-AI literature. All exports are
 CSV-only (never xlsx); heavy phases are resumable via checkpoints.
 
 Final model: **K=27** topics (coherence plateau, smallest K within 1% of max
-C_v), alpha=asymmetric, eta=0.5 (see `outputs/results/model_configuration_lda.json`,
-full configuration in `outputs/results/config/model_configuration_full.json`,
-and the report in `docs/Methodology_LDA.md`).
+C_v), alpha=asymmetric, eta=0.5.
+
+The main deliverable is the final paper:
+`docs/Information_MDPI_Manuscript_CLR.docx` (and its PDF export). Build it with
+`uv run python docs/make_paper_docx.py`.
 
 ## Setup
 
@@ -31,7 +33,7 @@ Phases run independently (resumable via checkpoints and CSVs):
 | 3 | `phase3_visualizations` | LDA visualizations (PNG/SVG). |
 | 4 | `phase4_trends` | Temporal trend analysis (OLS, Mann-Kendall, beta regression). |
 | 5 | `phase5_sensitivity` | LDA sensitivity: seed stability (Jaccard/ARI) + K neighbourhood. |
-| 6 | `phase6_report` | Deliverables: full config JSON, HJ-Biplot, LDAvis, `docs/Methodology_LDA.md`. |
+| 6 | `phase6_report` | Figures + full config JSON for the paper (biplots, LDAvis, PRISMA). |
 
 Invoke via CLI:
 

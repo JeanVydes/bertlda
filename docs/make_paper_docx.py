@@ -134,6 +134,13 @@ TEXT_REPLACEMENTS = {
         "preparation, J.V.; writing—review and editing, J.V.; visualization, "
         "J.V.; supervision, J.V. All authors have read and agreed to the "
         "published version of the manuscript.",
+    # --- Limitations: the flaw is now fixed --------------------------------
+    "Biplot quality. The countries and documents biplots have moderate and "
+    "low representation quality, respectively, and no log-ratio "
+    "transformation was applied.":
+        "Biplot quality. The countries and documents biplots have moderate "
+        "and low representation quality, respectively, after the centered "
+        "log-ratio transformation.",
 }
 
 # Table 16 ("Biplot, axis / Negative pole / Positive pole"): overwrite the

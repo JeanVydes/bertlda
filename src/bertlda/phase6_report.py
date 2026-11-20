@@ -22,7 +22,7 @@ Produces:
   * outputs/visualizations/LDAvis_Intertopic_Map.{png,svg}
   * outputs/visualizations/LDAvis_Relevance_Heatmap.{png,svg}
   * outputs/visualizations/LDAvis.html
-  * docs/Methodology_LDA.md
+
 
 The report is written in Spanish because it is the academic deliverable; all
 code, identifiers, CSV columns and JSON keys remain in English.
@@ -1786,21 +1786,13 @@ def main(argv=None) -> dict:
         json.dump(cfg_json, f, indent=2, ensure_ascii=False)
     print(f"  -> {cfg_path.relative_to(PROJECT_ROOT)}")
 
-    # Markdown report
-    print("\n-- MARKDOWN REPORT --")
-    md = _report_markdown(ctx, cfg_json, biplot_summary, ldavis_out)
-    docs_dir = PROJECT_ROOT / "docs"
-    docs_dir.mkdir(parents=True, exist_ok=True)
-    md_path = docs_dir / "Methodology_LDA.md"
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write(md)
-    print(f"  -> {md_path.relative_to(PROJECT_ROOT)}")
-
     print_separador("PHASE 6 COMPLETED")
-    print(f"  Report: {md_path.relative_to(PROJECT_ROOT)}")
     print(f"  Config: {cfg_path.relative_to(PROJECT_ROOT)}")
+    print("  Figures: outputs/visualizations/")
+    print("  Next: uv run python docs/make_paper_docx.py "
+          "(build the final paper DOCX, then export to PDF)")
     print(f"  Time: {_fmt(perf_counter() - t_total)}")
-    return {"report": str(md_path), "config": str(cfg_path)}
+    return {"config": str(cfg_path)}
 
 
 if __name__ == "__main__":

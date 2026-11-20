@@ -35,9 +35,8 @@ uv sync
   (`lda_sensitivity_pairs.csv`, `lda_sensitivity_seeds.csv`,
   `lda_sensitivity_k.csv`, `lda_sensitivity_k_overlap.csv`) + stability /
   K-overlap figures. Highest content stability at K=25.
-- Deliverables (Phase 6) **done** for K=27: `docs/Methodology_LDA.md` (the
-  assignment report in English, academic style, sections 1–9 + annexes), full
-  config `outputs/results/config/model_configuration_full.json`, HJ-Biplot
+- Deliverables (Phase 6) **done** for K=27: figures + full config
+  `outputs/results/config/model_configuration_full.json`, HJ-Biplot
   (years/countries/documents × topics + cos² tables), LDAvis
   (`outputs/visualizations/LDAvis.html` + intertopic map + relevance tables
   for λ∈{0, 0.6, 1}), PRISMA flow diagram, descriptive extras
@@ -74,7 +73,11 @@ bertlda --phase phase4
 # LDA sensitivity (seed stability + K neighbourhood) — resumable
 bertlda --phase phase5
 
-# Final deliverables: config JSON, HJ-Biplot, LDAvis, Methodology_LDA.md
+# Figures + config JSON for the final paper
+bertlda --phase phase6
+
+# Build the final paper DOCX (then export to PDF with LibreOffice)
+uv run python docs/make_paper_docx.py
 bertlda --phase phase6
 ```
 
@@ -99,10 +102,9 @@ bertlda --phase phase6
 
 ## Next steps (current session)
 
-1. Commit & push to origin (already pushed — verify with `git status`).
-2. The `[TO COMPLETE]` fields in Section 1.1 of `docs/Methodology_LDA.md`
-   (exact Scopus/WoS search strings, query dates, WoS counts) must be filled
-   from the previous delivery.
+1. Commit & push to origin (verify with `git status`).
+2. The final paper is `docs/Information_MDPI_Manuscript_CLR.docx` / `.pdf`.
+   Rebuild after any change with `uv run python docs/make_paper_docx.py`.
 
 ## Note on device
 

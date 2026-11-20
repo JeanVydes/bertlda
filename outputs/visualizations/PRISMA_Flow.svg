@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-19T19:20:17.306337</dc:date>
+    <dc:date>2026-11-19T19:49:07.670156</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 545.04 135.221969
 L 545.04 69.135569 
 L 66.96 69.135569 
 z
-" clip-path="url(#pd5a79000b4)" style="fill: #dce9f5; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
+" clip-path="url(#p97315daf75)" style="fill: #dce9f5; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 66.96 245.365969 
@@ -43,7 +43,7 @@ L 545.04 245.365969
 L 545.04 179.279569 
 L 66.96 179.279569 
 z
-" clip-path="url(#pd5a79000b4)" style="fill: #e8f1e4; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
+" clip-path="url(#p97315daf75)" style="fill: #e8f1e4; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 66.96 355.509969 
@@ -51,7 +51,7 @@ L 545.04 355.509969
 L 545.04 289.423569 
 L 66.96 289.423569 
 z
-" clip-path="url(#pd5a79000b4)" style="fill: #fff4d6; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
+" clip-path="url(#p97315daf75)" style="fill: #fff4d6; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 66.96 465.653969 
@@ -59,7 +59,7 @@ L 545.04 465.653969
 L 545.04 399.567569 
 L 66.96 399.567569 
 z
-" clip-path="url(#pd5a79000b4)" style="fill: #f8d7da; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
+" clip-path="url(#p97315daf75)" style="fill: #f8d7da; stroke: #333333; stroke-width: 1.1; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- Identification -->
@@ -1956,7 +1956,7 @@ z
      <use xlink:href="#DejaVuSans-Oblique-14" transform="translate(2647.359375 0)"/>
      <use xlink:href="#DejaVuSans-Oblique-c" transform="translate(2710.984375 0)"/>
     </g>
-    <!-- are documented in Section 1.1 (PRISMA 2020). -->
+    <!-- are documented in Section 2.1 (PRISMA 2020). -->
     <g style="fill: #444444" transform="translate(207.397781 527.949477) scale(0.084 -0.084)">
      <defs>
       <path id="DejaVuSans-Oblique-50" d="M 5747 2113 
@@ -2117,7 +2117,7 @@ z
      <use xlink:href="#DejaVuSans-Oblique-52" transform="translate(1226.96875 0)"/>
      <use xlink:href="#DejaVuSans-Oblique-51" transform="translate(1288.15625 0)"/>
      <use xlink:href="#DejaVuSans-Oblique-3" transform="translate(1351.53125 0)"/>
-     <use xlink:href="#DejaVuSans-Oblique-14" transform="translate(1383.3125 0)"/>
+     <use xlink:href="#DejaVuSans-Oblique-15" transform="translate(1383.3125 0)"/>
      <use xlink:href="#DejaVuSans-Oblique-11" transform="translate(1446.9375 0)"/>
      <use xlink:href="#DejaVuSans-Oblique-14" transform="translate(1478.71875 0)"/>
      <use xlink:href="#DejaVuSans-Oblique-3" transform="translate(1542.34375 0)"/>
@@ -2266,7 +2266,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pd5a79000b4">
+  <clipPath id="p97315daf75">
    <rect x="7.2" y="25.077969" width="597.6" height="550.72"/>
   </clipPath>
  </defs>
