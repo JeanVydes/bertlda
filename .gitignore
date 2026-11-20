@@ -15,3 +15,5 @@ fase2-draft-code/
 
 # Office lock files
 .~lock.*#
+
+__pycache__/

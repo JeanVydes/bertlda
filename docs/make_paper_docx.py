@@ -23,7 +23,8 @@ from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "docs" / "Information_MDPI_Manuscript.docx"
-OUTPUT = ROOT / "docs" / "Information_MDPI_Manuscript_CLR.docx"
+OUTPUT = ROOT / "docs" / "2611.00002.docx"
+PDF_OUTPUT = ROOT / "docs" / "2611.00002.pdf"
 VIZ = ROOT / "outputs" / "visualizations"
 
 # Image part name in the template -> corrected PNG produced by phase6_report.py
@@ -298,6 +299,27 @@ def main() -> None:
 
     doc.save(str(OUTPUT))
     print(f"Saved {OUTPUT} ({OUTPUT.stat().st_size:,} bytes)")
+
+    # Export to PDF with LibreOffice (headless) so equations/figures render.
+    import subprocess
+    subprocess.run(
+        ["libreoffice", "--headless", "--convert-to", "pdf",
+         "--outdir", str(OUTPUT.parent), str(OUTPUT)],
+        check=True, capture_output=True,
+    )
+    generated_pdf = OUTPUT.with_suffix(".pdf")
+    if generated_pdf != PDF_OUTPUT:
+        PDF_OUTPUT.write_bytes(generated_pdf.read_bytes())
+        generated_pdf.unlink()
+    print(f"Saved {PDF_OUTPUT} ({PDF_OUTPUT.stat().st_size:,} bytes)")
+
+    # Keep the site PDF in sync (research.vyde.dev/public/pdfs/2611.00002.pdf)
+    site_pdf = (ROOT.parent / "research.vyde.dev" / "public" / "pdfs"
+                / "2611.00002.pdf")
+    if site_pdf.parent.exists():
+        import shutil
+        shutil.copy2(PDF_OUTPUT, site_pdf)
+        print(f"  Synced site PDF -> {site_pdf}")
 
 
 if __name__ == "__main__":
